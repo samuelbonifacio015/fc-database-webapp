@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Andorra FC Manager</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-letter">A</span>
+          <span class="logo-text">Andorra FC Manager</span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active"
+              ><i class="icon">🏠</i> Inicio</a
+            >
+            </li>
+            <li>
+            <a href="jugadores.html"><i class="icon">👥</i> Jugadores</a>
+            </li>
+            <li>
+            <a href="plantillas.html"><i class="icon">📋</i> Plantillas</a>
+            </li>
+            <li>
+            <a href="notas.html"><i class="icon">📝</i> Notas</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="hero-section">
+        <h1>Andorra FC Manager</h1>
+
+        <p class="hero-description">
+          Seguimiento completo del modo carrera con Andorra FC en FC24. Gestiona
+          tus jugadores, plantillas y toma notas para llevar tu equipo al éxito.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="jugadores.html" class="btn btn-primary"
+            ><i class="icon">👥</i> Ver Jugadores</a
+          >
+          <a href="plantillas.html" class="btn btn-secondary"
+            ><i class="icon">📋</i> Gestionar Plantillas</a
+          >
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="feature-icon">👥</i>
+          <h3>Gestión de Jugadores</h3>
+          <p>
+            Registra todos los datos de tus jugadores, incluyendo estadísticas,
+            valor, potencial y más.
+          </p>
+          <a href="jugadores.html" class="feature-link">Ver jugadores →</a>
+        </div>
+
+        <div class="feature-card">
+          <i class="feature-icon">📋</i>
+          <h3>Plantillas y Formaciones</h3>
+          <p>
+            Organiza tus plantillas con diferentes formaciones tácticas para
+            maximizar el rendimiento del equipo.
+          </p>
+          <a href="plantillas.html" class="feature-link"
+            >Gestionar plantillas →</a
+          >
+        </div>
+
+        <div class="feature-card">
+          <i class="feature-icon">📝</i>
+          <h3>Notas y Seguimiento</h3>
+          <p>
+            Toma notas sobre objetivos, fichajes potenciales y estrategias para
+            tu modo carrera.
+          </p>
+          <a href="notas.html" class="feature-link">Ver notas →</a>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h2 class="section-title">Estadísticas del Club</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">23</div>
+            <div class="stat-label">Jugadores</div>
+            <div class="stat-trend positive">↑ 3 nuevos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">4°</div>
+            <div class="stat-label">Posición</div>
+            <div class="stat-trend positive">↑ 2 posiciones</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">76</div>
+            <div class="stat-label">Media del Equipo</div>
+            <div class="stat-trend positive">↑ 2 puntos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">€25M</div>
+            <div class="stat-label">Presupuesto</div>
+            <div class="stat-trend negative">↓ €2M</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="updates-section">
+        <div class="updates-header">
+          <h2 class="section-title">Últimas Actualizaciones</h2>
+          <a href="#" class="view-all">Ver todas</a>
+        </div>
+        <div class="updates-grid">
+          <div class="update-card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="update-content">
+              <div class="update-icon transfer editable-icon" contenteditable="false" data-placeholder="🔄">🔄</div>
+              <h3 class="editable" contenteditable="false" data-placeholder="Título de actualización">Nuevo Fichaje</h3>
+              <p class="editable" contenteditable="false" data-placeholder="Descripción de la actualización">Marc Fernández se une al equipo desde el Barcelona B</p>
+              <span class="update-date editable" contenteditable="false" data-placeholder="Fecha">Hace 2 días</span>
+              <div class="update-actions">
+                <button class="edit-btn">Editar</button>
+                <button class="save-btn" style="display: none">Guardar</button>
+                <button class="cancel-btn" style="display: none">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <div class="update-card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="update-content">
+              <div class="update-icon match editable-icon" contenteditable="false" data-placeholder="⚽">⚽</div>
+              <h3 class="editable" contenteditable="false" data-placeholder="Título de actualización">Victoria en Liga</h3>
+              <p class="editable" contenteditable="false" data-placeholder="Descripción de la actualización">Andorra FC 2 - 0 Racing Santander</p>
+              <span class="update-date editable" contenteditable="false" data-placeholder="Fecha">Hace 5 días</span>
+              <div class="update-actions">
+                <button class="edit-btn">Editar</button>
+                <button class="save-btn" style="display: none">Guardar</button>
+                <button class="cancel-btn" style="display: none">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <div class="update-card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="update-content">
+              <div class="update-icon training editable-icon" contenteditable="false" data-placeholder="📈">📈</div>
+              <h3 class="editable" contenteditable="false" data-placeholder="Título de actualización">Mejora de Jugador</h3>
+              <p class="editable" contenteditable="false" data-placeholder="Descripción de la actualización">Carlos Martínez ha subido a 78 de media</p>
+              <span class="update-date editable" contenteditable="false" data-placeholder="Fecha">Hace 1 semana</span>
+              <div class="update-actions">
+                <button class="edit-btn">Editar</button>
+                <button class="save-btn" style="display: none">Guardar</button>
+                <button class="cancel-btn" style="display: none">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="player-side-actions">
+              <a href="jugadores.html" class="database-link">
+                <span class="database-icon">📊</span>
+                <span class="link-text">Base de Datos</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main class="team-profile">
+      <div class="team-header">
+        <div class="team-basic-info">
+          <div class="team-logo-container">
+            <img
+              src="../img/assets/team-logo.png"
+              alt="Escudo del equipo"
+              class="team-logo"
+            />
+          </div>
+          <div class="team-rating">
+            <span class="rating-label">Valoración</span>
+            <span class="rating-value">65</span>
+          </div>
+        </div>
+
+        <div class="team-details">
+          <h1 class="team-name">Andorra FC</h1>
+          <div class="team-location">
+            <img
+              src="../img/assets/spain-flag.png"
+              alt="Bandera de Alemania"
+              class="country-flag"
+            />
+            <span>España</span>
+          </div>
+        </div>
+
+        <div class="team-stats">
+          <div class="stat-item">
+            <span class="stat-label">Año de fundación</span>
+            <span class="stat-value">1942</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Valor</span>
+            <span class="stat-value">€6.0M</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Títulos de liga</span>
+            <span class="stat-value">1</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Copas nacionales</span>
+            <span class="stat-value">2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-attributes">
+        <div class="attribute-column">
+          <div class="attribute-item">
+            <span class="attribute-name">Valoración</span>
+            <span class="attribute-value">65</span>
+            <div class="stars-container">★★★★☆</div>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Ataque</span>
+            <span class="attribute-value">65</span>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Centro del campo</span>
+            <span class="attribute-value">65</span>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Defensa</span>
+            <span class="attribute-value">64</span>
+          </div>
+        </div>
+        <div class="attribute-column">
+          <div class="attribute-item">
+            <span class="attribute-name">Prestigio nacional</span>
+            <div class="stars-container">★★★★☆</div>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Prestigio internacional</span>
+            <div class="stars-container">★☆☆☆☆</div>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Des. Juvenil</span>
+            <div class="stars-container">★★★★½</div>
+          </div>
+          <div class="attribute-item">
+            <span class="attribute-name">Rentabilidad</span>
+            <div class="stars-container">★★★☆☆</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-staff">
+        <div class="staff-section">
+          <h2 class="section-title">Entrenador</h2>
+          <div class="coach-card">
+            <div class="coach-image-container">
+              <img
+                src="../img/players_icons/00000.png"
+                alt="Diego Simeone"
+                class="coach-photo"
+              />
+            </div>
+            <div class="coach-info">
+              <h3 class="coach-name">Diego Simeone</h3>
+              <div class="coach-nationality">
+                <span class="nationality-label">Nacionalidad</span>
+                <div class="nationality-value">
+                  <img
+                    src="../img/assets/spain-flag.png"
+                    alt="España"
+                    class="country-flag"
+                  />
+                  <span>España</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stadium-section">
+          <h2 class="section-title">Estadio</h2>
+          <div class="stadium-card">
+            <div class="stadium-image-container">
+              <img
+                src="../img/assets/estadio-andorra.jpg"
+                alt="Grünwalder Stadion"
+                class="stadium-photo"
+              />
+            </div>
+            <div class="stadium-info">
+              <h3 class="stadium-name">Estadi Nacional de Andorra</h3>
+              <div class="stadium-details">
+                <span class="capacity">Capacidad: 3.3k</span>
+                <span class="location">Ubicación: Andorra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-history">
+        <h2>Historia</h2>
+        <p class="history-text">
+          Fundado en 1942, el FC Andorra ha competido principalmente en las
+          ligas españolas. Alcanzó la Segunda División B en 1981, manteniéndose
+          allí durante 17 temporadas. En 1994, ganó la Copa Catalunya al vencer
+          al FC Barcelona y al RCD Espanyol. En 2022, logró el ascenso a la
+          Segunda División española por primera vez en su historia
+        </p>
+      </div>
+
+      <div class="team-tactics">
+        <h2>Formación</h2>
+        <div class="formation-details">
+          <span class="formation-label">3-5-2</span>
+          <div class="formation-stats">
+            <span>Profundidad defensiva: 30%</span>
+            <span>Construcción de juego: Normal</span>
+          </div>
+        </div>
+
+        <!-- Sección de 11 titulares -->
+        <div class="starting-eleven">
+          <!-- Delanteros -->
+          <div class="forwards-row">
+            <div class="player-card">
+              <div class="player-growth">+5</div>
+              <img
+                src="../img/players_icons/adam.jpg"
+                alt="Adam"
+                class="player-photo"
+              />
+              <div class="player-rating">76</div>
+              <div class="player-name">Adám</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+5</div>
+              <img
+                src="../img/players_icons/duk.jpg"
+                alt="Duk"
+                class="player-photo"
+              />
+              <div class="player-rating">77</div>
+              <div class="player-name">Duk</div>
+            </div>
+          </div>
+
+          <!-- Mediocampista Ofensivo -->
+          <div class="cam-row">
+            <div class="player-card">
+              <div class="player-growth">+2</div>
+              <img
+                src="../img/players_icons/alzate.jpg"
+                alt="Alzate"
+                class="player-photo"
+              />
+              <div class="player-rating">78</div>
+              <div class="player-name">Alzate</div>
+            </div>
+          </div>
+
+          <!-- Mediocampistas Laterales -->
+          <div class="wide-mids-row">
+            <div class="player-card">
+              <div class="player-growth">+3</div>
+              <img
+                src="../img/players_icons/sulemana.jpg"
+                alt="Sulemana"
+                class="player-photo"
+              />
+              <div class="player-rating">82</div>
+              <div class="player-name">Sulemana</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+1</div>
+              <img
+                src="../img/players_icons/seungho.jpg"
+                alt="Baik Seung Ho"
+                class="player-photo"
+              />
+              <div class="player-rating">75</div>
+              <div class="player-name">Baik Seung Ho</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+1</div>
+              <img
+                src="../img/players_icons/jinseob.jpg"
+                alt="Park Jin Seob"
+                class="player-photo"
+              />
+              <div class="player-rating">75</div>
+              <div class="player-name">Park Jin Seob</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+4</div>
+              <img
+                src="../img/players_icons/calvo.jpg"
+                alt="Calvo"
+                class="player-photo"
+              />
+              <div class="player-rating">78</div>
+              <div class="player-name">Calvo</div>
+            </div>
+          </div>
+
+          <!-- Defensas -->
+          <div class="defenders-row">
+            <div class="player-card">
+              <div class="player-growth">+5</div>
+              <img
+                src="../img/players_icons/kuipers.jpg"
+                alt="Kuipers"
+                class="player-photo"
+              />
+              <div class="player-rating">77</div>
+              <div class="player-name">Kuipers</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+6</div>
+              <img
+                src="../img/players_icons/marsa.jpg"
+                alt="Marsà"
+                class="player-photo"
+              />
+              <div class="player-rating">78</div>
+              <div class="player-name">Marsà</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+4</div>
+              <img
+                src="../img/players_icons/mwanga.jpg"
+                alt="Mwanga"
+                class="player-photo"
+              />
+              <div class="player-rating">78</div>
+              <div class="player-name">Mwanga</div>
+            </div>
+          </div>
+
+          <!-- Portero -->
+          <div class="goalkeeper-row">
+            <div class="player-card">
+              <div class="player-growth">+6</div>
+              <img
+                src="../img/players_icons/agirrezabala.jpg"
+                alt="Agirrezabala"
+                class="player-photo"
+              />
+              <div class="player-rating">82</div>
+              <div class="player-name">Agirrezabala</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de Suplentes -->
+        <div class="bench-section">
+          <h3>Suplentes</h3>
+          <div class="players-grid">
+            <div class="player-card">
+              <div class="player-growth">+3</div>
+              <img
+                src="../img/players_icons/hilali.jpg"
+                alt="El Hilali"
+                class="player-photo"
+              />
+              <div class="player-rating">79</div>
+              <div class="player-name">El Hilali</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+0</div>
+              <img
+                src="../img/players_icons/besnard.jpg"
+                alt="Besnard"
+                class="player-photo"
+              />
+              <div class="player-rating">75</div>
+              <div class="player-name">Besnard</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+3</div>
+              <img
+                src="../img/players_icons/benito.jpg"
+                alt="Benito"
+                class="player-photo"
+              />
+              <div class="player-rating">74</div>
+              <div class="player-name">Benito</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+5</div>
+              <img
+                src="../img/players_icons/glatzel.jpg"
+                alt="Glatzel"
+                class="player-photo"
+              />
+              <div class="player-rating">72</div>
+              <div class="player-name">Glatzel</div>
+            </div>
+          </div>
+          <div class="players-grid">
+            <div class="player-card">
+              <div class="player-growth">+4</div>
+              <img
+                src="../img/players_icons/moreno.jpg"
+                alt="Moreno"
+                class="player-photo"
+              />
+              <div class="player-rating">73</div>
+              <div class="player-name">Moreno</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+3</div>
+              <img
+                src="../img/players_icons/mccrorie.jpg"
+                alt="McCrorie"
+                class="player-photo"
+              />
+              <div class="player-rating">75</div>
+              <div class="player-name">McCrorie</div>
+            </div>
+            <div class="player-card">
+              <div class="player-growth">+4</div>
+              <img
+                src="../img/players_icons/cremaschi.jpg"
+                alt="Cremaschi"
+                class="player-photo"
+              />
+              <div class="player-rating">75</div>
+              <div class="player-name">Cremaschi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Galería -->
+      <div class="team-gallery">
+        <h2 class="section-title">Galería</h2>
+        <div class="gallery-container">
+          <div class="gallery-main">
+            <img
+              id="featured-image"
+              src="../img/galery_screenshots/20241213232237_1.jpg"
+              alt="Imagen destacada"
+              class="gallery-featured"
+            />
+            <div class="gallery-controls">
+              <button id="prev-btn" class="gallery-btn">
+                <i class="gallery-icon">◀</i>
+              </button>
+              <button id="next-btn" class="gallery-btn">
+                <i class="gallery-icon">▶</i>
+              </button>
+            </div>
+          </div>
+          <div class="gallery-thumbnails">
+            <div
+              class="thumbnail active"
+              data-src="../img/galery_screenshots/20241213232237_1.jpg"
+            >
+              <img
+                src="../img/galery_screenshots/20241213232237_1.jpg"
+                alt="Partido vs Barcelona"
+                class="thumbnail-img"
+              />
+            </div>
+            <div
+              class="thumbnail"
+              data-src="../img/galery_screenshots/20250310222920_1.jpg"
+            >
+              <img
+                src="../img/galery_screenshots/20250310222920_1.jpg"
+                alt="Celebración de gol"
+                class="thumbnail-img"
+              />
+            </div>
+            <div
+              class="thumbnail"
+              data-src="../img/galery_screenshots/20250316123747_1.jpg"
+            >
+              <img
+                src="../img/galery_screenshots/20250316123747_1.jpg"
+                alt="Entrenamiento"
+                class="thumbnail-img"
+              />
+            </div>
+            <div
+              class="thumbnail"
+              data-src="../img/galery_screenshots/20250105101851_1.jpg"
+            >
+              <img
+                src="../img/galery_screenshots/20250105101851_1.jpg"
+                alt="Afición"
+                class="thumbnail-img"
+              />
+            </div>
+            <div
+              class="thumbnail"
+              data-src="../img/galery_screenshots/20250316124606_1.jpg"
+            >
+              <img
+                src="../img/galery_screenshots/20250316124606_1.jpg"
+                alt="Estadio"
+                class="thumbnail-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para ver imágenes en grande -->
+      <div id="gallery-modal" class="gallery-modal">
+        <button id="modal-prev" class="modal-nav-btn">◀</button>
+        <button id="modal-next" class="modal-nav-btn">▶</button>
+        <img
+          id="modal-image"
+          class="modal-content"
+          alt="Imagen ampliada"
+          title="Imagen ampliada"
+        />
+        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+    </main>
+
+    <!-- Script para la galería -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elementos de la galería
+        const featuredImage = document.getElementById("featured-image");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+
+        // Elementos del modal
+        const modal = document.getElementById("gallery-modal");
+        const modalImg = document.getElementById("modal-image");
+        const modalCaption = document.getElementById("modal-caption");
+        const modalPrevBtn = document.getElementById("modal-prev");
+        const modalNextBtn = document.getElementById("modal-next");
+
+        let currentIndex = 0;
+
+        // Cambiar la imagen destacada
+        function updateFeaturedImage(index) {
+          // Quitar clase active de todas las miniaturas
+          thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+
+          // Añadir clase active a la miniatura seleccionada
+          thumbnails[index].classList.add("active");
+
+          // Actualizar la imagen destacada
+          const imgSrc = thumbnails[index].dataset.src;
+          const imgAlt = thumbnails[index].querySelector("img").alt;
+          featuredImage.src = imgSrc;
+          featuredImage.alt = imgAlt;
+
+          currentIndex = index;
+        }
+
+        // Asignar eventos a las miniaturas
+        thumbnails.forEach((thumbnail, index) => {
+          thumbnail.addEventListener("click", () => {
+            updateFeaturedImage(index);
+          });
+        });
+
+        // Botones de navegación de la galería
+        prevBtn.addEventListener("click", () => {
+          let newIndex = currentIndex - 1;
+          if (newIndex < 0) newIndex = thumbnails.length - 1;
+          updateFeaturedImage(newIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+          let newIndex = currentIndex + 1;
+          if (newIndex >= thumbnails.length) newIndex = 0;
+          updateFeaturedImage(newIndex);
+        });
+
+        // Abrir modal al hacer clic en la imagen destacada
+        featuredImage.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = featuredImage.src;
+          modalCaption.textContent = featuredImage.alt;
+        });
+
+        // Navegación en el modal
+        modalPrevBtn.addEventListener("click", () => {
+          let newIndex = currentIndex - 1;
+          if (newIndex < 0) newIndex = thumbnails.length - 1;
+          updateImageInModal(newIndex);
+        });
+
+        modalNextBtn.addEventListener("click", () => {
+          let newIndex = currentIndex + 1;
+          if (newIndex >= thumbnails.length) newIndex = 0;
+          updateImageInModal(newIndex);
+        });
+
+        // Actualizar imagen en el modal
+        function updateImageInModal(index) {
+          currentIndex = index;
+          const imgSrc = thumbnails[index].dataset.src;
+          const imgAlt = thumbnails[index].querySelector("img").alt;
+          modalImg.src = imgSrc;
+          modalCaption.textContent = imgAlt;
+
+          // También actualizar la imagen destacada
+          updateFeaturedImage(index);
+        }
+
+        // Cerrar modal haciendo clic fuera de la imagen
+        window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+
+        // Navegación con teclado cuando el modal está abierto
+        document.addEventListener("keydown", (event) => {
+          if (modal.style.display === "block") {
+            if (event.key === "ArrowLeft") {
+              let newIndex = currentIndex - 1;
+              if (newIndex < 0) newIndex = thumbnails.length - 1;
+              updateImageInModal(newIndex);
+            } else if (event.key === "ArrowRight") {
+              let newIndex = currentIndex + 1;
+              if (newIndex >= thumbnails.length) newIndex = 0;
+              updateImageInModal(newIndex);
+            } else if (event.key === "Escape") {
+              modal.style.display = "none";
+            }
+          }
+        });
+      });
+    </script>
+
+    <!-- Script para las actualizaciones editables -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Script para la galería (existente)
+        // ... mantener el código existente aquí ...
+
+        // Script para editar actualizaciones
+        const updateCards = document.querySelectorAll(".update-card");
+
+        updateCards.forEach((card) => {
+          const editables = card.querySelectorAll(".editable");
+          const editableIcon = card.querySelector(".editable-icon");
+          const editBtn = card.querySelector(".edit-btn");
+          const saveBtn = card.querySelector(".save-btn");
+          const cancelBtn = card.querySelector(".cancel-btn");
+
+          // Almacenar valores originales para poder cancelar
+          let originalValues = [];
+          let originalIcon = "";
+
+          // Función para activar el modo edición
+          function enableEditMode() {
+            originalValues = [];
+            editables.forEach((editable) => {
+              // Guardar valor original
+              originalValues.push(editable.textContent);
+
+              // Activar edición
+              editable.contentEditable = true;
+              editable.classList.add("editing");
+
+              // Si está vacío, mostrar placeholder
+              if (editable.textContent.trim() === "") {
+                editable.textContent = editable.dataset.placeholder;
+                editable.classList.add("placeholder");
+              }
+            });
+
+            // Manejar icono editable
+            if (editableIcon) {
+              originalIcon = editableIcon.textContent;
+              editableIcon.contentEditable = true;
+              editableIcon.classList.add("editing");
+
+              // Mostrar tooltip/indicador para el icono
+              const tooltip = document.createElement("div");
+              tooltip.className = "icon-tooltip";
+              tooltip.textContent = "Haz clic para cambiar el emoji";
+              editableIcon.appendChild(tooltip);
+
+              // Eventos para el tooltip
+              setTimeout(() => {
+                tooltip.classList.add("show");
+              }, 100);
+              setTimeout(() => {
+                if (tooltip.parentNode === editableIcon) {
+                  tooltip.classList.remove("show");
+                  setTimeout(() => {
+                    if (tooltip.parentNode === editableIcon) {
+                      editableIcon.removeChild(tooltip);
+                    }
+                  }, 300);
+                }
+              }, 3000);
+            }
+
+            // Mostrar/ocultar botones
+            editBtn.style.display = "none";
+            saveBtn.style.display = "inline-block";
+            cancelBtn.style.display = "inline-block";
+
+            // Poner foco en el primer elemento
+            editables[0].focus();
+          }
+
+          // Función para guardar los cambios
+          function saveChanges() {
+            editables.forEach((editable) => {
+              // Desactivar edición
+              editable.contentEditable = false;
+              editable.classList.remove("editing");
+
+              // Si contiene solo el placeholder, limpiar
+              if (editable.textContent === editable.dataset.placeholder) {
+                editable.textContent = "";
+              }
+
+              // Quitar clase placeholder
+              editable.classList.remove("placeholder");
+            });
+
+            // Manejar icono editable
+            if (editableIcon) {
+              editableIcon.contentEditable = false;
+              editableIcon.classList.remove("editing");
+
+              // Eliminar tooltip si existe
+              const tooltip = editableIcon.querySelector(".icon-tooltip");
+              if (tooltip) {
+                editableIcon.removeChild(tooltip);
+              }
+
+              // Validar que haya un emoji (si está vacío, restaurar el original)
+              if (editableIcon.textContent.trim() === "") {
+                editableIcon.textContent = editableIcon.dataset.placeholder;
+              }
+            }
+
+            // Mostrar/ocultar botones
+            editBtn.style.display = "inline-block";
+            saveBtn.style.display = "none";
+            cancelBtn.style.display = "none";
+
+            // Aquí se podría agregar código para guardar en base de datos
+            console.log("Cambios guardados", card);
+          }
+
+          // Función para cancelar los cambios
+          function cancelChanges() {
+            editables.forEach((editable, index) => {
+              // Restaurar valor original
+              editable.textContent = originalValues[index];
+
+              // Desactivar edición
+              editable.contentEditable = false;
+              editable.classList.remove("editing");
+              editable.classList.remove("placeholder");
+            });
+
+            // Restaurar icono original
+            if (editableIcon) {
+              editableIcon.textContent = originalIcon;
+              editableIcon.contentEditable = false;
+              editableIcon.classList.remove("editing");
+
+              // Eliminar tooltip si existe
+              const tooltip = editableIcon.querySelector(".icon-tooltip");
+              if (tooltip) {
+                editableIcon.removeChild(tooltip);
+              }
+            }
+
+            // Mostrar/ocultar botones
+            editBtn.style.display = "inline-block";
+            saveBtn.style.display = "none";
+            cancelBtn.style.display = "none";
+          }
+
+          // Asignar eventos a los botones
+          editBtn.addEventListener("click", enableEditMode);
+          saveBtn.addEventListener("click", saveChanges);
+          cancelBtn.addEventListener("click", cancelChanges);
+
+          // Agregar doble clic en texto para editar
+          editables.forEach((editable) => {
+            editable.addEventListener("dblclick", function () {
+              if (
+                !editable.contentEditable ||
+                editable.contentEditable === "false"
+              ) {
+                enableEditMode();
+              }
+            });
+          });
+
+          // Agregar evento de clic para editar icono
+          if (editableIcon) {
+            editableIcon.addEventListener("dblclick", function () {
+              if (
+                !editableIcon.contentEditable ||
+                editableIcon.contentEditable === "false"
+              ) {
+                enableEditMode();
+                // Seleccionar todo el texto para facilitar el reemplazo
+                const range = document.createRange();
+                range.selectNodeContents(editableIcon);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+              }
+            });
+          }
+        });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+/*-----------------------------------*\
+  #styles.css
+\*-----------------------------------*/
+
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #4a4a4a;
+  --background-dark: #1a1a1a;
+  --background-light: #2d2d2d;
+  --background-hover: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --spacing-sm: 0.4rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --rating-color: #ffd700;
+  --card-border-color: #4caf50;
+  --rating-low: #e57373;
+  --rating-medium: #ffd54f;
+  --rating-high: #81c784;
+  --rating-very-high: #64b5f6;
+  --rating-exceptional: #ba68c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/*-----------------------------------*\
+  #NAVBAR
+\*-----------------------------------*/
+
+nav {
+  padding: calc(var(--spacing-md) * 1.2);
+}
+
+.nav-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo-letter {
+  background-color: var(--primary-color);
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-size: 1.44rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-lg) * 1.2);
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 7px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a.active {
+  background-color: var(--primary-color);
+}
+
+/*-----------------------------------*\
+  #JUGADORES PAGE
+\*-----------------------------------*/
+
+.jugadores-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.jugadores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.header-title h1 {
+  font-size: 2.16rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filtros-dropdown {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--background-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.icon-arrow {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.search-bar {
+  width: 40%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.72rem 1.2rem;
+  background-color: var(--background-light);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-primary);
+  font-size: 1.08rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+/*-----------------------------------*\
+  #CATEGORY TABS
+\*-----------------------------------*/
+
+.categories-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--background-light);
+  padding-bottom: 6px;
+}
+
+.tab {
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  min-width: 150px;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  color: #52b788;
+  border-bottom: 3px solid #52b788;
+  font-weight: 500;
+}
+
+/*-----------------------------------*\
+  #CONTENT LAYOUT
+\*-----------------------------------*/
+
+.jugadores-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-lg);
+  max-width: 120%;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background-color: var(--background-dark);
+}
+
+.columnas-seleccion,
+.buscador-section {
+  background-color: var(--background-light);
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.filtros-aplicados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.filtro-tag {
+  background-color: #2c2c2c;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.close-tag {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.add-column {
+  background-color: #2c2c2c;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: var(--spacing-md);
+}
+
+.btn-apply,
+.btn-reset {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-apply {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-reset {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn-apply:hover {
+  background-color: #0055b3;
+}
+
+.btn-reset:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-field,
+.select-field {
+  margin-bottom: 10px;
+}
+
+.select-field select {
+  width: 100%;
+  padding: 8px;
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  padding-right: 25px;
+}
+
+.range-filters {
+  margin-top: var(--spacing-md);
+}
+
+.range-filter {
+  margin-bottom: 10px;
+}
+
+.range-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: var(--text-secondary);
+}
+
+.range-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.range-min,
+.range-max {
+  width: 50%;
+  padding: 6px;
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/*-----------------------------------*\
+  #PLAYERS TABLE
+\*-----------------------------------*/
+
+.jugadores-table {
+  background-color: var(--background-light);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 1.08rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  text-align: left;
+  padding: 12px 10px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td {
+  padding: 12px 10px;
+  font-size: 1.08rem;
+  border-bottom: 1px solid #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ajustes para alinear y dar tamaños específicos a las columnas */
+th:nth-child(1),
+td:nth-child(1) {
+  /* N.º */
+  width: 48px;
+  text-align: center;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  /* Pos */
+  width: 60px;
+  text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  /* Nombre */
+  width: auto;
+  min-width: 240px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  /* GRL */
+  width: 72px;
+  text-align: center;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  /* Puesto */
+  width: 120px;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  /* Forma */
+  width: 96px;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+  /* Valor */
+  width: 96px;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+  /* Contrato */
+  width: 144px;
+  text-align: center;
+}
+
+th:nth-child(9),
+td:nth-child(9) {
+  /* Salario */
+  width: 96px;
+  text-align: right;
+}
+
+tbody tr:hover {
+  background-color: var(--background-hover);
+}
+
+.player-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.player-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.player-position {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.96rem;
+}
+
+.flag-icon {
+  font-size: 1.02rem;
+}
+
+.position {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ei,
+.ed,
+.md,
+.mi,
+.sd {
+  background-color: #f44336;
+}
+
+.mc,
+.mco,
+.mcd {
+  background-color: #4caf50;
+}
+
+.dc,
+.dfc,
+.li,
+.ld {
+  background-color: #2196f3;
+}
+
+.por {
+  background-color: #ff9800;
+}
+
+.rating {
+  display: inline-block;
+  width: 36px;
+  height: 29px;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: #000;
+  line-height: 29px;
+}
+
+/* Modificación de colores para GRL según distribución solicitada */
+.rating-50,
+.rating-51,
+.rating-52,
+.rating-53,
+.rating-54,
+.rating-55,
+.rating-56,
+.rating-57,
+.rating-58,
+.rating-59,
+.rating-60 {
+  background-color: #ff9800; /* Naranja */
+}
+
+.rating-61,
+.rating-62,
+.rating-63,
+.rating-64,
+.rating-65,
+.rating-66,
+.rating-67,
+.rating-68,
+.rating-69,
+.rating-70 {
+  background-color: #ffeb3b; /* Amarillo */
+}
+
+.rating-71,
+.rating-72,
+.rating-73,
+.rating-74,
+.rating-75,
+.rating-76,
+.rating-77,
+.rating-78,
+.rating-79,
+.rating-80 {
+  background-color: #8bc34a; /* Verde claro */
+}
+
+.rating-81,
+.rating-82,
+.rating-83,
+.rating-84,
+.rating-85,
+.rating-86,
+.rating-87,
+.rating-88,
+.rating-89,
+.rating-90 {
+  background-color: #3d8c40; /* Verde oscurecido un 20% */
+}
+
+.rating-total {
+  background-color: #ce93d8;
+}
+
+.growth {
+  font-size: 0.75rem;
+  margin-left: 3px;
+}
+
+.growth.up {
+  color: #4caf50;
+}
+
+.team-cell {
+  padding: 10px 8px;
+}
+
+.team-info {
+  display: flex;
+  justify-content: center;
+}
+
+.team-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.team-name {
+  font-weight: 500;
+}
+
+.contract {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .jugadores-content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .jugadores-table {
+    order: 1;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .jugadores-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: var(--spacing-md);
+  }
+
+  .header-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .player-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+    font-size: 0.9rem;
+  }
+}
+
+/*-----------------------------------*\
+  #MODAL DE JUGADOR
+\*-----------------------------------*/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--background-dark);
+  width: 85%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-secondary);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-modal:hover {
+  color: var(--text-primary);
+}
+
+.modal-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.jugador-perfil {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: linear-gradient(to bottom, #232a3b, var(--background-dark));
+  border-bottom: 1px solid #333;
+}
+
+.jugador-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.jugador-info-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jugador-info-general h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.jugador-valoracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-grl-label {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.modal-grl {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8bc34a;
+  line-height: 1;
+}
+
+.jugador-posicion-principal {
+  display: flex;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.jugador-imagen-container {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.jugador-imagen {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #333;
+  background-color: #2a2a2a;
+}
+
+.jugador-dorsal-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #222;
+}
+
+#modal-dorsal {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.jugador-estadisticas {
+  display: flex;
+  padding: 30px;
+  gap: 50px;
+}
+
+.estado-section,
+.contrato-section {
+  flex: 1;
+}
+
+.estado-section h3,
+.contrato-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.estado-info,
+.contrato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-label {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.info-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-rayo {
+  color: #ffd54f;
+}
+
+.icon-diamante {
+  color: #64b5f6;
+}
+
+.icon-emoji {
+  font-size: 1.2rem;
+}
+
+/* Hacer que las filas de jugadores sean clickeables */
+tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos responsivos para el modal */
+@media (min-width: 992px) {
+  .modal-layout {
+    flex-direction: row;
+  }
+
+  .jugador-perfil {
+    width: 40%;
+    border-right: 1px solid #333;
+    border-bottom: none;
+  }
+
+  .jugador-estadisticas {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .jugador-info-general {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .jugador-valoracion {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .modal-grl-label {
+    margin-bottom: 0;
+  }
+
+  .jugador-estadisticas {
+    flex-direction: column;
+  }
+
+  .jugador-imagen {
+    width: 200px;
+    height: 200px;
+  }
+
+  .jugador-imagen-container {
+    width: 200px;
+    height: 200px;
+  }
+}
