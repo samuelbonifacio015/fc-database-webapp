@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jugadores FC - Gestor de Equipo</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/equipo.css" />
+    <script src="../../js/cantera.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>FC Team Manager</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="jugadores.html" class="active">Jugadores</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="estadisticas.html">Estadísticas</a></li>
+          <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="tabs-container">
+          <div class="tab active" data-target="jugadores-content">
+            Jugadores
+          </div>
+          <div class="tab" data-target="cantera-content">Cantera</div>
+          <div class="tab" data-target="formacion-content">Formación</div>
+        </div>
+
+        <div class="contenido" id="jugadores-content">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="player-search"
+              placeholder="Buscar jugador..."
+            />
+          </div>
+
+          <div class="position-filters">
+            <span class="position-filter active" data-position="todos"
+              >Todos</span
+            >
+            <span class="position-filter" data-position="POR">POR</span>
+            <span class="position-filter" data-position="DEF">DEF</span>
+            <span class="position-filter" data-position="MED">MED</span>
+            <span class="position-filter" data-position="DEL">DEL</span>
+          </div>
+
+          <table class="jugadores-table">
+            <thead>
+              <tr>
+                <th data-sortable="true">Nombre</th>
+                <th data-sortable="true">Posición</th>
+                <th data-sortable="true" data-type="number">VAL</th>
+                <th data-sortable="true" data-type="number">Edad</th>
+                <th data-sortable="true" data-type="number">PJ</th>
+                <th data-sortable="true" data-type="number">Goles</th>
+                <th data-sortable="true" data-type="number">Asis</th>
+                <th>Forma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="player-row">
+                <td><span class="player-name">Álvaro García</span></td>
+                <td><span class="position">DEL</span></td>
+                <td><span class="valor" data-valor="89">89</span></td>
+                <td>25</td>
+                <td>34</td>
+                <td>22</td>
+                <td>8</td>
+                <td>
+                  <span class="forma" data-forma="excelente">Excelente</span>
+                </td>
+              </tr>
+              <tr class="player-row">
+                <td><span class="player-name">Mario López</span></td>
+                <td><span class="position">MED</span></td>
+                <td><span class="valor" data-valor="82">82</span></td>
+                <td>28</td>
+                <td>32</td>
+                <td>5</td>
+                <td>12</td>
+                <td><span class="forma" data-forma="buena">Buena</span></td>
+              </tr>
+              <tr class="player-row">
+                <td><span class="player-name">Carlos Fernández</span></td>
+                <td><span class="position">DEF</span></td>
+                <td><span class="valor" data-valor="78">78</span></td>
+                <td>31</td>
+                <td>30</td>
+                <td>1</td>
+                <td>2</td>
+                <td><span class="forma" data-forma="normal">Normal</span></td>
+              </tr>
+              <tr class="player-row">
+                <td><span class="player-name">Pablo Sánchez</span></td>
+                <td><span class="position">POR</span></td>
+                <td><span class="valor" data-valor="84">84</span></td>
+                <td>29</td>
+                <td>33</td>
+                <td>0</td>
+                <td>0</td>
+                <td><span class="forma" data-forma="buena">Buena</span></td>
+              </tr>
+              <tr class="player-row">
+                <td><span class="player-name">Javier Martínez</span></td>
+                <td><span class="position">DEL</span></td>
+                <td><span class="valor" data-valor="73">73</span></td>
+                <td>32</td>
+                <td>24</td>
+                <td>8</td>
+                <td>4</td>
+                <td><span class="forma" data-forma="mala">Mala</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="contenido" id="cantera-content" style="display: none">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="cantera-search"
+              placeholder="Buscar jugador de cantera..."
+            />
+          </div>
+
+          <div class="position-filters">
+            <span class="position-filter active" data-position="todos"
+              >Todos</span
+            >
+            <span class="position-filter" data-position="POR">POR</span>
+            <span class="position-filter" data-position="DEF">DEF</span>
+            <span class="position-filter" data-position="MED">MED</span>
+            <span class="position-filter" data-position="DEL">DEL</span>
+          </div>
+
+          <table class="jugadores-table cantera-table">
+            <thead>
+              <tr>
+                <th data-sortable="true">Nombre</th>
+                <th data-sortable="true">Posición</th>
+                <th data-sortable="true" data-type="number">VAL</th>
+                <th data-sortable="true" data-type="number">POT</th>
+                <th data-sortable="true" data-type="number">Edad</th>
+                <th data-sortable="true" data-type="number">PJ</th>
+                <th>Forma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cantera-player-row">
+                <td><span class="player-name">Miguel Ángel Díaz</span></td>
+                <td><span class="position">DEL</span></td>
+                <td><span class="valor" data-valor="65">65</span></td>
+                <td><span class="potential" data-potential="92">92</span></td>
+                <td>17</td>
+                <td>5</td>
+                <td><span class="forma" data-forma="buena">Buena</span></td>
+              </tr>
+              <tr class="cantera-player-row">
+                <td><span class="player-name">David García</span></td>
+                <td><span class="position">MED</span></td>
+                <td><span class="valor" data-valor="62">62</span></td>
+                <td><span class="potential" data-potential="85">85</span></td>
+                <td>18</td>
+                <td>8</td>
+                <td>
+                  <span class="forma" data-forma="excelente">Excelente</span>
+                </td>
+              </tr>
+              <tr class="cantera-player-row">
+                <td><span class="player-name">Sergio Martín</span></td>
+                <td><span class="position">DEF</span></td>
+                <td><span class="valor" data-valor="58">58</span></td>
+                <td><span class="potential" data-potential="78">78</span></td>
+                <td>19</td>
+                <td>12</td>
+                <td><span class="forma" data-forma="normal">Normal</span></td>
+              </tr>
+              <tr class="cantera-player-row">
+                <td><span class="player-name">Lucas Torres</span></td>
+                <td><span class="position">POR</span></td>
+                <td><span class="valor" data-valor="55">55</span></td>
+                <td><span class="potential" data-potential="82">82</span></td>
+                <td>16</td>
+                <td>0</td>
+                <td><span class="forma" data-forma="buena">Buena</span></td>
+              </tr>
+              <tr class="cantera-player-row">
+                <td><span class="player-name">Alejandro Ruiz</span></td>
+                <td><span class="position">DEL</span></td>
+                <td><span class="valor" data-valor="67">67</span></td>
+                <td><span class="potential" data-potential="88">88</span></td>
+                <td>18</td>
+                <td>7</td>
+                <td><span class="forma" data-forma="buena">Buena</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="contenido" id="formacion-content" style="display: none">
+          <div class="formacion-container">
+            <h2 class="formacion-title">4-3-3 Ofensivo</h2>
+            <div class="campo">
+              <div class="jugador portero">
+                <div class="numero">1</div>
+                <div class="nombre">P. Sánchez</div>
+              </div>
+              <div class="jugador defensa left">
+                <div class="numero">2</div>
+                <div class="nombre">R. García</div>
+              </div>
+              <div class="jugador defensa center-left">
+                <div class="numero">4</div>
+                <div class="nombre">C. Fernández</div>
+              </div>
+              <div class="jugador defensa center-right">
+                <div class="numero">5</div>
+                <div class="nombre">L. Rodríguez</div>
+              </div>
+              <div class="jugador defensa right">
+                <div class="numero">3</div>
+                <div class="nombre">J. Pérez</div>
+              </div>
+              <div class="jugador medio left">
+                <div class="numero">8</div>
+                <div class="nombre">M. López</div>
+              </div>
+              <div class="jugador medio center">
+                <div class="numero">6</div>
+                <div class="nombre">A. Ruiz</div>
+              </div>
+              <div class="jugador medio right">
+                <div class="numero">10</div>
+                <div class="nombre">D. Moreno</div>
+              </div>
+              <div class="jugador delantero left">
+                <div class="numero">11</div>
+                <div class="nombre">Á. García</div>
+              </div>
+              <div class="jugador delantero center">
+                <div class="numero">9</div>
+                <div class="nombre">F. Torres</div>
+              </div>
+              <div class="jugador delantero right">
+                <div class="numero">7</div>
+                <div class="nombre">J. Martínez</div>
+              </div>
+            </div>
+            <div class="tactica">
+              <h3>Tácticas del equipo</h3>
+              <ul>
+                <li>Presión alta</li>
+                <li>Posesión de balón</li>
+                <li>Ataque rápido por bandas</li>
+                <li>Juego corto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 FC Team Manager. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jugadores - Andorra FC Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Special+Gothic&family=Special+Gothic+Condensed+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/jugadores.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-letter">A</span>
+          <span class="logo-text">Andorra FC Manager</span>
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="jugadores.html" class="active">Jugadores</a>
+          </li>
+          <li>
+            <a href="rendimiento.html">Rendimiento</a>
+          </li>
+          <li>
+            <a href="notas.html">Notas</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="jugadores-page">
+      <div class="jugadores-header">
+        <div class="header-title">
+          <h1>Jugadores</h1>
+          <div class="filtros-dropdown">
+            <div class="filtro">
+              <span>v1.0 - 11 abril</span>
+              <i class="icon-arrow">▼</i>
+              <div class="filtro-menu">
+                <div class="filtro-option">v1.1 - 13 abril</div>
+                <div class="filtro-option">v1.0 - 11 abril</div>
+                <div class="filtro-option">v0.9 - 5 abril</div>
+                <div class="filtro-option">v0.8 - 1 abril</div>
+              </div>
+            </div>
+            <div class="filtro">
+              <span>Temporada 24/25</span>
+              <i class="icon-arrow">▼</i>
+              <div class="filtro-menu">
+                <div class="filtro-option">24/25</div>
+                <div class="filtro-option">25/26</div>
+                <div class="filtro-option">26/27</div>
+                <div class="filtro-option">27/28</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="categories-tabs">
+        <div class="tab active" data-tab="plantilla-actual">
+          Plantilla Actual
+        </div>
+        <div class="tab" data-tab="cantera">Cantera</div>
+        <div class="tab" data-tab="presupuesto">Presupuesto</div>
+        <div class="tab" data-tab="fichajes">Fichajes</div>
+      </div>
+
+      <div class="jugadores-content" id="plantilla-actual">
+        <div class="sidebar">
+          <div class="team-info-panel">
+            <h3 class="sidebar-title">Información del Equipo</h3>
+            <div class="team-stats-summary">
+              <div class="stat-item">
+                <span class="stat-label">Jugadores</span>
+                <span class="stat-value">23</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Media del equipo</span>
+                <span class="stat-value">76</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Presupuesto</span>
+                <span class="stat-value">€25M</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Salario semanal</span>
+                <span class="stat-value">€450K</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-distribution">
+            <h3 class="sidebar-title">Distribución por posición</h3>
+            <div class="position-graph">
+              <div class="position-bar">
+                <div class="position-label">POR</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 10%"></div>
+                  <span class="bar-value">2</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">DEF</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 40%"></div>
+                  <span class="bar-value">8</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">MED</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 35%"></div>
+                  <span class="bar-value">7</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">DEL</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 30%"></div>
+                  <span class="bar-value">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-players">
+            <h3 class="sidebar-title">Jugadores destacados</h3>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/sulemana.jpg"
+                alt="K. Sulemana"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">K. Sulemana</div>
+                <div class="top-player-stats">EI • 82 GRL</div>
+              </div>
+            </div>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/agirrezabala.jpg"
+                alt="J. Agirrezabala"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">J. Agirrezabala</div>
+                <div class="top-player-stats">POR • 82 GRL</div>
+              </div>
+            </div>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/hilali.jpg"
+                alt="O. El Hilali"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">O. El Hilali</div>
+                <div class="top-player-stats">LI • 79 GRL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-status">
+            <h3 class="sidebar-title">Estado del equipo</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">Forma del equipo</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-label">Moral</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 82%"></div>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-label">Condición física</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jugadores-table">
+          <table>
+            <thead>
+              <tr>
+                <th>N.º</th>
+                <th>Pos</th>
+                <th>Nombre</th>
+                <th>GRL</th>
+                <th>Puesto</th>
+                <th>Forma</th>
+                <th>Valor</th>
+                <th>Contrato</th>
+                <th>Salario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>POR</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/agirrezabala.jpg"
+                    alt="J. Agirrezabala"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">J. Agirrezabala</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position por">POR</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-82">82</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€32.5M</td>
+                <td>2024 ~ 2029</td>
+                <td>€60K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>POR</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/lejeune.png"
+                    alt="C. Lejeune"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">C. Lejeune</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇫🇷</span>
+                      <span class="position por">POR</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-71">71</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€3.5M</td>
+                <td>2024 ~ 2026</td>
+                <td>€12K</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>LI</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/hilali.jpg"
+                    alt="O. El Hilali"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">O. El Hilali</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇲🇦</span>
+                      <span class="position li">LI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-79">79</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€16M</td>
+                <td>2024 ~ 2028</td>
+                <td>€35K</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/jinseob.jpg"
+                    alt="Park Jin Seob"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">Park Jin Seob</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇰🇷</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-75">75</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€11M</td>
+                <td>2024 ~ 2027</td>
+                <td>€28K</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/marsa.jpg"
+                    alt="J. Marsà"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">J. Marsà</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-78">78</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€18M</td>
+                <td>2023 ~ 2026</td>
+                <td>€38K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/bombardo.jpg"
+                    alt="M. Bombardó"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">M. Bombardó</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-64">64</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€1.5M</td>
+                <td>2024 ~ 2026</td>
+                <td>€5K</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/figueroa.png"
+                    alt="S. Figueroa"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">S. Figueroa</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇱</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-66">66</span></td>
+                <td>Ocasional</td>
+                <td>Normal</td>
+                <td>€1.8M</td>
+                <td>2023 ~ 2025</td>
+                <td>€8K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/bianco.png"
+                    alt="C. Bianco"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">C. Bianco</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇮🇹</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-66">66</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€1.8M</td>
+                <td>2024 ~ 2027</td>
+                <td>€7K</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/kuipers.jpg"
+                    alt="J. Kuipers"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">J. Kuipers</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇳🇱</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-77">77</span></td>
+                <td>Importante</td>
+                <td>Normal</td>
+                <td>€14M</td>
+                <td>2023 ~ 2026</td>
+                <td>€33K</td>
+              </tr>
+              <tr>
+                <td>37</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/martino.png"
+                    alt="E. Martino"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">E. Martino</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇦🇷</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-63">63</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€1.2M</td>
+                <td>2024 ~ 2027</td>
+                <td>€5K</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>MC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/seungho.jpg"
+                    alt="Paik Seung Ho"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">Paik Seung Ho</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇰🇷</span>
+                      <span class="position mc">MC</span>
+                      <span class="position mcd">MCD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-75">75</span></td>
+                <td>Importante</td>
+                <td>Normal</td>
+                <td>€12M</td>
+                <td>2023 ~ 2026</td>
+                <td>€30K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>ED</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/sagna.png"
+                    alt="C. Sagna"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">C. Sagna</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇲</span>
+                      <span class="position ed">ED</span>
+                      <span class="position ei">EI</span>
+                      <span class="position mc">MC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-71">71</span></td>
+                <td>Rotación</td>
+                <td>Normal</td>
+                <td>€5.5M</td>
+                <td>Cedido hasta 2027</td>
+                <td>€15K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/hurtado.png"
+                    alt="S. Hurtado"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">S. Hurtado</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-68">68</span></td>
+                <td>Ocasional</td>
+                <td>Normal</td>
+                <td>€2.2M</td>
+                <td>2024 ~ 2028</td>
+                <td>€10K</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>LD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/mccrorie.jpg"
+                    alt="R. McCrorie"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">R. McCrorie</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+                      <span class="position ld">LD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-75">75</span></td>
+                <td>Importante</td>
+                <td>Normal</td>
+                <td>€11M</td>
+                <td>2023 ~ 2027</td>
+                <td>€25K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>LD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/knudsen.png"
+                    alt="E. Knudsen"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">E. Knudsen</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇩🇰</span>
+                      <span class="position ld">LD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-70">70</span></td>
+                <td>Ocasional</td>
+                <td>Normal</td>
+                <td>€4.5M</td>
+                <td>2024 ~ 2028</td>
+                <td>€12K</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>MCD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/mwanga.jpg"
+                    alt="J. Mwanga"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">J. Mwanga</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇲</span>
+                      <span class="position mcd">MCD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-78">78</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€20M</td>
+                <td>2023 ~ 2026</td>
+                <td>€40K</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>MC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/alzate.jpg"
+                    alt="S. Alzate"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">S. Alzate</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇴</span>
+                      <span class="position mc">MC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-78">78</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€18.5M</td>
+                <td>2023 ~ 2027</td>
+                <td>€42K</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>EI</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/sulemana.jpg"
+                    alt="K. Sulemana"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">K. Sulemana</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇬🇭</span>
+                      <span class="position ei">EI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-82">82</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€35M</td>
+                <td>2023 ~ 2027</td>
+                <td>€60K</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>ED</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/calvo.jpg"
+                    alt="A. Calvo"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">A. Calvo</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position ed">ED</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-78">78</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€18M</td>
+                <td>2023 ~ 2026</td>
+                <td>€38K</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/duk.jpg"
+                    alt="Duk"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">Duk</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇻</span>
+                      <span class="position dc">DC</span>
+                      <span class="position mi">MI</span>
+                      <span class="position ei">EI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-78">78</span></td>
+                <td>Importante</td>
+                <td>Buena</td>
+                <td>€15M</td>
+                <td>2023 ~ 2027</td>
+                <td>€35K</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/adam.jpg"
+                    alt="M. Adám"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">M. Adám</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇭🇺</span>
+                      <span class="position dc">DC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-76">76</span></td>
+                <td>Clave</td>
+                <td>Normal</td>
+                <td>€14M</td>
+                <td>2023 ~ 2026</td>
+                <td>€32K</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/moreno.jpg"
+                    alt="P. Moreno"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">P. Moreno</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dc">DC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-73">73</span></td>
+                <td>Importante</td>
+                <td>Normal</td>
+                <td>€7.5M</td>
+                <td>2024 ~ 2027</td>
+                <td>€18K</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/glatzel.jpg"
+                    alt="R. Glatzel"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">R. Glatzel</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇩🇪</span>
+                      <span class="position dc">DC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-72">72</span></td>
+                <td>Importante</td>
+                <td>Normal</td>
+                <td>€6.8M</td>
+                <td>2024 ~ 2027</td>
+                <td>€16K</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>SD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/jaramillo.png"
+                    alt="D. Jaramillo"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">D. Jaramillo</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇨🇴</span>
+                      <span class="position sd">SD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-56">56</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€850K</td>
+                <td>2024 ~ 2027</td>
+                <td>€3K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>ED</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/miller.png"
+                    alt="N. Miller"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">N. Miller</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                      <span class="position ed">ED</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-63">63</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€1.4M</td>
+                <td>2024 ~ 2027</td>
+                <td>€5K</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>EI</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/torres.png"
+                    alt="X. Torres"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">X. Torres</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position ei">EI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-65">65</span></td>
+                <td>Promesa</td>
+                <td>Normal</td>
+                <td>€1.8M</td>
+                <td>2024 ~ 2028</td>
+                <td>€7K</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Contenido de Cantera -->
+      <div class="jugadores-content" id="cantera" style="display: none">
+        <div class="sidebar">
+          <div class="team-info-panel">
+            <h3 class="sidebar-title">Información de Cantera</h3>
+            <div class="team-stats-summary">
+              <div class="stat-item">
+                <span class="stat-label">Canteranos</span>
+                <span class="stat-value">15</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Media del equipo</span>
+                <span class="stat-value">64</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Potencial medio</span>
+                <span class="stat-value">78</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Edad media</span>
+                <span class="stat-value">18.3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-distribution">
+            <h3 class="sidebar-title">Distribución por posición</h3>
+            <div class="position-graph">
+              <div class="position-bar">
+                <div class="position-label">POR</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 13%"></div>
+                  <span class="bar-value">2</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">DEF</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 20%"></div>
+                  <span class="bar-value">3</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">MED</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 33%"></div>
+                  <span class="bar-value">5</span>
+                </div>
+              </div>
+              <div class="position-bar">
+                <div class="position-label">DEL</div>
+                <div class="bar-container">
+                  <div class="bar" style="width: 33%"></div>
+                  <span class="bar-value">5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-players">
+            <h3 class="sidebar-title">Promesas destacadas</h3>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/martinez_canterano.jpg"
+                alt="F. Martínez"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">F. Martínez</div>
+                <div class="top-player-stats">SD • 68 GRL • 85 POT</div>
+              </div>
+            </div>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/garcia_canterano.jpg"
+                alt="L. García"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">L. García</div>
+                <div class="top-player-stats">MC • 67 GRL • 83 POT</div>
+              </div>
+            </div>
+            <div class="top-player-card">
+              <img
+                src="../../img/players_icons/lopez_canterano.jpg"
+                alt="A. López"
+                class="mini-avatar"
+              />
+              <div class="top-player-info">
+                <div class="top-player-name">A. López</div>
+                <div class="top-player-stats">EI • 66 GRL • 82 POT</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-status">
+            <h3 class="sidebar-title">Academia juvenil</h3>
+            <div class="progress-bar-container">
+              <div class="progress-label">Calidad de instalaciones</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 68%"></div>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-label">Red de ojeadores</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-label">Desarrollo de talentos</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jugadores-table">
+          <table>
+            <thead>
+              <tr>
+                <th>N.º</th>
+                <th>Pos</th>
+                <th>Nombre</th>
+                <th>GRL</th>
+                <th>Edad</th>
+                <th>POT</th>
+                <th>Valor</th>
+                <th>Contrato</th>
+                <th>Salario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40</td>
+                <td>SD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/martinez_canterano.jpg"
+                    alt="F. Martínez"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">F. Martínez</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position sd">SD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-68">68</span></td>
+                <td>17</td>
+                <td><span class="potential">85</span></td>
+                <td>€3.5M</td>
+                <td>2026 ~ 2030</td>
+                <td>€8K</td>
+              </tr>
+              <tr>
+                <td>41</td>
+                <td>MC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/garcia_canterano.jpg"
+                    alt="L. García"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">L. García</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position mc">MC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-67">67</span></td>
+                <td>18</td>
+                <td><span class="potential">83</span></td>
+                <td>€3.2M</td>
+                <td>2025 ~ 2030</td>
+                <td>€7K</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>EI</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/lopez_canterano.jpg"
+                    alt="A. López"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">A. López</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position ei">EI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-66">66</span></td>
+                <td>18</td>
+                <td><span class="potential">82</span></td>
+                <td>€2.8M</td>
+                <td>2025 ~ 2029</td>
+                <td>€6K</td>
+              </tr>
+              <tr>
+                <td>43</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/fernandez_canterano.jpg"
+                    alt="R. Fernández"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">R. Fernández</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dc">DC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-65">65</span></td>
+                <td>16</td>
+                <td><span class="potential">84</span></td>
+                <td>€2.2M</td>
+                <td>2026 ~ 2031</td>
+                <td>€5K</td>
+              </tr>
+              <tr>
+                <td>44</td>
+                <td>ED</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/rodriguez_canterano.jpg"
+                    alt="C. Rodríguez"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">C. Rodríguez</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position ed">ED</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-64">64</span></td>
+                <td>17</td>
+                <td><span class="potential">81</span></td>
+                <td>€1.8M</td>
+                <td>2026 ~ 2030</td>
+                <td>€4K</td>
+              </tr>
+              <tr>
+                <td>45</td>
+                <td>DFC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/perez_canterano.jpg"
+                    alt="T. Pérez"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">T. Pérez</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dfc">DFC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-63">63</span></td>
+                <td>19</td>
+                <td><span class="potential">79</span></td>
+                <td>€1.5M</td>
+                <td>2024 ~ 2028</td>
+                <td>€3K</td>
+              </tr>
+              <tr>
+                <td>46</td>
+                <td>MCD</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/gomez_canterano.jpg"
+                    alt="A. Gómez"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">A. Gómez</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position mcd">MCD</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-62">62</span></td>
+                <td>18</td>
+                <td><span class="potential">80</span></td>
+                <td>€1.2M</td>
+                <td>2025 ~ 2028</td>
+                <td>€2K</td>
+              </tr>
+              <tr>
+                <td>47</td>
+                <td>POR</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/sanchez_canterano.jpg"
+                    alt="M. Sánchez"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">M. Sánchez</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position por">POR</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-64">64</span></td>
+                <td>19</td>
+                <td><span class="potential">78</span></td>
+                <td>€1.3M</td>
+                <td>2024 ~ 2027</td>
+                <td>€3K</td>
+              </tr>
+              <tr>
+                <td>48</td>
+                <td>DC</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/navarro_canterano.jpg"
+                    alt="L. Navarro"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">L. Navarro</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position dc">DC</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-61">61</span></td>
+                <td>17</td>
+                <td><span class="potential">79</span></td>
+                <td>€950K</td>
+                <td>2026 ~ 2030</td>
+                <td>€1.5K</td>
+              </tr>
+              <tr>
+                <td>49</td>
+                <td>LI</td>
+                <td class="player-cell">
+                  <img
+                    src="../../img/players_icons/torres_canterano.jpg"
+                    alt="M. Torres"
+                    class="player-avatar"
+                  />
+                  <div class="player-info">
+                    <div class="player-name">M. Torres</div>
+                    <div class="player-position">
+                      <span class="flag-icon">🇪🇸</span>
+                      <span class="position li">LI</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="rating rating-61">61</span></td>
+                <td>18</td>
+                <td><span class="potential">77</span></td>
+                <td>€900K</td>
+                <td>2025 ~ 2028</td>
+                <td>€1.5K</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Contenido de Presupuesto -->
+      <div class="jugadores-content" id="presupuesto" style="display: none">
+        <!-- Aquí irá el contenido de presupuesto -->
+      </div>
+
+      <!-- Contenido de Formaciones -->
+      <div class="jugadores-content" id="formaciones" style="display: none">
+        <!-- Aquí irá el contenido de formaciones -->
+      </div>
+    </main>
+
+    <!-- Modal para acciones de jugadores -->
+    <div
+      id="player-modal"
+      class="player-modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        class="modal-content"
+        style="
+          width: 500px;
+          background-color: #ff3a44;
+          border-radius: 0;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        "
+      >
+        <div
+          id="modal-header"
+          class="player-header"
+          style="
+            display: flex;
+            padding: 15px;
+            background-color: #ff3a44;
+            color: white;
+          "
+        >
+          <span id="modal-position" style="width: 40px; text-align: center"
+            >MC</span
+          >
+          <span id="modal-name" style="flex: 1; margin-left: 8px"
+            >Nombre del Jugador</span
+          >
+          <span id="modal-number" style="width: 30px; text-align: center"
+            >29</span
+          >
+          <span id="modal-rating" style="width: 40px; text-align: center"
+            >76</span
+          >
+          <span style="width: 40px; text-align: center">➡️</span>
+          <span style="width: 100px">Mediocentro</span>
+        </div>
+
+        <div class="player-menu-section">
+          <div class="player-menu-section-title">🛒 Mercado</div>
+          <div class="player-menu-section-items">
+            <div class="player-menu-item" data-action="transferible">
+              Añadir a transferibles
+            </div>
+            <div class="player-menu-item" data-action="cedible">
+              Añadir a cedibles
+            </div>
+            <div class="player-menu-item" data-action="block">
+              Bloquear ofertas
+            </div>
+          </div>
+        </div>
+
+        <div class="player-menu-section">
+          <div class="player-menu-section-title">📋 Plantilla</div>
+          <div class="player-menu-section-items">
+            <div class="player-menu-item" data-action="development">
+              Plan de desarrollo
+            </div>
+            <div class="player-menu-item" data-action="tactics">
+              Sistemas de juego
+            </div>
+            <div class="player-menu-item" data-action="team">
+              Dirección del equipo
+            </div>
+            <div class="player-menu-item" data-action="number">
+              Cambiar dorsal
+            </div>
+          </div>
+        </div>
+
+        <div class="player-menu-section">
+          <div class="player-menu-section-title">📝 CONTRATO</div>
+          <div class="player-menu-section-items">
+            <div class="player-menu-item" data-action="negotiation">
+              Negociación contractual
+            </div>
+            <div class="player-menu-item" data-action="delegate">
+              Delegar renovación
+            </div>
+            <div class="player-menu-item" data-action="release">
+              Liberar jugador
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Script cargado directamente en HTML");
+
+        // Gestionar las pestañas
+        const tabs = document.querySelectorAll(".tab");
+        const contenidos = document.querySelectorAll(".jugadores-content");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            console.log("Tab clicked:", this.getAttribute("data-tab"));
+
+            // Remover clase active de todas las pestañas
+            tabs.forEach((t) => t.classList.remove("active"));
+
+            // Agregar clase active a la pestaña clickeada
+            this.classList.add("active");
+
+            // Obtener el id del contenido a mostrar
+            const target = this.getAttribute("data-tab");
+
+            // Ocultar todos los contenidos
+            contenidos.forEach((contenido) => {
+              contenido.style.display = "none";
+            });
+
+            // Mostrar el contenido correspondiente
+            const targetContent = document.getElementById(target);
+            targetContent.style.display = "grid";
+          });
+        });
+
+        // Mostrar por defecto la primera pestaña
+        if (tabs.length > 0) {
+          tabs[0].click();
+        }
+
+        // Referencia al modal
+        const playerModal = document.getElementById("player-modal");
+        const modalName = document.getElementById("modal-name");
+        const modalPosition = document.getElementById("modal-position");
+        const modalRating = document.getElementById("modal-rating");
+        const modalNumber = document.getElementById("modal-number");
+
+        // Agregar eventos a las celdas de jugadores
+        function setupPlayerCells() {
+          const playerCells = document.querySelectorAll(".player-cell");
+          console.log("Jugadores encontrados:", playerCells.length);
+
+          playerCells.forEach((cell, index) => {
+            // Evitar agregar múltiples event listeners
+            if (!cell.hasAttribute("data-setup")) {
+              cell.setAttribute("data-setup", "true");
+
+              cell.addEventListener("click", function (e) {
+                e.stopPropagation();
+                console.log("Click en jugador:", index);
+
+                // Obtener datos del jugador
+                const playerName =
+                  this.querySelector(".player-name").textContent;
+                const playerPosition = this.querySelector(".position")
+                  ? this.querySelector(".position").textContent
+                  : "MC";
+                const playerRating = this.closest("tr").querySelector(".rating")
+                  ? this.closest("tr").querySelector(".rating").textContent
+                  : "76";
+                const playerNumberCell =
+                  this.closest("tr").querySelector("td:first-child");
+                const playerNumber = playerNumberCell
+                  ? playerNumberCell.textContent.trim()
+                  : "29";
+
+                console.log(
+                  `Jugador: ${playerName}, Posición: ${playerPosition}, Rating: ${playerRating}, Número: ${playerNumber}`
+                );
+
+                // Actualizar datos en el modal
+                modalName.textContent = playerName;
+                modalPosition.textContent = playerPosition;
+                modalRating.textContent = playerRating;
+                modalNumber.textContent = playerNumber;
+
+                // Mostrar el modal
+                playerModal.style.display = "flex";
+              });
+            }
+          });
+        }
+
+        // Configurar celdas iniciales
+        setupPlayerCells();
+
+        // Configurar celdas cuando cambie la pestaña
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            setTimeout(setupPlayerCells, 100);
+          });
+        });
+
+        // Añadir eventos a los items del menú del modal
+        playerModal.querySelectorAll(".player-menu-item").forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const action = this.getAttribute("data-action");
+            const playerName =
+              document.getElementById("modal-name").textContent;
+
+            console.log(`Acción "${action}" para ${playerName}`);
+            alert(`Acción "${action}" para ${playerName}`);
+
+            // Cerrar el modal después de la acción
+            playerModal.style.display = "none";
+          });
+        });
+
+        // Cerrar el modal al hacer clic fuera del contenido
+        playerModal.addEventListener("click", function (e) {
+          if (e.target === playerModal) {
+            playerModal.style.display = "none";
+          }
+        });
+
+        // Gestionar los filtros desplegables
+        const filtros = document.querySelectorAll(".filtro");
+
+        filtros.forEach((filtro) => {
+          filtro.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            // Evitar que el clic se propague a los elementos del menú
+            if (e.target.closest(".filtro-option")) {
+              const selectedOption = e.target.textContent;
+              const spanElement = this.querySelector("span");
+              spanElement.textContent = selectedOption;
+
+              // Cerrar el menú después de seleccionar
+              this.classList.remove("filtro-active");
+              return;
+            }
+
+            // Si el filtro ya está activo, lo cerramos
+            if (this.classList.contains("filtro-active")) {
+              this.classList.remove("filtro-active");
+              return;
+            }
+
+            // Cerrar todos los otros filtros abiertos
+            filtros.forEach((f) => {
+              if (f !== this) {
+                f.classList.remove("filtro-active");
+              }
+            });
+
+            // Activar este filtro
+            this.classList.toggle("filtro-active");
+          });
+        });
+
+        // Cerrar menús al hacer clic fuera de ellos
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".filtro")) {
+            filtros.forEach((filtro) => {
+              filtro.classList.remove("filtro-active");
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

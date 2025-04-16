@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rendimiento - Andorra FC Manager</title>
+    <link rel="stylesheet" href="../../css/rendimiento.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Special+Gothic&family=Special+Gothic+Condensed+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../../js/rendimiento.js" defer></script>
+  </head>
+  <body>
+    <div class="page-layout">
+      <!-- Sidebar Navigation -->
+      <div class="sidebar-container">
+        <article class="menu">
+          <input
+            type="radio"
+            name="path"
+            id="dashboard"
+            class="radio"
+            checked
+          />
+          <input type="radio" name="path" id="profile" class="radio" />
+          <input type="radio" name="path" id="messages" class="radio" />
+          <input type="radio" name="path" id="help" class="radio" />
+          <input type="radio" name="path" id="settings" class="radio" />
+
+          <div class="menu-indicator"></div>
+
+          <label class="menu-item" for="dashboard">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"
+              ></path>
+            </svg>
+            <span class="tooltip">Dashboard</span>
+          </label>
+
+          <label class="menu-item" for="profile">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"
+              ></path>
+            </svg>
+            <span class="tooltip">Perfil</span>
+          </label>
+
+          <label class="menu-item" for="messages">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 18v3.766l1.515-.909L11.277 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h1zM4 8h12v8h-5.277L7 18.234V16H4V8z"
+              ></path>
+              <path
+                d="M20 2H8c-1.103 0-2 .897-2 2h12c1.103 0 2 .897 2 2v8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2z"
+              ></path>
+            </svg>
+            <span class="tooltip">Mensajes</span>
+          </label>
+
+          <label class="menu-item" for="help">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM12 20c-4.411 0-8-3.589-8-8s3.567-8 7.953-8C16.391 4 20 7.589 20 12s-3.589 8-8 8z"
+              ></path>
+              <path d="M11 7h2v7h-2zm0 8h2v2h-2z"></path>
+            </svg>
+            <span class="tooltip">Ayuda</span>
+          </label>
+
+          <label class="menu-item" for="settings">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"
+              ></path>
+              <path
+                d="M12 4c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7z"
+              ></path>
+            </svg>
+            <span class="tooltip">Ajustes</span>
+          </label>
+        </article>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <nav>
+          <div class="nav-container">
+            <div class="logo">
+              <span class="logo-letter">A</span>
+              <span class="logo-text">Andorra FC Manager</span>
+            </div>
+
+            <ul class="nav-links">
+              <li>
+                <a href="index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="jugadores.html">Jugadores</a>
+              </li>
+              <li>
+                <a href="rendimiento.html" class="active">Rendimiento</a>
+              </li>
+              <li>
+                <a href="notas.html">Notas</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="content">
+          <div class="stats-grid">
+            <!-- Tabla de posiciones -->
+            <section class="league-table">
+              <div class="league-header">
+                <div class="header-content">
+                  <img
+                    src="../../img/assets/laligalogo.png"
+                    alt="LaLiga"
+                    class="league-logo"
+                  />
+                  <h2 class="season-title">Temporada 24/25</h2>
+                </div>
+              </div>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Equipo</th>
+                      <th>PTS</th>
+                      <th>PJ</th>
+                      <th>PG</th>
+                      <th>PE</th>
+                      <th>PP</th>
+                      <th>DG</th>
+                      <th>Últimas</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Los datos se llenarán dinámicamente -->
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Resultados por fecha -->
+            <section class="matchday-results">
+              <div class="matchday-header">
+                <h2>Jornada 9</h2>
+                <div class="date-navigation">
+                  <button id="prev-matchday" class="matchday-arrow">
+                    &lt;
+                  </button>
+                  <span id="matchday-number">9</span>
+                  <button id="next-matchday" class="matchday-arrow">
+                    &gt;
+                  </button>
+                </div>
+              </div>
+              <div class="matchday-container">
+                <div class="match-item">
+                  <div class="match-date">Viernes 20/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/sevilla.jpg"
+                        alt="Sevilla"
+                        class="team-logo"
+                      />
+                      <span>Sevilla</span>
+                    </div>
+                    <div class="score">2 - 1</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/getafe.jpg"
+                        alt="Getafe"
+                        class="team-logo"
+                      />
+                      <span>Getafe</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Sábado 21/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/barcelona.jpg"
+                        alt="Barcelona"
+                        class="team-logo"
+                      />
+                      <span>Barcelona</span>
+                    </div>
+                    <div class="score">3 - 0</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/levante.jpg"
+                        alt="Levante"
+                        class="team-logo"
+                      />
+                      <span>Levante</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Sábado 21/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/valencia.jpg"
+                        alt="Valencia"
+                        class="team-logo"
+                      />
+                      <span>Valencia</span>
+                    </div>
+                    <div class="score">2 - 0</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/celta.jpg"
+                        alt="Celta"
+                        class="team-logo"
+                      />
+                      <span>Celta</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Sábado 21/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/andorra.jpg"
+                        alt="Andorra"
+                        class="team-logo"
+                      />
+                      <span>Andorra</span>
+                    </div>
+                    <div class="score">1 - 1</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/madrid.jpg"
+                        alt="Real Madrid"
+                        class="team-logo"
+                      />
+                      <span>Real Madrid</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Domingo 22/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/atletico.jpg"
+                        alt="Atlético"
+                        class="team-logo"
+                      />
+                      <span>Atlético</span>
+                    </div>
+                    <div class="score">3 - 1</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/betis.jpg"
+                        alt="Betis"
+                        class="team-logo"
+                      />
+                      <span>Betis</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Domingo 22/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/bilbao.jpg"
+                        alt="Athletic"
+                        class="team-logo"
+                      />
+                      <span>Athletic</span>
+                    </div>
+                    <div class="score">2 - 0</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/almeria.jpg"
+                        alt="Almería"
+                        class="team-logo"
+                      />
+                      <span>Almería</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Domingo 22/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/realsociedad.jpg"
+                        alt="Real Sociedad"
+                        class="team-logo"
+                      />
+                      <span>Real Sociedad</span>
+                    </div>
+                    <div class="score">2 - 2</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/osasuna.jpg"
+                        alt="Osasuna"
+                        class="team-logo"
+                      />
+                      <span>Osasuna</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Lunes 23/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/villareal.jpg"
+                        alt="Villarreal"
+                        class="team-logo"
+                      />
+                      <span>Villarreal</span>
+                    </div>
+                    <div class="score">2 - 1</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/rayo.jpg"
+                        alt="Rayo"
+                        class="team-logo"
+                      />
+                      <span>Rayo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="match-item">
+                  <div class="match-date">Lunes 23/10</div>
+                  <div class="match-teams">
+                    <div class="team home">
+                      <img
+                        src="../../img/teams_logo/girona.jpg"
+                        alt="Girona"
+                        class="team-logo"
+                      />
+                      <span>Girona</span>
+                    </div>
+                    <div class="score">3 - 0</div>
+                    <div class="team away">
+                      <img
+                        src="../../img/teams_logo/granada.jpg"
+                        alt="Granada"
+                        class="team-logo"
+                      />
+                      <span>Granada</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Estadísticas destacadas -->
+            <section class="featured-stats">
+              <div class="stat-card top-scorer">
+                <h3>Máximo Goleador</h3>
+                <div class="player-stats">
+                  <img
+                    src="../../img/players_icons/adam.jpg"
+                    alt="Adam"
+                    class="player-photo"
+                  />
+                  <div class="stats-info">
+                    <h4>Adam</h4>
+                    <p class="stats">
+                      <span class="games">31 PJ</span>
+                      <span class="goals">22 Goles</span>
+                      <span class="assists">8 Asistencias</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stat-card top-assist">
+                <h3>Máximo Asistidor</h3>
+                <div class="player-stats">
+                  <img
+                    src="../../img/players_icons/calvo.jpg"
+                    alt="Calvo"
+                    class="player-photo"
+                  />
+                  <div class="stats-info">
+                    <h4>Calvo</h4>
+                    <p class="stats">
+                      <span class="games">29 PJ</span>
+                      <span class="goals">5 Goles</span>
+                      <span class="assists">15 Asistencias</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stat-card clean-sheets">
+                <h3>Vallas Invictas</h3>
+                <div class="player-stats" id="aguirrezabala-card">
+                  <img
+                    src="../../img/players_icons/agirrezabala.jpg"
+                    alt="Aguirrezabala"
+                    class="player-photo"
+                  />
+                  <div class="stats-info">
+                    <h4>Aguirrezabala</h4>
+                    <p class="stats">
+                      <span class="games">31 PJ</span>
+                      <span class="clean-sheets">12 Vallas invictas</span>
+                      <span class="saves">89 Atajadas</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal de Aguirrezabala -->
+    <div id="aguirrezabala-modal" class="player-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-layout">
+          <div class="jugador-perfil">
+            <div class="jugador-header">
+              <div class="jugador-info-general">
+                <h2>Julen Aguirrezabala</h2>
+                <div class="jugador-valoracion">
+                  <span class="modal-grl-label">VAL</span>
+                  <span class="modal-grl">83</span>
+                </div>
+              </div>
+              <div class="jugador-posicion-principal">
+                <span class="position por">POR</span>
+                <span>Portero</span>
+                <span class="nacionalidad">🇪🇸 España</span>
+              </div>
+            </div>
+            <div class="jugador-imagen-container">
+              <img
+                src="../../img/players_model/agirrezabala-model.png"
+                alt="Modelo Aguirrezabala"
+                class="jugador-imagen"
+              />
+              <div class="jugador-dorsal-container">
+                <span id="modal-dorsal">1</span>
+              </div>
+            </div>
+          </div>
+          <div class="jugador-estadisticas">
+            <div class="estado-section">
+              <h3>Estadísticas de la temporada</h3>
+              <div class="estado-info">
+                <div class="info-row">
+                  <span class="info-label">Partidos jugados</span>
+                  <span class="info-value">31</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Vallas invictas</span>
+                  <span class="info-value">12</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Atajadas</span>
+                  <span class="info-value">89</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">% Atajadas</span>
+                  <span class="info-value">76%</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Goles concedidos</span>
+                  <span class="info-value">28</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Penaltis atajados</span>
+                  <span class="info-value">2</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Saques largos</span>
+                  <span class="info-value">35</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Precisión de pases</span>
+                  <span class="info-value">91%</span>
+                </div>
+              </div>
+            </div>
+            <div class="contrato-section">
+              <h3>Valoración</h3>
+              <div class="rating-bars">
+                <div class="rating-item">
+                  <span class="rating-label">Reflejos</span>
+                  <div class="rating-bar">
+                    <div class="rating-fill" style="width: 85%"></div>
+                  </div>
+                  <span class="rating-value">85</span>
+                </div>
+                <div class="rating-item">
+                  <span class="rating-label">Posicionamiento</span>
+                  <div class="rating-bar">
+                    <div class="rating-fill" style="width: 82%"></div>
+                  </div>
+                  <span class="rating-value">82</span>
+                </div>
+                <div class="rating-item">
+                  <span class="rating-label">Juego aéreo</span>
+                  <div class="rating-bar">
+                    <div class="rating-fill" style="width: 78%"></div>
+                  </div>
+                  <span class="rating-value">78</span>
+                </div>
+                <div class="rating-item">
+                  <span class="rating-label">Juego con los pies</span>
+                  <div class="rating-bar">
+                    <div class="rating-fill" style="width: 87%"></div>
+                  </div>
+                  <span class="rating-value">87</span>
+                </div>
+                <div class="rating-item">
+                  <span class="rating-label">Concentración</span>
+                  <div class="rating-bar">
+                    <div class="rating-fill" style="width: 83%"></div>
+                  </div>
+                  <span class="rating-value">83</span>
+                </div>
+              </div>
+              <div class="contrato-info">
+                <div class="info-row">
+                  <span class="info-label">Edad</span>
+                  <span class="info-value">23 años</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Altura</span>
+                  <span class="info-value">1,86 m</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Peso</span>
+                  <span class="info-value">78 kg</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Contrato</span>
+                  <span class="info-value">2024-2027</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Cláusula</span>
+                  <span class="info-value">€25M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

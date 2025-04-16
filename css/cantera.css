@@ -1,0 +1,913 @@
+/* Estilos para la página de jugadores */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para las pestañas */
+.tabs-container {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab.active {
+  background-color: #fff;
+  border-color: #ddd;
+  border-bottom: 2px solid #3498db;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Estilos para la búsqueda */
+.search-bar {
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Estilos para los filtros de posición */
+.position-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.position-filter {
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.position-filter:hover {
+  background-color: #e0e0e0;
+}
+
+.position-filter.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Estilos para la tabla de jugadores */
+.jugadores-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jugadores-table th,
+.jugadores-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.jugadores-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.jugadores-table th:hover {
+  background-color: #e9ecef;
+}
+
+.jugadores-table th::after {
+  content: "↕";
+  font-size: 12px;
+  opacity: 0.3;
+  margin-left: 5px;
+}
+
+.jugadores-table th.asc::after {
+  content: "↑";
+  opacity: 1;
+}
+
+.jugadores-table th.desc::after {
+  content: "↓";
+  opacity: 1;
+}
+
+.jugadores-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos para los valores de los jugadores */
+.valor,
+.potential {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.valor[data-valor="90"],
+.valor[data-valor="91"],
+.valor[data-valor="92"],
+.valor[data-valor="93"],
+.valor[data-valor="94"],
+.valor[data-valor="95"],
+.valor[data-valor="96"],
+.valor[data-valor="97"],
+.valor[data-valor="98"],
+.valor[data-valor="99"] {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.valor[data-valor="80"],
+.valor[data-valor="81"],
+.valor[data-valor="82"],
+.valor[data-valor="83"],
+.valor[data-valor="84"],
+.valor[data-valor="85"],
+.valor[data-valor="86"],
+.valor[data-valor="87"],
+.valor[data-valor="88"],
+.valor[data-valor="89"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.valor[data-valor="70"],
+.valor[data-valor="71"],
+.valor[data-valor="72"],
+.valor[data-valor="73"],
+.valor[data-valor="74"],
+.valor[data-valor="75"],
+.valor[data-valor="76"],
+.valor[data-valor="77"],
+.valor[data-valor="78"],
+.valor[data-valor="79"] {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.valor[data-valor="60"],
+.valor[data-valor="61"],
+.valor[data-valor="62"],
+.valor[data-valor="63"],
+.valor[data-valor="64"],
+.valor[data-valor="65"],
+.valor[data-valor="66"],
+.valor[data-valor="67"],
+.valor[data-valor="68"],
+.valor[data-valor="69"] {
+  background-color: #e67e22;
+  color: white;
+}
+
+.valor[data-valor="0"],
+.valor[data-valor="1"],
+.valor[data-valor="2"],
+.valor[data-valor="3"],
+.valor[data-valor="4"],
+.valor[data-valor="5"],
+.valor[data-valor="6"],
+.valor[data-valor="7"],
+.valor[data-valor="8"],
+.valor[data-valor="9"],
+.valor[data-valor="10"],
+.valor[data-valor="11"],
+.valor[data-valor="12"],
+.valor[data-valor="13"],
+.valor[data-valor="14"],
+.valor[data-valor="15"],
+.valor[data-valor="16"],
+.valor[data-valor="17"],
+.valor[data-valor="18"],
+.valor[data-valor="19"],
+.valor[data-valor="20"],
+.valor[data-valor="21"],
+.valor[data-valor="22"],
+.valor[data-valor="23"],
+.valor[data-valor="24"],
+.valor[data-valor="25"],
+.valor[data-valor="26"],
+.valor[data-valor="27"],
+.valor[data-valor="28"],
+.valor[data-valor="29"],
+.valor[data-valor="30"],
+.valor[data-valor="31"],
+.valor[data-valor="32"],
+.valor[data-valor="33"],
+.valor[data-valor="34"],
+.valor[data-valor="35"],
+.valor[data-valor="36"],
+.valor[data-valor="37"],
+.valor[data-valor="38"],
+.valor[data-valor="39"],
+.valor[data-valor="40"],
+.valor[data-valor="41"],
+.valor[data-valor="42"],
+.valor[data-valor="43"],
+.valor[data-valor="44"],
+.valor[data-valor="45"],
+.valor[data-valor="46"],
+.valor[data-valor="47"],
+.valor[data-valor="48"],
+.valor[data-valor="49"],
+.valor[data-valor="50"],
+.valor[data-valor="51"],
+.valor[data-valor="52"],
+.valor[data-valor="53"],
+.valor[data-valor="54"],
+.valor[data-valor="55"],
+.valor[data-valor="56"],
+.valor[data-valor="57"],
+.valor[data-valor="58"],
+.valor[data-valor="59"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Estilos para el potencial de jugadores de cantera */
+.potential[data-potential="90"],
+.potential[data-potential="91"],
+.potential[data-potential="92"],
+.potential[data-potential="93"],
+.potential[data-potential="94"],
+.potential[data-potential="95"],
+.potential[data-potential="96"],
+.potential[data-potential="97"],
+.potential[data-potential="98"],
+.potential[data-potential="99"] {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.potential[data-potential="80"],
+.potential[data-potential="81"],
+.potential[data-potential="82"],
+.potential[data-potential="83"],
+.potential[data-potential="84"],
+.potential[data-potential="85"],
+.potential[data-potential="86"],
+.potential[data-potential="87"],
+.potential[data-potential="88"],
+.potential[data-potential="89"] {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.potential[data-potential="70"],
+.potential[data-potential="71"],
+.potential[data-potential="72"],
+.potential[data-potential="73"],
+.potential[data-potential="74"],
+.potential[data-potential="75"],
+.potential[data-potential="76"],
+.potential[data-potential="77"],
+.potential[data-potential="78"],
+.potential[data-potential="79"] {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Estilos para la forma */
+.forma {
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.forma[data-forma="excelente"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.forma[data-forma="buena"] {
+  background-color: #3498db;
+  color: white;
+}
+
+.forma[data-forma="normal"] {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.forma[data-forma="mala"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Estilos para la posición */
+.position {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.position:contains("POR") {
+  background-color: #3498db;
+  color: white;
+}
+
+.position:contains("DEF") {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.position:contains("MED") {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.position:contains("DEL") {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Estilos para la formación */
+.formacion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formacion-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.campo {
+  position: relative;
+  width: 600px;
+  height: 800px;
+  background-color: #4caf50;
+  border: 3px solid white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.campo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.campo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.jugador {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.jugador:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.jugador .numero {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.jugador .nombre {
+  font-size: 12px;
+  color: #333;
+  margin-top: 3px;
+}
+
+.portero {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+}
+
+.defensa.left {
+  bottom: 25%;
+  left: 15%;
+  background-color: #2ecc71;
+}
+
+.defensa.center-left {
+  bottom: 25%;
+  left: 35%;
+  background-color: #2ecc71;
+}
+
+.defensa.center-right {
+  bottom: 25%;
+  right: 35%;
+  background-color: #2ecc71;
+}
+
+.defensa.right {
+  bottom: 25%;
+  right: 15%;
+  background-color: #2ecc71;
+}
+
+.medio.left {
+  bottom: 45%;
+  left: 20%;
+  background-color: #f1c40f;
+}
+
+.medio.center {
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1c40f;
+}
+
+.medio.right {
+  bottom: 45%;
+  right: 20%;
+  background-color: #f1c40f;
+}
+
+.delantero.left {
+  bottom: 70%;
+  left: 25%;
+  background-color: #e74c3c;
+}
+
+.delantero.center {
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e74c3c;
+}
+
+.delantero.right {
+  bottom: 70%;
+  right: 25%;
+  background-color: #e74c3c;
+}
+
+.tactica {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tactica h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.tactica ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tactica li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tactica li:last-child {
+  border-bottom: none;
+}
+
+/* Corrección para el selector :contains que no es estándar */
+.position {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Estas reglas funcionarán mejor para elementos específicos */
+.position:nth-child(1) {
+  background-color: #3498db;
+  color: white;
+}
+
+.player-row .position,
+.cantera-player-row .position {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  min-width: 40px;
+}
+
+tr .position:contains("POR") {
+  background-color: #3498db !important;
+  color: white !important;
+}
+
+tr .position:contains("DEF") {
+  background-color: #2ecc71 !important;
+  color: white !important;
+}
+
+tr .position:contains("MED") {
+  background-color: #f1c40f !important;
+  color: black !important;
+}
+
+tr .position:contains("DEL") {
+  background-color: #e74c3c !important;
+  color: white !important;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .tabs-container {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    flex: 1 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .jugadores-table {
+    font-size: 14px;
+  }
+
+  .jugadores-table th,
+  .jugadores-table td {
+    padding: 8px;
+  }
+
+  .campo {
+    width: 100%;
+    height: 600px;
+  }
+
+  .jugador {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Estilos para la pestaña de Cantera */
+.potential {
+  display: inline-block;
+  width: 36px;
+  height: 29px;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: #000;
+  line-height: 29px;
+  background-color: #ce93d8; /* Color morado para potencial */
+}
+
+/* Estilos específicos para POT en la tabla de Cantera */
+#cantera th:nth-child(6),
+#cantera td:nth-child(6) {
+  /* POT */
+  width: 72px;
+  text-align: center;
+}
+
+/* Estilos específicos para Edad en la tabla de Cantera */
+#cantera th:nth-child(5),
+#cantera td:nth-child(5) {
+  /* Edad */
+  width: 72px;
+  text-align: center;
+}
+
+/* Rangos de colores para potencial */
+.potential[data-pot="75"],
+.potential[data-pot="76"],
+.potential[data-pot="77"],
+.potential[data-pot="78"],
+.potential[data-pot="79"],
+.potential[data-pot="80"] {
+  background-color: #8bc34a; /* Verde claro */
+}
+
+.potential[data-pot="81"],
+.potential[data-pot="82"],
+.potential[data-pot="83"],
+.potential[data-pot="84"],
+.potential[data-pot="85"] {
+  background-color: #3d8c40; /* Verde oscuro */
+}
+
+.potential[data-pot="86"],
+.potential[data-pot="87"],
+.potential[data-pot="88"],
+.potential[data-pot="89"],
+.potential[data-pot="90"],
+.potential[data-pot="91"],
+.potential[data-pot="92"],
+.potential[data-pot="93"],
+.potential[data-pot="94"],
+.potential[data-pot="95"] {
+  background-color: #ce93d8; /* Morado para potencial excepcional */
+}
+
+/* Ajustes para la visualización de la formación de cantera */
+#formaciones .formation-details {
+  margin-bottom: 30px;
+}
+
+#formaciones .team-tactics {
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+}
+
+#formaciones .formation-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--background-hover);
+}
+
+#formaciones .formation-container {
+  margin-bottom: 40px;
+}
+
+/* Estilos para las pestañas */
+.tab {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  border-bottom-color: var(--color-accent);
+}
+
+/* Ajustes para la vista móvil */
+@media (max-width: 768px) {
+  #cantera .jugadores-table {
+    font-size: 0.95rem;
+  }
+
+  #cantera th,
+  #cantera td {
+    padding: 10px 5px;
+  }
+
+  .potential {
+    width: 32px;
+    height: 26px;
+    font-size: 0.95rem;
+    line-height: 26px;
+  }
+}
+
+/* Estilos para el modal de jugador */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  width: 85%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #a0a0a0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-modal:hover {
+  color: #ffffff;
+}
+
+.modal-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.jugador-perfil {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: linear-gradient(to bottom, #232a3b, #1a1a1a);
+  border-bottom: 1px solid #333;
+}
+
+.jugador-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.jugador-info-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jugador-info-general h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.jugador-valoracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-grl-label {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.modal-grl {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8bc34a;
+  line-height: 1;
+}
+
+.jugador-posicion-principal {
+  display: flex;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.jugador-estadisticas {
+  display: flex;
+  padding: 30px;
+  gap: 50px;
+}
+
+.estado-section,
+.contrato-section {
+  flex: 1;
+}
+
+.estado-section h3,
+.contrato-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #a0a0a0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.estado-info,
+.contrato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-label {
+  color: #a0a0a0;
+  font-size: 1rem;
+}
+
+.info-value {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hacer que las filas de jugadores sean clickeables */
+tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos responsivos para el modal */
+@media (min-width: 992px) {
+  .modal-layout {
+    flex-direction: row;
+  }
+
+  .jugador-perfil {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .jugador-info-general {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .jugador-valoracion {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .modal-grl-label {
+    margin-bottom: 0;
+  }
+
+  .jugador-estadisticas {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}

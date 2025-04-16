@@ -14,6 +14,17 @@
   --spacing-lg: 2rem;
   --rating-color: #ffd700;
   --card-border-color: #4caf50;
+  --color-accent: #0066cc;
+  --transition: all 0.3s ease;
+  --font-primary: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-heading: "Libre Caslon Text", serif;
+  --rating-low: #ff9800; /* Naranja: 50-60 */
+  --rating-medium: #ffeb3b; /* Amarillo: 61-70 */
+  --rating-high: #8bc34a; /* Verde claro: 71-80 */
+  --rating-very-high: #3d8c40; /* Verde oscuro: 81-90 */
+  --rating-exceptional: #ce93d8; /* Morado: 91+ */
 }
 
 * {
@@ -23,11 +34,19 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-primary);
   background-color: var(--background-dark);
   color: var(--text-primary);
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
 
 /*-----------------------------------*\
@@ -85,15 +104,41 @@ nav a {
   gap: var(--spacing-sm);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 6px;
-  transition: background-color 0.3s;
+  transition: var(--transition);
+  position: relative;
+  margin: 0 0.25rem;
+}
+
+nav a:after {
+  content: "";
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: var(--color-accent);
+  transition: var(--transition);
+}
+
+nav a:hover:after {
+  width: 100%;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
 }
 
 nav a.active {
-  background-color: var(--primary-color);
+  color: var(--color-accent);
+}
+
+nav a.active:after {
+  width: 100%;
+}
+
+nav a.highlight {
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 /*-----------------------------------*\
@@ -422,14 +467,96 @@ nav a.active {
 }
 
 .team-rating {
-  text-align: center;
-  margin-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.rating-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
 }
 
 .rating-value {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--rating-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #000;
+}
+
+/* Colores de valoración según el rango */
+.rating-value[data-rating="76"],
+.rating-value[data-rating="75"],
+.rating-value[data-rating="74"],
+.rating-value[data-rating="73"],
+.rating-value[data-rating="72"],
+.rating-value[data-rating="71"],
+.rating-value[data-rating="77"],
+.rating-value[data-rating="78"],
+.rating-value[data-rating="79"],
+.rating-value[data-rating="80"] {
+  background-color: var(--rating-high); /* Verde claro: 71-80 */
+}
+
+.rating-value[data-rating="61"],
+.rating-value[data-rating="62"],
+.rating-value[data-rating="63"],
+.rating-value[data-rating="64"],
+.rating-value[data-rating="65"],
+.rating-value[data-rating="66"],
+.rating-value[data-rating="67"],
+.rating-value[data-rating="68"],
+.rating-value[data-rating="69"],
+.rating-value[data-rating="70"] {
+  background-color: var(--rating-medium); /* Amarillo: 61-70 */
+}
+
+.rating-value[data-rating="50"],
+.rating-value[data-rating="51"],
+.rating-value[data-rating="52"],
+.rating-value[data-rating="53"],
+.rating-value[data-rating="54"],
+.rating-value[data-rating="55"],
+.rating-value[data-rating="56"],
+.rating-value[data-rating="57"],
+.rating-value[data-rating="58"],
+.rating-value[data-rating="59"],
+.rating-value[data-rating="60"] {
+  background-color: var(--rating-low); /* Naranja: 50-60 */
+}
+
+.rating-value[data-rating="81"],
+.rating-value[data-rating="82"],
+.rating-value[data-rating="83"],
+.rating-value[data-rating="84"],
+.rating-value[data-rating="85"],
+.rating-value[data-rating="86"],
+.rating-value[data-rating="87"],
+.rating-value[data-rating="88"],
+.rating-value[data-rating="89"],
+.rating-value[data-rating="90"] {
+  background-color: var(--rating-very-high); /* Verde oscuro: 81-90 */
+}
+
+.rating-value[data-rating="91"],
+.rating-value[data-rating="92"],
+.rating-value[data-rating="93"],
+.rating-value[data-rating="94"],
+.rating-value[data-rating="95"],
+.rating-value[data-rating="96"],
+.rating-value[data-rating="97"],
+.rating-value[data-rating="98"],
+.rating-value[data-rating="99"] {
+  background-color: var(--rating-exceptional); /* Morado: 91+ */
 }
 
 .team-name {
