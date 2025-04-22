@@ -1035,20 +1035,174 @@ tbody tr:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
 .player-modal .modal-content {
-  width: 500px;
-  background-color: #ff3a44;
-  border-radius: 0;
+  width: 800px;
+  background-color: var(--background-dark);
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   animation: modalOpen 0.3s ease;
+}
+
+.modal-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--background-light);
+  position: relative;
+}
+
+.player-basic-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-modal-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.player-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player-age {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.player-grl {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+}
+
+#modal-player-rating {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.rating-trend {
+  color: #4caf50;
+  font-size: 0.8rem;
+}
+
+.player-name-position {
+  text-align: center;
+}
+
+#modal-player-name {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+#modal-player-lastname {
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: var(--text-secondary);
+}
+
+.position-info {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.player-attributes {
+  text-align: right;
+}
+
+.preferred-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.foot-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.foot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--background-dark);
+  border-radius: 50%;
+}
+
+.foot.active {
+  background-color: #4caf50;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+.stat-value.red {
+  color: #f44336;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 @keyframes modalOpen {
@@ -1062,72 +1216,31 @@ tbody tr:hover {
   }
 }
 
-.player-modal .player-header {
-  display: flex;
-  padding: 15px;
-  background-color: #ff3a44;
-  color: white;
-  align-items: center;
-}
-
-.player-modal .player-menu-section {
-  display: flex;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.player-modal .player-menu-section:last-child {
-  border-bottom: none;
-}
-
-.player-modal .player-menu-section-title {
-  padding: 15px;
-  font-weight: bold;
-  background-color: white;
-  color: #ff3a44;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-}
-
-.player-modal .player-menu-section-items {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-}
-
-.player-modal .player-menu-item {
-  padding: 15px 20px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-size: 1rem;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  flex: 1;
-  min-width: 150px;
-}
-
-.player-modal .player-menu-item:hover {
-  background-color: #ff5c63;
-}
-
-/* Responsivo para el modal */
+/* Responsive */
 @media (max-width: 768px) {
   .player-modal .modal-content {
     width: 95%;
-    max-width: 450px;
+    max-width: 600px;
   }
 
-  .player-modal .player-menu-section {
-    flex-direction: column;
+  .modal-header {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .player-modal .player-menu-section-title {
-    width: 100%;
+  .player-basic-info {
+    justify-content: center;
   }
 
-  .player-modal .player-menu-item {
-    padding: 12px 15px;
-    font-size: 0.9rem;
+  .player-attributes {
+    text-align: center;
+  }
+
+  .foot-icons {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
