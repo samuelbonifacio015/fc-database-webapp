@@ -1,0 +1,631 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-22",
+    "totalPlayers": 23,
+    "seasons": ["2024-2025"],
+    "lastModified": "2025-01-22T10:00:00Z"
+  },
+  "players": [
+    {
+      "id": "agirrezabala_julen_001",
+      "basicInfo": {
+        "name": "J. Agirrezabala",
+        "fullName": "Julen Agirrezabala",
+        "position": "POR",
+        "age": 25,
+        "nationality": "España",
+        "nationalityCode": "ES",
+        "photoUrl": "../../img/players_icons/agirrezabala.jpg",
+        "dorsal": 1
+      },
+      "gameStats": {
+        "rating": 82,
+        "potential": 85,
+        "value": "32.5M",
+        "salary": "60K",
+        "contract": {
+          "years": 5,
+          "startDate": "2024-07-01",
+          "endDate": "2029-06-30"
+        }
+      },
+      "attributes": {
+        "estiradas": 79,
+        "paradas": 82,
+        "saque": 86,
+        "reflejos": 76,
+        "velocidad": 34,
+        "colocacion": 85,
+        "pace": 34,
+        "shooting": 15,
+        "passing": 86,
+        "dribbling": 45,
+        "defending": 82,
+        "physical": 75
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 34,
+          "goals": 0,
+          "assists": 1,
+          "rating": 8.2,
+          "minutesPlayed": 3060,
+          "cleanSheets": 18,
+          "saves": 124
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Clave",
+        "form": "Normal",
+        "preferredFoot": "Izquierda"
+      }
+    },
+    {
+      "id": "sulemana_kamaldeen_002",
+      "basicInfo": {
+        "name": "K. Sulemana",
+        "fullName": "Kamaldeen Sulemana",
+        "position": "EI",
+        "age": 22,
+        "nationality": "Ghana",
+        "nationalityCode": "GH",
+        "photoUrl": "../../img/players_icons/sulemana.jpg",
+        "dorsal": 7
+      },
+      "gameStats": {
+        "rating": 82,
+        "potential": 88,
+        "value": "45M",
+        "salary": "85K",
+        "contract": {
+          "years": 4,
+          "startDate": "2023-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 94,
+        "shooting": 78,
+        "passing": 75,
+        "dribbling": 88,
+        "defending": 35,
+        "physical": 72
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 32,
+          "goals": 14,
+          "assists": 8,
+          "rating": 8.1,
+          "minutesPlayed": 2880
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Clave",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "hilali_othman_003",
+      "basicInfo": {
+        "name": "O. El Hilali",
+        "fullName": "Othman El Hilali",
+        "position": "LI",
+        "age": 24,
+        "nationality": "Marruecos",
+        "nationalityCode": "MA",
+        "photoUrl": "../../img/players_icons/hilali.jpg",
+        "dorsal": 16
+      },
+      "gameStats": {
+        "rating": 79,
+        "potential": 83,
+        "value": "28M",
+        "salary": "70K",
+        "contract": {
+          "years": 3,
+          "startDate": "2024-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 85,
+        "shooting": 65,
+        "passing": 78,
+        "dribbling": 82,
+        "defending": 76,
+        "physical": 74
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 29,
+          "goals": 5,
+          "assists": 12,
+          "rating": 7.8,
+          "minutesPlayed": 2610
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Izquierda"
+      }
+    },
+    {
+      "id": "alzate_steven_004",
+      "basicInfo": {
+        "name": "S. Alzate",
+        "fullName": "Steven Alzate",
+        "position": "MC",
+        "age": 26,
+        "nationality": "Colombia",
+        "nationalityCode": "CO",
+        "photoUrl": "../../img/players_icons/alzate.jpg",
+        "dorsal": 10
+      },
+      "gameStats": {
+        "rating": 78,
+        "potential": 80,
+        "value": "22M",
+        "salary": "55K",
+        "contract": {
+          "years": 3,
+          "startDate": "2024-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 72,
+        "shooting": 74,
+        "passing": 82,
+        "dribbling": 78,
+        "defending": 65,
+        "physical": 76
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 31,
+          "goals": 8,
+          "assists": 11,
+          "rating": 7.6,
+          "minutesPlayed": 2790
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "calvo_izan_005",
+      "basicInfo": {
+        "name": "I. Calvo",
+        "fullName": "Izan Calvo",
+        "position": "LD",
+        "age": 21,
+        "nationality": "España",
+        "nationalityCode": "ES",
+        "photoUrl": "../../img/players_icons/calvo.jpg",
+        "dorsal": 2
+      },
+      "gameStats": {
+        "rating": 78,
+        "potential": 85,
+        "value": "18M",
+        "salary": "38K",
+        "contract": {
+          "years": 4,
+          "startDate": "2023-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 82,
+        "shooting": 58,
+        "passing": 76,
+        "dribbling": 74,
+        "defending": 78,
+        "physical": 75
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 28,
+          "goals": 3,
+          "assists": 7,
+          "rating": 7.4,
+          "minutesPlayed": 2520
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Izquierda"
+      }
+    },
+    {
+      "id": "marsa_jordi_006",
+      "basicInfo": {
+        "name": "J. Marsà",
+        "fullName": "Jordi Marsà",
+        "position": "DFC",
+        "age": 23,
+        "nationality": "España",
+        "nationalityCode": "ES",
+        "photoUrl": "../../img/players_icons/marsa.jpg",
+        "dorsal": 3
+      },
+      "gameStats": {
+        "rating": 78,
+        "potential": 82,
+        "value": "18M",
+        "salary": "38K",
+        "contract": {
+          "years": 3,
+          "startDate": "2023-07-01",
+          "endDate": "2026-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 68,
+        "shooting": 45,
+        "passing": 78,
+        "dribbling": 65,
+        "defending": 82,
+        "physical": 81
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 30,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.5,
+          "minutesPlayed": 2700
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Clave",
+        "form": "Normal",
+        "preferredFoot": "Izquierda"
+      }
+    },
+    {
+      "id": "mwanga_aurelien_007",
+      "basicInfo": {
+        "name": "A. Mwanga",
+        "fullName": "Aurélien Mwanga",
+        "position": "DFC",
+        "age": 22,
+        "nationality": "Francia",
+        "nationalityCode": "FR",
+        "photoUrl": "../../img/players_icons/mwanga.jpg",
+        "dorsal": 4
+      },
+      "gameStats": {
+        "rating": 78,
+        "potential": 84,
+        "value": "16M",
+        "salary": "35K",
+        "contract": {
+          "years": 4,
+          "startDate": "2024-07-01",
+          "endDate": "2028-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 75,
+        "shooting": 42,
+        "passing": 74,
+        "dribbling": 68,
+        "defending": 84,
+        "physical": 82
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 27,
+          "goals": 1,
+          "assists": 2,
+          "rating": 7.3,
+          "minutesPlayed": 2430
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "kuipers_dirk_008",
+      "basicInfo": {
+        "name": "D. Kuipers",
+        "fullName": "Dirk Kuipers",
+        "position": "DFC",
+        "age": 24,
+        "nationality": "Países Bajos",
+        "nationalityCode": "NL",
+        "photoUrl": "../../img/players_icons/kuipers.jpg",
+        "dorsal": 5
+      },
+      "gameStats": {
+        "rating": 77,
+        "potential": 81,
+        "value": "15M",
+        "salary": "32K",
+        "contract": {
+          "years": 3,
+          "startDate": "2024-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 70,
+        "shooting": 38,
+        "passing": 76,
+        "dribbling": 62,
+        "defending": 83,
+        "physical": 85
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 25,
+          "goals": 3,
+          "assists": 0,
+          "rating": 7.2,
+          "minutesPlayed": 2250
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Rotación",
+        "form": "Normal",
+        "preferredFoot": "Izquierda"
+      }
+    },
+    {
+      "id": "seungho_paik_009",
+      "basicInfo": {
+        "name": "Paik Seung Ho",
+        "fullName": "Paik Seung Ho",
+        "position": "MC",
+        "age": 27,
+        "nationality": "Corea del Sur",
+        "nationalityCode": "KR",
+        "photoUrl": "../../img/players_icons/seungho.jpg",
+        "dorsal": 18
+      },
+      "gameStats": {
+        "rating": 75,
+        "potential": 77,
+        "value": "12M",
+        "salary": "30K",
+        "contract": {
+          "years": 3,
+          "startDate": "2023-07-01",
+          "endDate": "2026-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 68,
+        "shooting": 72,
+        "passing": 78,
+        "dribbling": 74,
+        "defending": 71,
+        "physical": 73
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 26,
+          "goals": 4,
+          "assists": 6,
+          "rating": 7.1,
+          "minutesPlayed": 2340
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "jinseob_park_010",
+      "basicInfo": {
+        "name": "Park Jin Seob",
+        "fullName": "Park Jin Seob",
+        "position": "DFC",
+        "age": 25,
+        "nationality": "Corea del Sur",
+        "nationalityCode": "KR",
+        "photoUrl": "../../img/players_icons/jinseob.jpg",
+        "dorsal": 24
+      },
+      "gameStats": {
+        "rating": 75,
+        "potential": 78,
+        "value": "11M",
+        "salary": "28K",
+        "contract": {
+          "years": 3,
+          "startDate": "2024-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 72,
+        "shooting": 45,
+        "passing": 74,
+        "dribbling": 68,
+        "defending": 79,
+        "physical": 76
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 22,
+          "goals": 1,
+          "assists": 2,
+          "rating": 6.9,
+          "minutesPlayed": 1980
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Clave",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "adam_martin_011",
+      "basicInfo": {
+        "name": "M. Adám",
+        "fullName": "Martin Adám",
+        "position": "DC",
+        "age": 29,
+        "nationality": "Hungría",
+        "nationalityCode": "HU",
+        "photoUrl": "../../img/players_icons/adam.jpg",
+        "dorsal": 9
+      },
+      "gameStats": {
+        "rating": 76,
+        "potential": 76,
+        "value": "8M",
+        "salary": "25K",
+        "contract": {
+          "years": 2,
+          "startDate": "2024-07-01",
+          "endDate": "2026-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 65,
+        "shooting": 81,
+        "passing": 68,
+        "dribbling": 70,
+        "defending": 38,
+        "physical": 84
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 30,
+          "goals": 18,
+          "assists": 4,
+          "rating": 7.8,
+          "minutesPlayed": 2700
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Clave",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    },
+    {
+      "id": "duk_stojan_012",
+      "basicInfo": {
+        "name": "Duk",
+        "fullName": "Stojan Duk",
+        "position": "DC",
+        "age": 28,
+        "nationality": "Cabo Verde",
+        "nationalityCode": "CV",
+        "photoUrl": "../../img/players_icons/duk.jpg",
+        "dorsal": 11
+      },
+      "gameStats": {
+        "rating": 77,
+        "potential": 77,
+        "value": "12M",
+        "salary": "28K",
+        "contract": {
+          "years": 3,
+          "startDate": "2024-07-01",
+          "endDate": "2027-06-30"
+        }
+      },
+      "attributes": {
+        "pace": 78,
+        "shooting": 79,
+        "passing": 65,
+        "dribbling": 76,
+        "defending": 35,
+        "physical": 75
+      },
+      "seasonStats": {
+        "2024-2025": {
+          "appearances": 28,
+          "goals": 15,
+          "assists": 6,
+          "rating": 7.6,
+          "minutesPlayed": 2520
+        }
+      },
+      "status": {
+        "isActive": true,
+        "isYouthPlayer": false,
+        "onLoan": false,
+        "transferListed": false,
+        "injured": false,
+        "importance": "Importante",
+        "form": "Normal",
+        "preferredFoot": "Derecha"
+      }
+    }
+  ]
+} 
