@@ -491,4 +491,4 @@ if (window.location.pathname.includes('jugadores.html')) {
   });
 }
 
-export default PlayerMigration; 
+// PlayerMigration disponible globalmente 

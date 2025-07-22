@@ -662,18 +662,35 @@
         <div class="player-info-body">
           <div class="player-profile-section">
             <div class="player-photo-section">
-              <img id="playerLargePhoto" src="" alt="Jugador" class="player-large-photo">
+              <img
+                id="playerLargePhoto"
+                src=""
+                alt="Jugador"
+                class="player-large-photo"
+              />
               <div class="player-basic-details">
-                <div id="playerNameDisplay" class="player-name-display">Nombre del Jugador</div>
-                <div class="player-position-display">
-                  <span id="playerNationalityFlag" class="player-nationality-flag">🏳️</span>
-                  <span id="playerPositionBadge" class="player-position-badge">POS</span>
+                <div id="playerNameDisplay" class="player-name-display">
+                  Nombre del Jugador
                 </div>
-                <div id="playerAgeDisplay" class="player-age-display">Edad: 25 años</div>
+                <div class="player-position-display">
+                  <span
+                    id="playerNationalityFlag"
+                    class="player-nationality-flag"
+                    >🏳️</span
+                  >
+                  <span id="playerPositionBadge" class="player-position-badge"
+                    >POS</span
+                  >
+                </div>
+                <div id="playerAgeDisplay" class="player-age-display">
+                  Edad: 25 años
+                </div>
                 <div class="player-rating-display">
                   <div class="rating-label">Rating Actual</div>
                   <div id="playerRatingValue" class="rating-value">76</div>
-                  <div class="potential-value">POT: <span id="playerPotentialValue">80</span></div>
+                  <div class="potential-value">
+                    POT: <span id="playerPotentialValue">80</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -683,46 +700,66 @@
                   <h3>Información Contractual</h3>
                   <div class="stat-row">
                     <span class="stat-label">Valor de Mercado</span>
-                    <span id="playerValueDisplay" class="stat-value highlight">€15M</span>
+                    <span id="playerValueDisplay" class="stat-value highlight"
+                      >€15M</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Salario Semanal</span>
-                    <span id="playerSalaryDisplay" class="stat-value">€30K</span>
+                    <span id="playerSalaryDisplay" class="stat-value"
+                      >€30K</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Contrato</span>
-                    <span id="playerContractDisplay" class="stat-value">2024 ~ 2027</span>
+                    <span id="playerContractDisplay" class="stat-value"
+                      >2024 ~ 2027</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Importancia</span>
-                    <span id="playerImportanceDisplay" class="stat-value">Importante</span>
+                    <span id="playerImportanceDisplay" class="stat-value"
+                      >Importante</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Forma</span>
-                    <span id="playerFormDisplay" class="stat-value">Normal</span>
+                    <span id="playerFormDisplay" class="stat-value"
+                      >Normal</span
+                    >
                   </div>
                 </div>
                 <div class="stats-group">
                   <h3>Estadísticas 2024-25</h3>
                   <div class="stat-row">
                     <span class="stat-label">Partidos Jugados</span>
-                    <span id="playerAppearancesDisplay" class="stat-value">25</span>
+                    <span id="playerAppearancesDisplay" class="stat-value"
+                      >25</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Goles</span>
-                    <span id="playerGoalsDisplay" class="stat-value highlight">8</span>
+                    <span id="playerGoalsDisplay" class="stat-value highlight"
+                      >8</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Asistencias</span>
-                    <span id="playerAssistsDisplay" class="stat-value highlight">5</span>
+                    <span id="playerAssistsDisplay" class="stat-value highlight"
+                      >5</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Minutos Jugados</span>
-                    <span id="playerMinutesDisplay" class="stat-value">2,250</span>
+                    <span id="playerMinutesDisplay" class="stat-value"
+                      >2,250</span
+                    >
                   </div>
                   <div class="stat-row">
                     <span class="stat-label">Media de Notas</span>
-                    <span id="playerSeasonRatingDisplay" class="stat-value">7.2</span>
+                    <span id="playerSeasonRatingDisplay" class="stat-value"
+                      >7.2</span
+                    >
                   </div>
                 </div>
               </div>
@@ -737,10 +774,16 @@
         </div>
         <div class="player-info-footer">
           <div class="modal-actions">
-            <button class="btn-modal btn-modal-secondary" id="closeInfoModalBtn">
+            <button
+              class="btn-modal btn-modal-secondary"
+              id="closeInfoModalBtn"
+            >
               Cerrar
             </button>
-            <button class="btn-modal btn-modal-primary" id="editPlayerFromInfoBtn">
+            <button
+              class="btn-modal btn-modal-primary"
+              id="editPlayerFromInfoBtn"
+            >
               ✏️ Editar Jugador
             </button>
           </div>
@@ -757,18 +800,34 @@
         </header>
         <form id="playerForm" class="player-form">
           <div class="form-tabs">
-            <button type="button" class="tab-btn active" data-tab="basic">👤 Básico</button>
-            <button type="button" class="tab-btn" data-tab="stats">📊 Stats</button>
+            <button type="button" class="tab-btn active" data-tab="basic">
+              👤 Básico
+            </button>
+            <button type="button" class="tab-btn" data-tab="stats">
+              📊 Stats
+            </button>
           </div>
           <div class="form-tab-content active" data-tab="basic">
             <div class="form-row">
               <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" id="playerName" name="name" required>
+                <label for="playerName">Nombre</label>
+                <input
+                  type="text"
+                  id="playerName"
+                  name="name"
+                  title="Nombre del jugador"
+                  placeholder="Ej: J. Agirrezabala"
+                  required
+                />
               </div>
               <div class="form-group">
-                <label>Posición</label>
-                <select id="playerPosition" name="position" required>
+                <label for="playerPosition">Posición</label>
+                <select
+                  id="playerPosition"
+                  name="position"
+                  title="Posición del jugador"
+                  required
+                >
                   <option value="POR">POR</option>
                   <option value="DFC">DFC</option>
                   <option value="MC">MC</option>
@@ -780,115 +839,230 @@
           <div class="form-tab-content" data-tab="stats">
             <div class="form-row">
               <div class="form-group">
-                <label>Rating</label>
-                <input type="number" id="playerRating" name="rating" min="40" max="99" value="65">
+                <label for="playerRating">Rating</label>
+                <input
+                  type="number"
+                  id="playerRating"
+                  name="rating"
+                  title="Rating del jugador (40-99)"
+                  placeholder="65"
+                  min="40"
+                  max="99"
+                  value="65"
+                />
               </div>
             </div>
           </div>
           <div class="form-actions">
-            <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
-            <button type="submit" class="btn btn-primary" id="saveBtn">Guardar</button>
+            <button type="button" class="btn btn-secondary" id="cancelBtn">
+              Cancelar
+            </button>
+            <button type="submit" class="btn btn-primary" id="saveBtn">
+              Guardar
+            </button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Scripts del nuevo sistema -->
+    <script>
+      console.log("📦 Cargando scripts del sistema...");
+    </script>
     <script src="../../js/database/PlayerDatabase.js"></script>
+    <script>
+      console.log("✅ PlayerDatabase.js cargado", !!window.PlayerDB);
+    </script>
     <script src="../../js/PlayerManagementModal.js"></script>
-    
+    <script>
+      console.log(
+        "✅ PlayerManagementModal.js cargado",
+        !!window.PlayerManagement
+      );
+    </script>
+
     <!-- Script principal de integración -->
     <script>
-      document.addEventListener('DOMContentLoaded', async function() {
-        console.log('🚀 Inicializando sistema de jugadores...');
-        
+      document.addEventListener("DOMContentLoaded", async function () {
+        console.log("🚀 Inicializando sistema de jugadores...");
+        console.log("🔍 Estado inicial:", {
+          url: window.location.href,
+          PlayerDB: !!window.PlayerDB,
+          PlayerManagement: !!window.PlayerManagement,
+        });
+
         // Cargar base de datos
         if (window.PlayerDB) {
+          console.log("📁 PlayerDB encontrado, iniciando carga...");
           const success = await window.PlayerDB.loadDatabase();
+          console.log(`📊 Resultado de carga: ${success ? "ÉXITO" : "FALLO"}`);
+
           if (success) {
+            console.log("🎨 Renderizando componentes...");
             renderPlayersTable();
             updateTeamStats();
             updatePositionDistribution();
             updateTopPlayers();
+            console.log("✅ Sistema de jugadores inicializado correctamente");
           } else {
-            showErrorMessage('Error cargando la base de datos de jugadores');
+            console.error("❌ Error en la carga de la base de datos");
+            showErrorMessage("Error cargando la base de datos de jugadores");
           }
+        } else {
+          console.error("❌ window.PlayerDB no está disponible");
+          showErrorMessage("Sistema de base de datos no disponible");
         }
-        
+
         // Configurar pestañas
         setupTabs();
-        
+
         // Configurar filtros
         setupFilters();
-        
+
         // Configurar botón añadir jugador
         setupAddPlayerButton();
-        
+
         // Escuchar eventos de actualización
-        document.addEventListener('playerAdded', handlePlayerUpdate);
-        document.addEventListener('playerUpdated', handlePlayerUpdate);
-        document.addEventListener('playerDeleted', handlePlayerUpdate);
+        document.addEventListener("playerAdded", handlePlayerUpdate);
+        document.addEventListener("playerUpdated", handlePlayerUpdate);
+        document.addEventListener("playerDeleted", handlePlayerUpdate);
       });
-      
+
       function renderPlayersTable() {
-        const tbody = document.getElementById('playersTableBody');
-        const cardsContainer = document.getElementById('playersCardsContainer');
-        
-        if (!window.PlayerDB || !window.PlayerDB.isLoaded) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="10" class="players-loading">Cargando jugadores...</td></tr>';
-          if (cardsContainer) cardsContainer.innerHTML = '<div class="players-loading">Cargando jugadores...</div>';
+        console.log("🎨 Iniciando renderizado de tabla de jugadores...");
+
+        const tbody = document.getElementById("playersTableBody");
+        const cardsContainer = document.getElementById("playersCardsContainer");
+
+        console.log("🔍 Elementos encontrados:", {
+          tbody: !!tbody,
+          cardsContainer: !!cardsContainer,
+          PlayerDB: !!window.PlayerDB,
+          isLoaded: window.PlayerDB ? window.PlayerDB.isLoaded : "N/A",
+        });
+
+        if (!window.PlayerDB) {
+          console.error("❌ window.PlayerDB no está disponible");
+          if (tbody)
+            tbody.innerHTML =
+              '<tr><td colspan="10" class="error-message">Error: Base de datos no disponible</td></tr>';
+          if (cardsContainer)
+            cardsContainer.innerHTML =
+              '<div class="error-message">Error: Base de datos no disponible</div>';
           return;
         }
-        
-        const players = window.PlayerDB.searchPlayers({ 
-          sortBy: 'rating', 
-          sortOrder: 'desc',
-          includeInactive: false
+
+        if (!window.PlayerDB.isLoaded) {
+          console.log("⏳ PlayerDB no está cargada aún...");
+          if (tbody)
+            tbody.innerHTML =
+              '<tr><td colspan="10" class="players-loading">Cargando jugadores...</td></tr>';
+          if (cardsContainer)
+            cardsContainer.innerHTML =
+              '<div class="players-loading">Cargando jugadores...</div>';
+          return;
+        }
+
+        console.log("🔍 PlayerDB cargada, obteniendo jugadores...");
+        const players = window.PlayerDB.searchPlayers({
+          sortBy: "rating",
+          sortOrder: "desc",
+          includeInactive: false,
         });
-        
-        console.log(`🎯 Renderizando ${players.length} jugadores`);
-        
+
+        console.log(
+          `🎯 Jugadores obtenidos para renderizar: ${players.length}`
+        );
+
+        if (players.length === 0) {
+          console.warn("⚠️ No se encontraron jugadores para mostrar");
+          if (tbody)
+            tbody.innerHTML =
+              '<tr><td colspan="10" class="no-players">No hay jugadores disponibles</td></tr>';
+          if (cardsContainer)
+            cardsContainer.innerHTML =
+              '<div class="no-players">No hay jugadores disponibles</div>';
+          return;
+        }
+
+        console.log("👥 Lista de jugadores a renderizar:");
+        players.forEach((p, i) => {
+          console.log(
+            `   ${i + 1}. ${p.basicInfo.name} (${
+              p.basicInfo.position
+            }) - Rating: ${p.gameStats.rating}`
+          );
+        });
+
         // Renderizar tabla para desktop/tablet
         if (tbody) {
-          tbody.innerHTML = players.map(player => `
+          tbody.innerHTML = players
+            .map(
+              (player) => `
             <tr data-player-id="${player.id}" class="player-row-clickable">
-              <td>${player.basicInfo.dorsal || '-'}</td>
+              <td>${player.basicInfo.dorsal || "-"}</td>
               <td>${player.basicInfo.position}</td>
               <td class="player-cell">
-                <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-avatar" onerror="this.src='../../img/players_icons/00000.png'" />
+                                 <img src="${player.basicInfo.photoUrl}" alt="${
+                player.basicInfo.name
+              }" class="player-avatar" onerror="console.log('📸 Imagen no encontrada para ${
+                player.basicInfo.name
+              }:', this.src); this.src='../../img/players_icons/00000.png'" />
                 <div class="player-info">
                   <div class="player-name">${player.basicInfo.name}</div>
                   <div class="player-position">
-                    <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
-                    <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+                    <span class="flag-icon">${getFlagEmoji(
+                      player.basicInfo.nationalityCode
+                    )}</span>
+                    <span class="position ${player.basicInfo.position.toLowerCase()}">${
+                player.basicInfo.position
+              }</span>
                   </div>
                 </div>
               </td>
-              <td><span class="rating rating-${player.gameStats.rating}">${player.gameStats.rating}</span></td>
+              <td><span class="rating rating-${player.gameStats.rating}">${
+                player.gameStats.rating
+              }</span></td>
               <td>${player.status.importance}</td>
               <td>${player.status.form}</td>
               <td>${player.gameStats.value}</td>
               <td>${formatContractDates(player.gameStats.contract)}</td>
               <td>${player.gameStats.salary}</td>
               <td class="actions-cell">
-                <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar" onclick="event.stopPropagation()">✏️</button>
-                <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar" onclick="event.stopPropagation()">🗑️</button>
+                <button class="btn-icon" data-action="edit-player" data-player-id="${
+                  player.id
+                }" title="Editar" onclick="event.stopPropagation()">✏️</button>
+                <button class="btn-icon" data-action="delete-player" data-player-id="${
+                  player.id
+                }" title="Eliminar" onclick="event.stopPropagation()">🗑️</button>
               </td>
             </tr>
-          `).join('');
+          `
+            )
+            .join("");
         }
-        
+
         // Renderizar cards para móviles
         if (cardsContainer) {
-          cardsContainer.innerHTML = players.map(player => `
+          cardsContainer.innerHTML = players
+            .map(
+              (player) => `
             <div class="player-card-mobile" data-player-id="${player.id}">
               <div class="player-card-header">
-                <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-card-avatar" onerror="this.src='../../img/players_icons/00000.png'" />
+                                 <img src="${player.basicInfo.photoUrl}" alt="${
+                player.basicInfo.name
+              }" class="player-card-avatar" onerror="console.log('📸 Imagen no encontrada para ${
+                player.basicInfo.name
+              }:', this.src); this.src='../../img/players_icons/00000.png'" />
                 <div class="player-card-info">
                   <h4>${player.basicInfo.name}</h4>
                   <div class="player-card-position">
-                    <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
-                    <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+                    <span class="flag-icon">${getFlagEmoji(
+                      player.basicInfo.nationalityCode
+                    )}</span>
+                    <span class="position ${player.basicInfo.position.toLowerCase()}">${
+                player.basicInfo.position
+              }</span>
                     <span>•</span>
                     <span>${player.basicInfo.age} años</span>
                   </div>
@@ -896,127 +1070,167 @@
               </div>
               <div class="player-card-stats">
                 <div class="player-card-stat">
-                  <span class="player-card-stat-value">${player.gameStats.rating}</span>
+                  <span class="player-card-stat-value">${
+                    player.gameStats.rating
+                  }</span>
                   <span class="player-card-stat-label">Rating</span>
                 </div>
                 <div class="player-card-stat">
-                  <span class="player-card-stat-value">${player.gameStats.value}</span>
+                  <span class="player-card-stat-value">${
+                    player.gameStats.value
+                  }</span>
                   <span class="player-card-stat-label">Valor</span>
                 </div>
                 <div class="player-card-stat">
-                  <span class="player-card-stat-value">${player.status.importance}</span>
+                  <span class="player-card-stat-value">${
+                    player.status.importance
+                  }</span>
                   <span class="player-card-stat-label">Rol</span>
                 </div>
               </div>
               <div class="player-card-actions">
-                <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar">✏️</button>
-                <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar">🗑️</button>
+                <button class="btn-icon" data-action="edit-player" data-player-id="${
+                  player.id
+                }" title="Editar">✏️</button>
+                <button class="btn-icon" data-action="delete-player" data-player-id="${
+                  player.id
+                }" title="Eliminar">🗑️</button>
               </div>
             </div>
-          `).join('');
+          `
+            )
+            .join("");
         }
-        
+
         // Configurar event listeners para modal de información
         setupPlayerInfoListeners();
       }
-      
+
       function setupPlayerInfoListeners() {
         // Event listeners para filas de tabla
-        document.querySelectorAll('.player-row-clickable').forEach(row => {
-          row.addEventListener('click', (e) => {
+        document.querySelectorAll(".player-row-clickable").forEach((row) => {
+          row.addEventListener("click", (e) => {
             // No abrir modal si se hizo click en botones de acción
-            if (e.target.closest('.actions-cell')) return;
-            
+            if (e.target.closest(".actions-cell")) return;
+
             const playerId = row.dataset.playerId;
             openPlayerInfoModal(playerId);
           });
         });
-        
+
         // Event listeners para cards móviles
-        document.querySelectorAll('.player-card-mobile').forEach(card => {
-          card.addEventListener('click', (e) => {
+        document.querySelectorAll(".player-card-mobile").forEach((card) => {
+          card.addEventListener("click", (e) => {
             // No abrir modal si se hizo click en botones de acción
-            if (e.target.closest('.player-card-actions')) return;
-            
+            if (e.target.closest(".player-card-actions")) return;
+
             const playerId = card.dataset.playerId;
             openPlayerInfoModal(playerId);
           });
         });
       }
-      
+
       function openPlayerInfoModal(playerId) {
         if (!window.PlayerDB || !window.PlayerDB.isLoaded) return;
-        
+
         const player = window.PlayerDB.getPlayerById(playerId);
         if (!player) {
-          console.error('Jugador no encontrado:', playerId);
+          console.error("Jugador no encontrado:", playerId);
           return;
         }
-        
+
         // Popular datos del modal
         populatePlayerInfoModal(player);
-        
+
         // Mostrar modal
-        const modal = document.getElementById('playerInfoModal');
+        const modal = document.getElementById("playerInfoModal");
         if (modal) {
-          modal.classList.add('active');
-          document.body.style.overflow = 'hidden';
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden";
         }
       }
-      
+
       function populatePlayerInfoModal(player) {
         // Información básica
-        const nameDisplay = document.getElementById('playerNameDisplay');
-        const photoDisplay = document.getElementById('playerLargePhoto');
-        const flagDisplay = document.getElementById('playerNationalityFlag');
-        const positionBadge = document.getElementById('playerPositionBadge');
-        const ageDisplay = document.getElementById('playerAgeDisplay');
-        const ratingValue = document.getElementById('playerRatingValue');
-        const potentialValue = document.getElementById('playerPotentialValue');
-        
+        const nameDisplay = document.getElementById("playerNameDisplay");
+        const photoDisplay = document.getElementById("playerLargePhoto");
+        const flagDisplay = document.getElementById("playerNationalityFlag");
+        const positionBadge = document.getElementById("playerPositionBadge");
+        const ageDisplay = document.getElementById("playerAgeDisplay");
+        const ratingValue = document.getElementById("playerRatingValue");
+        const potentialValue = document.getElementById("playerPotentialValue");
+
         if (nameDisplay) nameDisplay.textContent = player.basicInfo.name;
         if (photoDisplay) {
           photoDisplay.src = player.basicInfo.photoUrl;
-          photoDisplay.onerror = function() { this.src = '../../img/players_icons/00000.png'; };
+          photoDisplay.onerror = function () {
+            this.src = "../../img/players_icons/00000.png";
+          };
         }
-        if (flagDisplay) flagDisplay.textContent = getFlagEmoji(player.basicInfo.nationalityCode);
-        if (positionBadge) positionBadge.textContent = player.basicInfo.position;
-        if (ageDisplay) ageDisplay.textContent = `Edad: ${player.basicInfo.age} años`;
+        if (flagDisplay)
+          flagDisplay.textContent = getFlagEmoji(
+            player.basicInfo.nationalityCode
+          );
+        if (positionBadge)
+          positionBadge.textContent = player.basicInfo.position;
+        if (ageDisplay)
+          ageDisplay.textContent = `Edad: ${player.basicInfo.age} años`;
         if (ratingValue) ratingValue.textContent = player.gameStats.rating;
-        if (potentialValue) potentialValue.textContent = player.gameStats.potential;
-        
+        if (potentialValue)
+          potentialValue.textContent = player.gameStats.potential;
+
         // Información contractual
-        const valueDisplay = document.getElementById('playerValueDisplay');
-        const salaryDisplay = document.getElementById('playerSalaryDisplay');
-        const contractDisplay = document.getElementById('playerContractDisplay');
-        const importanceDisplay = document.getElementById('playerImportanceDisplay');
-        const formDisplay = document.getElementById('playerFormDisplay');
-        
+        const valueDisplay = document.getElementById("playerValueDisplay");
+        const salaryDisplay = document.getElementById("playerSalaryDisplay");
+        const contractDisplay = document.getElementById(
+          "playerContractDisplay"
+        );
+        const importanceDisplay = document.getElementById(
+          "playerImportanceDisplay"
+        );
+        const formDisplay = document.getElementById("playerFormDisplay");
+
         if (valueDisplay) valueDisplay.textContent = player.gameStats.value;
         if (salaryDisplay) salaryDisplay.textContent = player.gameStats.salary;
-        if (contractDisplay) contractDisplay.textContent = formatContractDates(player.gameStats.contract);
-        if (importanceDisplay) importanceDisplay.textContent = player.status.importance;
+        if (contractDisplay)
+          contractDisplay.textContent = formatContractDates(
+            player.gameStats.contract
+          );
+        if (importanceDisplay)
+          importanceDisplay.textContent = player.status.importance;
         if (formDisplay) formDisplay.textContent = player.status.form;
-        
+
         // Estadísticas de temporada
-        const seasonStats = player.seasonStats['2024-2025'] || {};
-        const appearancesDisplay = document.getElementById('playerAppearancesDisplay');
-        const goalsDisplay = document.getElementById('playerGoalsDisplay');
-        const assistsDisplay = document.getElementById('playerAssistsDisplay');
-        const minutesDisplay = document.getElementById('playerMinutesDisplay');
-        const seasonRatingDisplay = document.getElementById('playerSeasonRatingDisplay');
-        
-        if (appearancesDisplay) appearancesDisplay.textContent = seasonStats.appearances || 0;
+        const seasonStats = player.seasonStats["2024-2025"] || {};
+        const appearancesDisplay = document.getElementById(
+          "playerAppearancesDisplay"
+        );
+        const goalsDisplay = document.getElementById("playerGoalsDisplay");
+        const assistsDisplay = document.getElementById("playerAssistsDisplay");
+        const minutesDisplay = document.getElementById("playerMinutesDisplay");
+        const seasonRatingDisplay = document.getElementById(
+          "playerSeasonRatingDisplay"
+        );
+
+        if (appearancesDisplay)
+          appearancesDisplay.textContent = seasonStats.appearances || 0;
         if (goalsDisplay) goalsDisplay.textContent = seasonStats.goals || 0;
-        if (assistsDisplay) assistsDisplay.textContent = seasonStats.assists || 0;
-        if (minutesDisplay) minutesDisplay.textContent = (seasonStats.minutesPlayed || 0).toLocaleString();
-        if (seasonRatingDisplay) seasonRatingDisplay.textContent = (seasonStats.rating || 0).toFixed(1);
-        
+        if (assistsDisplay)
+          assistsDisplay.textContent = seasonStats.assists || 0;
+        if (minutesDisplay)
+          minutesDisplay.textContent = (
+            seasonStats.minutesPlayed || 0
+          ).toLocaleString();
+        if (seasonRatingDisplay)
+          seasonRatingDisplay.textContent = (seasonStats.rating || 0).toFixed(
+            1
+          );
+
         // Atributos
         populatePlayerAttributes(player);
-        
+
         // Configurar botón de editar
-        const editBtn = document.getElementById('editPlayerFromInfoBtn');
+        const editBtn = document.getElementById("editPlayerFromInfoBtn");
         if (editBtn) {
           editBtn.onclick = () => {
             closePlayerInfoModal();
@@ -1026,27 +1240,28 @@
           };
         }
       }
-      
+
       function populatePlayerAttributes(player) {
-        const attributesGrid = document.getElementById('playerAttributesGrid');
+        const attributesGrid = document.getElementById("playerAttributesGrid");
         if (!attributesGrid || !player.attributes) return;
-        
+
         const attributes = player.attributes;
-        
+
         // Si es portero, mostrar atributos específicos
-        if (player.basicInfo.position === 'POR') {
+        if (player.basicInfo.position === "POR") {
           const goalkeeperAttrs = {
-            estiradas: 'Estiradas',
-            paradas: 'Paradas',
-            saque: 'Saque',
-            reflejos: 'Reflejos',
-            colocacion: 'Colocación',
-            physical: 'Físico'
+            estiradas: "Estiradas",
+            paradas: "Paradas",
+            saque: "Saque",
+            reflejos: "Reflejos",
+            colocacion: "Colocación",
+            physical: "Físico",
           };
-          
-          attributesGrid.innerHTML = Object.entries(goalkeeperAttrs).map(([key, label]) => {
-            const value = attributes[key] || 65;
-            return `
+
+          attributesGrid.innerHTML = Object.entries(goalkeeperAttrs)
+            .map(([key, label]) => {
+              const value = attributes[key] || 65;
+              return `
               <div class="attribute-item">
                 <div class="attribute-name">${label}</div>
                 <div class="attribute-value">${value}</div>
@@ -1055,20 +1270,22 @@
                 </div>
               </div>
             `;
-          }).join('');
+            })
+            .join("");
         } else {
           const attributeNames = {
-            pace: 'Ritmo',
-            shooting: 'Tiro',
-            passing: 'Pase',
-            dribbling: 'Regate',
-            defending: 'Defensa',
-            physical: 'Físico'
+            pace: "Ritmo",
+            shooting: "Tiro",
+            passing: "Pase",
+            dribbling: "Regate",
+            defending: "Defensa",
+            physical: "Físico",
           };
-          
-          attributesGrid.innerHTML = Object.entries(attributeNames).map(([key, label]) => {
-            const value = attributes[key] || 65;
-            return `
+
+          attributesGrid.innerHTML = Object.entries(attributeNames)
+            .map(([key, label]) => {
+              const value = attributes[key] || 65;
+              return `
               <div class="attribute-item">
                 <div class="attribute-name">${label}</div>
                 <div class="attribute-value">${value}</div>
@@ -1077,127 +1294,147 @@
                 </div>
               </div>
             `;
-          }).join('');
+            })
+            .join("");
         }
       }
-      
+
       function closePlayerInfoModal() {
-        const modal = document.getElementById('playerInfoModal');
+        const modal = document.getElementById("playerInfoModal");
         if (modal) {
-          modal.classList.remove('active');
-          document.body.style.overflow = 'auto';
+          modal.classList.remove("active");
+          document.body.style.overflow = "auto";
         }
       }
-      
+
       function updateTeamStats() {
         if (!window.PlayerDB.isLoaded) return;
-        
+
         const stats = window.PlayerDB.getTeamStats();
-        
-        const statLabels = ['Jugadores', 'Media del equipo', 'Presupuesto', 'Salario semanal'];
-        const statValues = [stats.totalPlayers, stats.averageRating, stats.totalValue, '€450K'];
-        
-        document.querySelectorAll('.stat-item').forEach((item, index) => {
-          const valueEl = item.querySelector('.stat-value');
-          const labelEl = item.querySelector('.stat-label');
+
+        const statLabels = [
+          "Jugadores",
+          "Media del equipo",
+          "Presupuesto",
+          "Salario semanal",
+        ];
+        const statValues = [
+          stats.totalPlayers,
+          stats.averageRating,
+          stats.totalValue,
+          "€450K",
+        ];
+
+        document.querySelectorAll(".stat-item").forEach((item, index) => {
+          const valueEl = item.querySelector(".stat-value");
+          const labelEl = item.querySelector(".stat-label");
           if (valueEl && labelEl && statLabels[index]) {
             labelEl.textContent = statLabels[index];
             valueEl.textContent = statValues[index];
           }
         });
       }
-      
+
       function updatePositionDistribution() {
         if (!window.PlayerDB.isLoaded) return;
-        
+
         const stats = window.PlayerDB.getTeamStats();
-        const positions = ['POR', 'DEF', 'MED', 'DEL'];
-        const positionLabels = ['POR', 'DEF', 'MED', 'DEL'];
-        
-        document.querySelectorAll('.position-bar').forEach((bar, index) => {
+        const positions = ["POR", "DEF", "MED", "DEL"];
+        const positionLabels = ["POR", "DEF", "MED", "DEL"];
+
+        document.querySelectorAll(".position-bar").forEach((bar, index) => {
           const position = positions[index];
           const count = getPositionCount(stats.positionBreakdown, position);
-          const maxCount = Math.max(...Object.values(stats.positionBreakdown || {}), 1);
+          const maxCount = Math.max(
+            ...Object.values(stats.positionBreakdown || {}),
+            1
+          );
           const percentage = (count / maxCount) * 100;
-          
-          const barEl = bar.querySelector('.bar');
-          const valueEl = bar.querySelector('.bar-value');
-          const labelEl = bar.querySelector('.position-label');
-          
+
+          const barEl = bar.querySelector(".bar");
+          const valueEl = bar.querySelector(".bar-value");
+          const labelEl = bar.querySelector(".position-label");
+
           if (barEl) barEl.style.width = `${Math.max(percentage, 10)}%`;
           if (valueEl) valueEl.textContent = count;
           if (labelEl) labelEl.textContent = positionLabels[index];
         });
       }
-      
+
       function getPositionCount(breakdown, posGroup) {
         if (!breakdown) return 0;
-        
+
         const positionGroups = {
-          'POR': ['POR'],
-          'DEF': ['DFC', 'LD', 'LI'],
-          'MED': ['MC', 'MCD', 'MCO'],
-          'DEL': ['DC', 'ED', 'EI']
+          POR: ["POR"],
+          DEF: ["DFC", "LD", "LI"],
+          MED: ["MC", "MCD", "MCO"],
+          DEL: ["DC", "ED", "EI"],
         };
-        
+
         const positions = positionGroups[posGroup] || [];
-        return positions.reduce((total, pos) => total + (breakdown[pos] || 0), 0);
+        return positions.reduce(
+          (total, pos) => total + (breakdown[pos] || 0),
+          0
+        );
       }
-      
+
       function updateTopPlayers() {
         if (!window.PlayerDB.isLoaded) return;
-        
-        const topPlayers = window.PlayerDB.searchPlayers({ 
-          sortBy: 'rating', 
-          sortOrder: 'desc',
-          limit: 3
+
+        const topPlayers = window.PlayerDB.searchPlayers({
+          sortBy: "rating",
+          sortOrder: "desc",
+          limit: 3,
         });
-        
-        const topPlayerCards = document.querySelectorAll('.top-player-card');
-        
+
+        const topPlayerCards = document.querySelectorAll(".top-player-card");
+
         topPlayerCards.forEach((card, index) => {
           const player = topPlayers[index];
           if (player) {
-            const img = card.querySelector('.mini-avatar');
-            const name = card.querySelector('.top-player-name');
-            const stats = card.querySelector('.top-player-stats');
-            
+            const img = card.querySelector(".mini-avatar");
+            const name = card.querySelector(".top-player-name");
+            const stats = card.querySelector(".top-player-stats");
+
             if (img) {
               img.src = player.basicInfo.photoUrl;
-              img.onerror = function() { this.src = '../../img/players_icons/00000.png'; };
+              img.onerror = function () {
+                this.src = "../../img/players_icons/00000.png";
+              };
             }
             if (name) name.textContent = player.basicInfo.name;
-            if (stats) stats.textContent = `${player.basicInfo.position} • ${player.gameStats.rating} GRL`;
+            if (stats)
+              stats.textContent = `${player.basicInfo.position} • ${player.gameStats.rating} GRL`;
           }
         });
       }
-      
+
       function setupTabs() {
-        const tabs = document.querySelectorAll('.tab');
-        const contenidos = document.querySelectorAll('.jugadores-content');
+        const tabs = document.querySelectorAll(".tab");
+        const contenidos = document.querySelectorAll(".jugadores-content");
 
         tabs.forEach((tab) => {
-          tab.addEventListener('click', function () {
-            console.log('Tab clicked:', this.getAttribute('data-tab'));
+          tab.addEventListener("click", function () {
+            console.log("Tab clicked:", this.getAttribute("data-tab"));
 
             // Remover clase active de todas las pestañas
-            tabs.forEach((t) => t.classList.remove('active'));
+            tabs.forEach((t) => t.classList.remove("active"));
 
             // Agregar clase active a la pestaña clickeada
-            this.classList.add('active');
+            this.classList.add("active");
 
             // Obtener el id del contenido a mostrar
-            const target = this.getAttribute('data-tab');
+            const target = this.getAttribute("data-tab");
 
             // Ocultar todos los contenidos
             contenidos.forEach((contenido) => {
-              contenido.style.display = 'none';
+              contenido.style.display = "none";
             });
 
             // Mostrar el contenido correspondiente
             const targetContent = document.getElementById(target);
             if (targetContent) {
-              targetContent.style.display = 'grid';
+              targetContent.style.display = "grid";
             }
           });
         });
@@ -1207,118 +1444,134 @@
           tabs[0].click();
         }
       }
-      
+
       function setupFilters() {
-        const filtros = document.querySelectorAll('.filtro');
+        const filtros = document.querySelectorAll(".filtro");
 
         filtros.forEach((filtro) => {
-          filtro.addEventListener('click', function (e) {
+          filtro.addEventListener("click", function (e) {
             e.stopPropagation();
 
-            if (e.target.closest('.filtro-option')) {
+            if (e.target.closest(".filtro-option")) {
               const selectedOption = e.target.textContent;
-              const spanElement = this.querySelector('span');
+              const spanElement = this.querySelector("span");
               spanElement.textContent = selectedOption;
-              this.classList.remove('filtro-active');
+              this.classList.remove("filtro-active");
               return;
             }
 
-            if (this.classList.contains('filtro-active')) {
-              this.classList.remove('filtro-active');
+            if (this.classList.contains("filtro-active")) {
+              this.classList.remove("filtro-active");
               return;
             }
 
             filtros.forEach((f) => {
               if (f !== this) {
-                f.classList.remove('filtro-active');
+                f.classList.remove("filtro-active");
               }
             });
 
-            this.classList.toggle('filtro-active');
+            this.classList.toggle("filtro-active");
           });
         });
 
-        document.addEventListener('click', function (e) {
-          if (!e.target.closest('.filtro')) {
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".filtro")) {
             filtros.forEach((filtro) => {
-              filtro.classList.remove('filtro-active');
+              filtro.classList.remove("filtro-active");
             });
           }
         });
       }
-      
+
       function setupAddPlayerButton() {
         const addButton = document.querySelector('[data-action="add-player"]');
         if (addButton) {
-          addButton.addEventListener('click', (e) => {
+          addButton.addEventListener("click", (e) => {
             e.preventDefault();
-            console.log('🎯 Botón añadir jugador clickeado');
-            
+            console.log("🎯 Botón añadir jugador clickeado");
+
             if (window.PlayerManagement) {
               window.PlayerManagement.openAddModal();
             } else {
-              console.error('❌ PlayerManagement no está disponible');
+              console.error("❌ PlayerManagement no está disponible");
             }
           });
         }
       }
-      
+
       function handlePlayerUpdate() {
-        console.log('🔄 Actualizando datos de jugadores...');
+        console.log("🔄 Actualizando datos de jugadores...");
         renderPlayersTable();
         updateTeamStats();
         updatePositionDistribution();
         updateTopPlayers();
       }
-      
+
       function showErrorMessage(message) {
-        const tbody = document.getElementById('playersTableBody');
+        const tbody = document.getElementById("playersTableBody");
         if (tbody) {
           tbody.innerHTML = `<tr><td colspan="10" class="error-message">${message}</td></tr>`;
         }
       }
-      
+
       function getFlagEmoji(countryCode) {
         const flags = {
-          'ES': '🇪🇸', 'FR': '🇫🇷', 'PT': '🇵🇹', 'BR': '🇧🇷', 'AR': '🇦🇷',
-          'IT': '🇮🇹', 'DE': '🇩🇪', 'GB': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'NL': '🇳🇱', 'KR': '🇰🇷',
-          'GH': '🇬🇭', 'MA': '🇲🇦', 'CO': '🇨🇴', 'HU': '🇭🇺', 'CV': '🇨🇻'
+          ES: "🇪🇸",
+          FR: "🇫🇷",
+          PT: "🇵🇹",
+          BR: "🇧🇷",
+          AR: "🇦🇷",
+          IT: "🇮🇹",
+          DE: "🇩🇪",
+          GB: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          NL: "🇳🇱",
+          KR: "🇰🇷",
+          GH: "🇬🇭",
+          MA: "🇲🇦",
+          CO: "🇨🇴",
+          HU: "🇭🇺",
+          CV: "🇨🇻",
         };
-        return flags[countryCode] || '🏳️';
+        return flags[countryCode] || "🏳️";
       }
-      
+
       function formatContractDates(contract) {
-        if (!contract.startDate || !contract.endDate) return '-';
+        if (!contract.startDate || !contract.endDate) return "-";
         const start = new Date(contract.startDate).getFullYear();
         const end = new Date(contract.endDate).getFullYear();
         return `${start} ~ ${end}`;
       }
-      
+
       // Event listeners para cerrar modal de información
-      document.addEventListener('DOMContentLoaded', () => {
-        const infoModal = document.getElementById('playerInfoModal');
-        const closeBtn = document.querySelector('.player-info-close');
-        const closeFooterBtn = document.getElementById('closeInfoModalBtn');
-        
+      document.addEventListener("DOMContentLoaded", () => {
+        const infoModal = document.getElementById("playerInfoModal");
+        const closeBtn = document.querySelector(".player-info-close");
+        const closeFooterBtn = document.getElementById("closeInfoModalBtn");
+
         if (closeBtn) {
-          closeBtn.addEventListener('click', closePlayerInfoModal);
+          closeBtn.addEventListener("click", closePlayerInfoModal);
         }
-        
+
         if (closeFooterBtn) {
-          closeFooterBtn.addEventListener('click', closePlayerInfoModal);
+          closeFooterBtn.addEventListener("click", closePlayerInfoModal);
         }
-        
+
         if (infoModal) {
-          infoModal.addEventListener('click', (e) => {
+          infoModal.addEventListener("click", (e) => {
             if (e.target === infoModal) {
               closePlayerInfoModal();
             }
           });
         }
-        
+
         // Cerrar modal con ESC
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && infoModal && infoModal.classList.contains('active')) {
+        document.addEventListener("keydown", (e) => {
+          if (
+            e.key === "Escape" &&
+            infoModal &&
+            infoModal.classList.contains("active")
+          ) {
             closePlayerInfoModal();
           }
         });

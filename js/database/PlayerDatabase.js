@@ -8,7 +8,7 @@ class PlayerDatabase {
     this.metadata = {};
     this.isLoaded = false;
     this.backupKey = 'andorra_players_backup';
-    this.dbPath = './js/database/players.json';
+    this.dbPath = '../../js/database/players.json';
   }
 
   /**
@@ -17,17 +17,30 @@ class PlayerDatabase {
    */
   async loadDatabase() {
     try {
-      console.log('🔄 Cargando base de datos de jugadores...');
+      console.log('🔄 Iniciando carga de base de datos...');
+      console.log(`📂 Path de la base de datos: ${this.dbPath}`);
+      console.log(`🌐 URL actual: ${window.location.href}`);
       
       const response = await fetch(this.dbPath);
+      console.log(`📡 Respuesta del fetch: Status ${response.status} - ${response.statusText}`);
+      
       if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`);
+        throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
       }
       
       const data = await response.json();
+      console.log('📄 Datos JSON parseados correctamente');
+      console.log('🔍 Estructura de datos recibida:', {
+        hasMetadata: !!data.metadata,
+        hasPlayers: !!data.players,
+        playersCount: data.players ? data.players.length : 0,
+        metadataKeys: data.metadata ? Object.keys(data.metadata) : []
+      });
       
       // Validar estructura básica
       if (!this.validateDatabaseStructure(data)) {
+        console.error('❌ Estructura de base de datos inválida');
+        console.log('🔍 Datos recibidos:', data);
         throw new Error('Estructura de base de datos inválida');
       }
       
@@ -35,21 +48,41 @@ class PlayerDatabase {
       this.metadata = data.metadata || {};
       this.isLoaded = true;
       
+      console.log('✅ Datos asignados correctamente:');
+      console.log(`   📊 Total de jugadores: ${this.players.length}`);
+      console.log(`   📋 Metadata versión: ${this.metadata.version}`);
+      console.log(`   📅 Última actualización: ${this.metadata.lastUpdated}`);
+      
+      // Verificar algunos jugadores de ejemplo
+      if (this.players.length > 0) {
+        console.log('👤 Primeros 3 jugadores:');
+        this.players.slice(0, 3).forEach((player, index) => {
+          console.log(`   ${index + 1}. ${player.basicInfo.name} - ${player.basicInfo.position} - Rating: ${player.gameStats.rating}`);
+        });
+      }
+      
       // Crear backup automático
       this.createBackup();
+      console.log('💾 Backup automático creado');
       
-      console.log(`✅ Base de datos cargada: ${this.players.length} jugadores`);
+      console.log('🎉 ¡Base de datos cargada exitosamente!');
       return true;
       
     } catch (error) {
-      console.error('❌ Error cargando base de datos:', error);
+      console.error('❌ Error detallado cargando base de datos:');
+      console.error('   🔥 Tipo de error:', error.name);
+      console.error('   📝 Mensaje:', error.message);
+      console.error('   📍 Stack:', error.stack);
+      console.error('   🌐 URL intentada:', this.dbPath);
       
       // Intentar cargar desde backup
+      console.log('🔄 Intentando cargar desde backup local...');
       if (this.loadFromBackup()) {
-        console.log('🔄 Datos restaurados desde backup local');
+        console.log('✅ Datos restaurados desde backup local');
         return true;
       }
       
+      console.log('❌ No se pudo cargar desde backup, inicializando vacío');
       // Inicializar con datos vacíos si todo falla
       this.initializeEmpty();
       return false;
@@ -577,14 +610,29 @@ class PlayerDatabase {
    */
   loadFromBackup() {
     try {
+      console.log(`🔄 Intentando cargar backup desde localStorage key: ${this.backupKey}`);
       const backupData = localStorage.getItem(this.backupKey);
-      if (!backupData) return false;
       
+      if (!backupData) {
+        console.log('❌ No se encontró backup en localStorage');
+        return false;
+      }
+      
+      console.log('📦 Backup encontrado, parseando datos...');
       const data = JSON.parse(backupData);
+      
+      console.log('🔍 Estructura del backup:', {
+        hasPlayers: !!data.players,
+        playersCount: data.players ? data.players.length : 0,
+        hasMetadata: !!data.metadata,
+        timestamp: data.timestamp
+      });
+      
       this.players = data.players || [];
       this.metadata = data.metadata || {};
       this.isLoaded = true;
       
+      console.log(`✅ Backup cargado exitosamente: ${this.players.length} jugadores`);
       return true;
     } catch (error) {
       console.error('❌ Error cargando backup:', error);
@@ -624,6 +672,4 @@ class PlayerDatabase {
 }
 
 // Crear instancia global
-window.PlayerDB = new PlayerDatabase();
-
-export default PlayerDatabase; 
+window.PlayerDB = new PlayerDatabase(); 
