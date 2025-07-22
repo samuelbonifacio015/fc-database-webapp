@@ -204,6 +204,12 @@
           </div>
         </div>
 
+        <!-- Contenedor para cards móviles -->
+        <div class="players-cards-container" id="playersCardsContainer">
+          <!-- Las cards se generarán dinámicamente para móviles -->
+        </div>
+
+        <!-- Tabla para tablet/desktop -->
         <div class="jugadores-table">
           <table>
             <thead>
@@ -222,569 +228,6 @@
             </thead>
             <tbody id="playersTableBody">
               <!-- Los jugadores se cargarán dinámicamente desde la base de datos -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-
-              <tr>
-                <td>24</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/jinseob.jpg"
-                    alt="Park Jin Seob"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">Park Jin Seob</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇰🇷</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-75">75</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€11M</td>
-                <td>2024 ~ 2027</td>
-                <td>€28K</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/marsa.jpg"
-                    alt="J. Marsà"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">J. Marsà</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-78">78</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€18M</td>
-                <td>2023 ~ 2026</td>
-                <td>€38K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/bombardo.jpg"
-                    alt="M. Bombardó"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">M. Bombardó</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-64">64</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€1.5M</td>
-                <td>2024 ~ 2026</td>
-                <td>€5K</td>
-              </tr>
-              <tr>
-                <td>26</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/figueroa.png"
-                    alt="S. Figueroa"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">S. Figueroa</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇱</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-66">66</span></td>
-                <td>Ocasional</td>
-                <td>Normal</td>
-                <td>€1.8M</td>
-                <td>2023 ~ 2025</td>
-                <td>€8K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/bianco.png"
-                    alt="C. Bianco"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">C. Bianco</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇮🇹</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-66">66</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€1.8M</td>
-                <td>2024 ~ 2027</td>
-                <td>€7K</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/kuipers.jpg"
-                    alt="J. Kuipers"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">J. Kuipers</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇳🇱</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-77">77</span></td>
-                <td>Importante</td>
-                <td>Normal</td>
-                <td>€14M</td>
-                <td>2023 ~ 2026</td>
-                <td>€33K</td>
-              </tr>
-              <tr>
-                <td>37</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/martino.png"
-                    alt="E. Martino"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">E. Martino</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇦🇷</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-63">63</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€1.2M</td>
-                <td>2024 ~ 2027</td>
-                <td>€5K</td>
-              </tr>
-              <tr>
-                <td>18</td>
-                <td>MC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/seungho.jpg"
-                    alt="Paik Seung Ho"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">Paik Seung Ho</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇰🇷</span>
-                      <span class="position mc">MC</span>
-                      <span class="position mcd">MCD</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-75">75</span></td>
-                <td>Importante</td>
-                <td>Normal</td>
-                <td>€12M</td>
-                <td>2023 ~ 2026</td>
-                <td>€30K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>ED</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/sagna.png"
-                    alt="C. Sagna"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">C. Sagna</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇲</span>
-                      <span class="position ed">ED</span>
-                      <span class="position ei">EI</span>
-                      <span class="position mc">MC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-71">71</span></td>
-                <td>Rotación</td>
-                <td>Normal</td>
-                <td>€5.5M</td>
-                <td>Cedido hasta 2027</td>
-                <td>€15K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>DFC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/hurtado.png"
-                    alt="S. Hurtado"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">S. Hurtado</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position dfc">DFC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-68">68</span></td>
-                <td>Ocasional</td>
-                <td>Normal</td>
-                <td>€2.2M</td>
-                <td>2024 ~ 2028</td>
-                <td>€10K</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>LD</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/mccrorie.jpg"
-                    alt="R. McCrorie"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">R. McCrorie</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
-                      <span class="position ld">LD</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-75">75</span></td>
-                <td>Importante</td>
-                <td>Normal</td>
-                <td>€11M</td>
-                <td>2023 ~ 2027</td>
-                <td>€25K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>LD</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/knudsen.png"
-                    alt="E. Knudsen"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">E. Knudsen</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇩🇰</span>
-                      <span class="position ld">LD</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-70">70</span></td>
-                <td>Ocasional</td>
-                <td>Normal</td>
-                <td>€4.5M</td>
-                <td>2024 ~ 2028</td>
-                <td>€12K</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>MCD</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/mwanga.jpg"
-                    alt="J. Mwanga"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">J. Mwanga</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇲</span>
-                      <span class="position mcd">MCD</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-78">78</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€20M</td>
-                <td>2023 ~ 2026</td>
-                <td>€40K</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>MC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/alzate.jpg"
-                    alt="S. Alzate"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">S. Alzate</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇴</span>
-                      <span class="position mc">MC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-78">78</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€18.5M</td>
-                <td>2023 ~ 2027</td>
-                <td>€42K</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>EI</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/sulemana.jpg"
-                    alt="K. Sulemana"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">K. Sulemana</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇬🇭</span>
-                      <span class="position ei">EI</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-82">82</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€35M</td>
-                <td>2023 ~ 2027</td>
-                <td>€60K</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>ED</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/calvo.jpg"
-                    alt="A. Calvo"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">A. Calvo</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position ed">ED</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-78">78</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€18M</td>
-                <td>2023 ~ 2026</td>
-                <td>€38K</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>DC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/duk.jpg"
-                    alt="Duk"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">Duk</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇻</span>
-                      <span class="position dc">DC</span>
-                      <span class="position mi">MI</span>
-                      <span class="position ei">EI</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-78">78</span></td>
-                <td>Importante</td>
-                <td>Buena</td>
-                <td>€15M</td>
-                <td>2023 ~ 2027</td>
-                <td>€35K</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>DC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/adam.jpg"
-                    alt="M. Adám"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">M. Adám</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇭🇺</span>
-                      <span class="position dc">DC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-76">76</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€14M</td>
-                <td>2023 ~ 2026</td>
-                <td>€32K</td>
-              </tr>
-              <tr>
-                <td>23</td>
-                <td>DC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/moreno.jpg"
-                    alt="P. Moreno"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">P. Moreno</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position dc">DC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-73">73</span></td>
-                <td>Importante</td>
-                <td>Normal</td>
-                <td>€7.5M</td>
-                <td>2024 ~ 2027</td>
-                <td>€18K</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>DC</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/glatzel.jpg"
-                    alt="R. Glatzel"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">R. Glatzel</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇩🇪</span>
-                      <span class="position dc">DC</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-72">72</span></td>
-                <td>Importante</td>
-                <td>Normal</td>
-                <td>€6.8M</td>
-                <td>2024 ~ 2027</td>
-                <td>€16K</td>
-              </tr>
-              <tr>
-                <td>27</td>
-                <td>SD</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/jaramillo.png"
-                    alt="D. Jaramillo"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">D. Jaramillo</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇨🇴</span>
-                      <span class="position sd">SD</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-56">56</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€850K</td>
-                <td>2024 ~ 2027</td>
-                <td>€3K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>ED</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/miller.png"
-                    alt="N. Miller"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">N. Miller</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
-                      <span class="position ed">ED</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-63">63</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€1.4M</td>
-                <td>2024 ~ 2027</td>
-                <td>€5K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>EI</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/torres.png"
-                    alt="X. Torres"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">X. Torres</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position ei">EI</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-65">65</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€1.8M</td>
-                <td>2024 ~ 2028</td>
-                <td>€7K</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -1209,6 +652,102 @@
       </div>
     </main>
 
+    <!-- Modal de Información del Jugador -->
+    <div id="playerInfoModal" class="player-info-modal">
+      <div class="player-info-content">
+        <div class="player-info-header">
+          <h2>Información del Jugador</h2>
+          <button class="player-info-close" type="button">&times;</button>
+        </div>
+        <div class="player-info-body">
+          <div class="player-profile-section">
+            <div class="player-photo-section">
+              <img id="playerLargePhoto" src="" alt="Jugador" class="player-large-photo">
+              <div class="player-basic-details">
+                <div id="playerNameDisplay" class="player-name-display">Nombre del Jugador</div>
+                <div class="player-position-display">
+                  <span id="playerNationalityFlag" class="player-nationality-flag">🏳️</span>
+                  <span id="playerPositionBadge" class="player-position-badge">POS</span>
+                </div>
+                <div id="playerAgeDisplay" class="player-age-display">Edad: 25 años</div>
+                <div class="player-rating-display">
+                  <div class="rating-label">Rating Actual</div>
+                  <div id="playerRatingValue" class="rating-value">76</div>
+                  <div class="potential-value">POT: <span id="playerPotentialValue">80</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="player-details-section">
+              <div class="player-stats-grid">
+                <div class="stats-group">
+                  <h3>Información Contractual</h3>
+                  <div class="stat-row">
+                    <span class="stat-label">Valor de Mercado</span>
+                    <span id="playerValueDisplay" class="stat-value highlight">€15M</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Salario Semanal</span>
+                    <span id="playerSalaryDisplay" class="stat-value">€30K</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Contrato</span>
+                    <span id="playerContractDisplay" class="stat-value">2024 ~ 2027</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Importancia</span>
+                    <span id="playerImportanceDisplay" class="stat-value">Importante</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Forma</span>
+                    <span id="playerFormDisplay" class="stat-value">Normal</span>
+                  </div>
+                </div>
+                <div class="stats-group">
+                  <h3>Estadísticas 2024-25</h3>
+                  <div class="stat-row">
+                    <span class="stat-label">Partidos Jugados</span>
+                    <span id="playerAppearancesDisplay" class="stat-value">25</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Goles</span>
+                    <span id="playerGoalsDisplay" class="stat-value highlight">8</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Asistencias</span>
+                    <span id="playerAssistsDisplay" class="stat-value highlight">5</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Minutos Jugados</span>
+                    <span id="playerMinutesDisplay" class="stat-value">2,250</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Media de Notas</span>
+                    <span id="playerSeasonRatingDisplay" class="stat-value">7.2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="attributes-section">
+                <h3>Atributos</h3>
+                <div class="attributes-grid" id="playerAttributesGrid">
+                  <!-- Los atributos se generarán dinámicamente -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-info-footer">
+          <div class="modal-actions">
+            <button class="btn-modal btn-modal-secondary" id="closeInfoModalBtn">
+              Cerrar
+            </button>
+            <button class="btn-modal btn-modal-primary" id="editPlayerFromInfoBtn">
+              ✏️ Editar Jugador
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal de Gestión de Jugadores (versión simplificada) -->
     <div id="playerManagementModal" class="modal-overlay">
       <div class="modal-content player-management-modal">
@@ -1254,243 +793,300 @@
       </div>
     </div>
 
-    <script>
-      // Funcionalidad para abrir modal de jugador
-      document.addEventListener("DOMContentLoaded", function () {
-        console.log("Script cargado directamente en HTML");
-
-        // Gestionar las pestañas
-        const tabs = document.querySelectorAll(".tab");
-        const contenidos = document.querySelectorAll(".jugadores-content");
-
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function () {
-            console.log("Tab clicked:", this.getAttribute("data-tab"));
-
-            // Remover clase active de todas las pestañas
-            tabs.forEach((t) => t.classList.remove("active"));
-
-            // Agregar clase active a la pestaña clickeada
-            this.classList.add("active");
-
-            // Obtener el id del contenido a mostrar
-            const target = this.getAttribute("data-tab");
-
-            // Ocultar todos los contenidos
-            contenidos.forEach((contenido) => {
-              contenido.style.display = "none";
-            });
-
-            // Mostrar el contenido correspondiente
-            const targetContent = document.getElementById(target);
-            targetContent.style.display = "grid";
-          });
-        });
-
-        // Mostrar por defecto la primera pestaña
-        if (tabs.length > 0) {
-          tabs[0].click();
-        }
-
-        // Gestionar los filtros desplegables
-        const filtros = document.querySelectorAll(".filtro");
-
-        filtros.forEach((filtro) => {
-          filtro.addEventListener("click", function (e) {
-            e.stopPropagation();
-
-            // Evitar que el clic se propague a los elementos del menú
-            if (e.target.closest(".filtro-option")) {
-              const selectedOption = e.target.textContent;
-              const spanElement = this.querySelector("span");
-              spanElement.textContent = selectedOption;
-
-              // Cerrar el menú después de seleccionar
-              this.classList.remove("filtro-active");
-              return;
-            }
-
-            // Si el filtro ya está activo, lo cerramos
-            if (this.classList.contains("filtro-active")) {
-              this.classList.remove("filtro-active");
-              return;
-            }
-
-            // Cerrar todos los otros filtros abiertos
-            filtros.forEach((f) => {
-              if (f !== this) {
-                f.classList.remove("filtro-active");
-              }
-            });
-
-            // Activar este filtro
-            this.classList.toggle("filtro-active");
-          });
-        });
-
-        // Cerrar menús al hacer clic fuera de ellos
-        document.addEventListener("click", function (e) {
-          if (!e.target.closest(".filtro")) {
-            filtros.forEach((filtro) => {
-              filtro.classList.remove("filtro-active");
-            });
-          }
-        });
-
-        // Configurar modal de jugadores
-        function setupPlayerModals() {
-          const playerCells = document.querySelectorAll(".player-cell");
-          const playerModal = document.getElementById("player-modal");
-
-          playerCells.forEach((cell) => {
-            // Evitar duplicar event listeners
-            if (!cell.hasAttribute("data-modal-setup")) {
-              cell.setAttribute("data-modal-setup", "true");
-
-              cell.addEventListener("click", () => {
-                const playerName =
-                  cell.querySelector(".player-name").textContent;
-                const playerPosition = cell.querySelector(".position")
-                  ? cell.querySelector(".position").textContent
-                  : "";
-                const playerRating = cell.closest("tr").querySelector(".rating")
-                  ? cell.closest("tr").querySelector(".rating").textContent
-                  : "";
-                const playerNumberCell = cell
-                  .closest("tr")
-                  .querySelector("td:first-child");
-                const playerNumber = playerNumberCell
-                  ? playerNumberCell.textContent.trim()
-                  : "";
-
-                // Actualizar el modal con la información del jugador
-                document.getElementById("modal-player-name").textContent =
-                  playerName;
-                document.getElementById("modal-player-position").textContent =
-                  playerPosition;
-                document.getElementById("modal-player-rating").textContent =
-                  playerRating;
-                document.getElementById("modal-dorsal").textContent =
-                  playerNumber;
-
-                // Mostrar el modal
-                playerModal.style.display = "block";
-                document.body.style.overflow = "hidden"; // Evitar scroll en el fondo
-              });
-            }
-          });
-
-          // Configurar cierre del modal
-          const closeModal = document.querySelector(".close-modal");
-          if (closeModal) {
-            closeModal.addEventListener("click", () => {
-              playerModal.style.display = "none";
-              document.body.style.overflow = "auto"; // Restaurar scroll
-            });
-          }
-
-          // Cerrar modal al hacer clic fuera
-          window.addEventListener("click", (event) => {
-            if (event.target === playerModal) {
-              playerModal.style.display = "none";
-              document.body.style.overflow = "auto";
-            }
-          });
-
-          // Cerrar modal con tecla ESC
-          document.addEventListener("keydown", (event) => {
-            if (
-              event.key === "Escape" &&
-              playerModal.style.display === "block"
-            ) {
-              playerModal.style.display = "none";
-              document.body.style.overflow = "auto";
-            }
-          });
-
-          // Manejar acciones del modal
-          const playerMenuItems =
-            document.querySelectorAll(".player-menu-item");
-          playerMenuItems.forEach((item) => {
-            item.addEventListener("click", function (e) {
-              e.stopPropagation();
-              const action = this.getAttribute("data-action");
-              const playerName =
-                document.getElementById("modal-player-name").textContent;
-
-              console.log(`Acción "${action}" para ${playerName}`);
-
-              // Cerrar el modal después de la acción
-              playerModal.style.display = "none";
-              document.body.style.overflow = "auto";
-            });
-          });
-        }
-
-        // Configurar modales iniciales
-        setupPlayerModals();
-
-        // Configurar modales cuando cambie la pestaña
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function () {
-            setTimeout(setupPlayerModals, 100);
-          });
-        });
-      });
-    </script>
-    
     <!-- Scripts del nuevo sistema -->
     <script src="../../js/database/PlayerDatabase.js"></script>
     <script src="../../js/PlayerManagementModal.js"></script>
     
-    <!-- Script de integración -->
+    <!-- Script principal de integración -->
     <script>
       document.addEventListener('DOMContentLoaded', async function() {
+        console.log('🚀 Inicializando sistema de jugadores...');
+        
         // Cargar base de datos
         if (window.PlayerDB) {
-          await window.PlayerDB.loadDatabase();
-          renderPlayersTable();
-          updateTeamStats();
+          const success = await window.PlayerDB.loadDatabase();
+          if (success) {
+            renderPlayersTable();
+            updateTeamStats();
+            updatePositionDistribution();
+            updateTopPlayers();
+          } else {
+            showErrorMessage('Error cargando la base de datos de jugadores');
+          }
         }
         
+        // Configurar pestañas
+        setupTabs();
+        
+        // Configurar filtros
+        setupFilters();
+        
+        // Configurar botón añadir jugador
+        setupAddPlayerButton();
+        
         // Escuchar eventos de actualización
-        document.addEventListener('playerAdded', renderPlayersTable);
-        document.addEventListener('playerUpdated', renderPlayersTable);
-        document.addEventListener('playerDeleted', renderPlayersTable);
+        document.addEventListener('playerAdded', handlePlayerUpdate);
+        document.addEventListener('playerUpdated', handlePlayerUpdate);
+        document.addEventListener('playerDeleted', handlePlayerUpdate);
       });
       
       function renderPlayersTable() {
         const tbody = document.getElementById('playersTableBody');
-        if (!tbody || !window.PlayerDB.isLoaded) return;
+        const cardsContainer = document.getElementById('playersCardsContainer');
         
-        const players = window.PlayerDB.searchPlayers({ sortBy: 'rating', sortOrder: 'desc' });
+        if (!window.PlayerDB || !window.PlayerDB.isLoaded) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="10" class="players-loading">Cargando jugadores...</td></tr>';
+          if (cardsContainer) cardsContainer.innerHTML = '<div class="players-loading">Cargando jugadores...</div>';
+          return;
+        }
         
-        tbody.innerHTML = players.map(player => `
-          <tr data-player-id="${player.id}">
-            <td>${player.basicInfo.dorsal || '-'}</td>
-            <td>${player.basicInfo.position}</td>
-            <td class="player-cell">
-              <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-avatar" />
-              <div class="player-info">
-                <div class="player-name">${player.basicInfo.name}</div>
-                <div class="player-position">
-                  <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
-                  <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+        const players = window.PlayerDB.searchPlayers({ 
+          sortBy: 'rating', 
+          sortOrder: 'desc',
+          includeInactive: false
+        });
+        
+        console.log(`🎯 Renderizando ${players.length} jugadores`);
+        
+        // Renderizar tabla para desktop/tablet
+        if (tbody) {
+          tbody.innerHTML = players.map(player => `
+            <tr data-player-id="${player.id}" class="player-row-clickable">
+              <td>${player.basicInfo.dorsal || '-'}</td>
+              <td>${player.basicInfo.position}</td>
+              <td class="player-cell">
+                <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-avatar" onerror="this.src='../../img/players_icons/00000.png'" />
+                <div class="player-info">
+                  <div class="player-name">${player.basicInfo.name}</div>
+                  <div class="player-position">
+                    <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
+                    <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+                  </div>
+                </div>
+              </td>
+              <td><span class="rating rating-${player.gameStats.rating}">${player.gameStats.rating}</span></td>
+              <td>${player.status.importance}</td>
+              <td>${player.status.form}</td>
+              <td>${player.gameStats.value}</td>
+              <td>${formatContractDates(player.gameStats.contract)}</td>
+              <td>${player.gameStats.salary}</td>
+              <td class="actions-cell">
+                <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar" onclick="event.stopPropagation()">✏️</button>
+                <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar" onclick="event.stopPropagation()">🗑️</button>
+              </td>
+            </tr>
+          `).join('');
+        }
+        
+        // Renderizar cards para móviles
+        if (cardsContainer) {
+          cardsContainer.innerHTML = players.map(player => `
+            <div class="player-card-mobile" data-player-id="${player.id}">
+              <div class="player-card-header">
+                <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-card-avatar" onerror="this.src='../../img/players_icons/00000.png'" />
+                <div class="player-card-info">
+                  <h4>${player.basicInfo.name}</h4>
+                  <div class="player-card-position">
+                    <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
+                    <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+                    <span>•</span>
+                    <span>${player.basicInfo.age} años</span>
+                  </div>
                 </div>
               </div>
-            </td>
-            <td><span class="rating rating-${player.gameStats.rating}">${player.gameStats.rating}</span></td>
-            <td>${player.status.importance}</td>
-            <td>${player.status.form}</td>
-            <td>${player.gameStats.value}</td>
-            <td>${formatContractDates(player.gameStats.contract)}</td>
-            <td>${player.gameStats.salary}</td>
-            <td class="actions-cell">
-              <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar">✏️</button>
-              <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar">🗑️</button>
-            </td>
-          </tr>
-        `).join('');
+              <div class="player-card-stats">
+                <div class="player-card-stat">
+                  <span class="player-card-stat-value">${player.gameStats.rating}</span>
+                  <span class="player-card-stat-label">Rating</span>
+                </div>
+                <div class="player-card-stat">
+                  <span class="player-card-stat-value">${player.gameStats.value}</span>
+                  <span class="player-card-stat-label">Valor</span>
+                </div>
+                <div class="player-card-stat">
+                  <span class="player-card-stat-value">${player.status.importance}</span>
+                  <span class="player-card-stat-label">Rol</span>
+                </div>
+              </div>
+              <div class="player-card-actions">
+                <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar">✏️</button>
+                <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar">🗑️</button>
+              </div>
+            </div>
+          `).join('');
+        }
+        
+        // Configurar event listeners para modal de información
+        setupPlayerInfoListeners();
+      }
+      
+      function setupPlayerInfoListeners() {
+        // Event listeners para filas de tabla
+        document.querySelectorAll('.player-row-clickable').forEach(row => {
+          row.addEventListener('click', (e) => {
+            // No abrir modal si se hizo click en botones de acción
+            if (e.target.closest('.actions-cell')) return;
+            
+            const playerId = row.dataset.playerId;
+            openPlayerInfoModal(playerId);
+          });
+        });
+        
+        // Event listeners para cards móviles
+        document.querySelectorAll('.player-card-mobile').forEach(card => {
+          card.addEventListener('click', (e) => {
+            // No abrir modal si se hizo click en botones de acción
+            if (e.target.closest('.player-card-actions')) return;
+            
+            const playerId = card.dataset.playerId;
+            openPlayerInfoModal(playerId);
+          });
+        });
+      }
+      
+      function openPlayerInfoModal(playerId) {
+        if (!window.PlayerDB || !window.PlayerDB.isLoaded) return;
+        
+        const player = window.PlayerDB.getPlayerById(playerId);
+        if (!player) {
+          console.error('Jugador no encontrado:', playerId);
+          return;
+        }
+        
+        // Popular datos del modal
+        populatePlayerInfoModal(player);
+        
+        // Mostrar modal
+        const modal = document.getElementById('playerInfoModal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      
+      function populatePlayerInfoModal(player) {
+        // Información básica
+        const nameDisplay = document.getElementById('playerNameDisplay');
+        const photoDisplay = document.getElementById('playerLargePhoto');
+        const flagDisplay = document.getElementById('playerNationalityFlag');
+        const positionBadge = document.getElementById('playerPositionBadge');
+        const ageDisplay = document.getElementById('playerAgeDisplay');
+        const ratingValue = document.getElementById('playerRatingValue');
+        const potentialValue = document.getElementById('playerPotentialValue');
+        
+        if (nameDisplay) nameDisplay.textContent = player.basicInfo.name;
+        if (photoDisplay) {
+          photoDisplay.src = player.basicInfo.photoUrl;
+          photoDisplay.onerror = function() { this.src = '../../img/players_icons/00000.png'; };
+        }
+        if (flagDisplay) flagDisplay.textContent = getFlagEmoji(player.basicInfo.nationalityCode);
+        if (positionBadge) positionBadge.textContent = player.basicInfo.position;
+        if (ageDisplay) ageDisplay.textContent = `Edad: ${player.basicInfo.age} años`;
+        if (ratingValue) ratingValue.textContent = player.gameStats.rating;
+        if (potentialValue) potentialValue.textContent = player.gameStats.potential;
+        
+        // Información contractual
+        const valueDisplay = document.getElementById('playerValueDisplay');
+        const salaryDisplay = document.getElementById('playerSalaryDisplay');
+        const contractDisplay = document.getElementById('playerContractDisplay');
+        const importanceDisplay = document.getElementById('playerImportanceDisplay');
+        const formDisplay = document.getElementById('playerFormDisplay');
+        
+        if (valueDisplay) valueDisplay.textContent = player.gameStats.value;
+        if (salaryDisplay) salaryDisplay.textContent = player.gameStats.salary;
+        if (contractDisplay) contractDisplay.textContent = formatContractDates(player.gameStats.contract);
+        if (importanceDisplay) importanceDisplay.textContent = player.status.importance;
+        if (formDisplay) formDisplay.textContent = player.status.form;
+        
+        // Estadísticas de temporada
+        const seasonStats = player.seasonStats['2024-2025'] || {};
+        const appearancesDisplay = document.getElementById('playerAppearancesDisplay');
+        const goalsDisplay = document.getElementById('playerGoalsDisplay');
+        const assistsDisplay = document.getElementById('playerAssistsDisplay');
+        const minutesDisplay = document.getElementById('playerMinutesDisplay');
+        const seasonRatingDisplay = document.getElementById('playerSeasonRatingDisplay');
+        
+        if (appearancesDisplay) appearancesDisplay.textContent = seasonStats.appearances || 0;
+        if (goalsDisplay) goalsDisplay.textContent = seasonStats.goals || 0;
+        if (assistsDisplay) assistsDisplay.textContent = seasonStats.assists || 0;
+        if (minutesDisplay) minutesDisplay.textContent = (seasonStats.minutesPlayed || 0).toLocaleString();
+        if (seasonRatingDisplay) seasonRatingDisplay.textContent = (seasonStats.rating || 0).toFixed(1);
+        
+        // Atributos
+        populatePlayerAttributes(player);
+        
+        // Configurar botón de editar
+        const editBtn = document.getElementById('editPlayerFromInfoBtn');
+        if (editBtn) {
+          editBtn.onclick = () => {
+            closePlayerInfoModal();
+            if (window.PlayerManagement) {
+              window.PlayerManagement.openEditModal(player.id);
+            }
+          };
+        }
+      }
+      
+      function populatePlayerAttributes(player) {
+        const attributesGrid = document.getElementById('playerAttributesGrid');
+        if (!attributesGrid || !player.attributes) return;
+        
+        const attributes = player.attributes;
+        
+        // Si es portero, mostrar atributos específicos
+        if (player.basicInfo.position === 'POR') {
+          const goalkeeperAttrs = {
+            estiradas: 'Estiradas',
+            paradas: 'Paradas',
+            saque: 'Saque',
+            reflejos: 'Reflejos',
+            colocacion: 'Colocación',
+            physical: 'Físico'
+          };
+          
+          attributesGrid.innerHTML = Object.entries(goalkeeperAttrs).map(([key, label]) => {
+            const value = attributes[key] || 65;
+            return `
+              <div class="attribute-item">
+                <div class="attribute-name">${label}</div>
+                <div class="attribute-value">${value}</div>
+                <div class="attribute-bar">
+                  <div class="attribute-fill" style="width: ${value}%"></div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        } else {
+          const attributeNames = {
+            pace: 'Ritmo',
+            shooting: 'Tiro',
+            passing: 'Pase',
+            dribbling: 'Regate',
+            defending: 'Defensa',
+            physical: 'Físico'
+          };
+          
+          attributesGrid.innerHTML = Object.entries(attributeNames).map(([key, label]) => {
+            const value = attributes[key] || 65;
+            return `
+              <div class="attribute-item">
+                <div class="attribute-name">${label}</div>
+                <div class="attribute-value">${value}</div>
+                <div class="attribute-bar">
+                  <div class="attribute-fill" style="width: ${value}%"></div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+      
+      function closePlayerInfoModal() {
+        const modal = document.getElementById('playerInfoModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
       }
       
       function updateTeamStats() {
@@ -1498,17 +1094,188 @@
         
         const stats = window.PlayerDB.getTeamStats();
         
-        // Actualizar estadísticas en sidebar
-        const statElements = {
-          '.stat-value': [stats.totalPlayers, stats.averageRating, stats.totalValue, '€450K']
-        };
+        const statLabels = ['Jugadores', 'Media del equipo', 'Presupuesto', 'Salario semanal'];
+        const statValues = [stats.totalPlayers, stats.averageRating, stats.totalValue, '€450K'];
         
         document.querySelectorAll('.stat-item').forEach((item, index) => {
           const valueEl = item.querySelector('.stat-value');
-          if (valueEl && statElements['.stat-value'][index]) {
-            valueEl.textContent = statElements['.stat-value'][index];
+          const labelEl = item.querySelector('.stat-label');
+          if (valueEl && labelEl && statLabels[index]) {
+            labelEl.textContent = statLabels[index];
+            valueEl.textContent = statValues[index];
           }
         });
+      }
+      
+      function updatePositionDistribution() {
+        if (!window.PlayerDB.isLoaded) return;
+        
+        const stats = window.PlayerDB.getTeamStats();
+        const positions = ['POR', 'DEF', 'MED', 'DEL'];
+        const positionLabels = ['POR', 'DEF', 'MED', 'DEL'];
+        
+        document.querySelectorAll('.position-bar').forEach((bar, index) => {
+          const position = positions[index];
+          const count = getPositionCount(stats.positionBreakdown, position);
+          const maxCount = Math.max(...Object.values(stats.positionBreakdown || {}), 1);
+          const percentage = (count / maxCount) * 100;
+          
+          const barEl = bar.querySelector('.bar');
+          const valueEl = bar.querySelector('.bar-value');
+          const labelEl = bar.querySelector('.position-label');
+          
+          if (barEl) barEl.style.width = `${Math.max(percentage, 10)}%`;
+          if (valueEl) valueEl.textContent = count;
+          if (labelEl) labelEl.textContent = positionLabels[index];
+        });
+      }
+      
+      function getPositionCount(breakdown, posGroup) {
+        if (!breakdown) return 0;
+        
+        const positionGroups = {
+          'POR': ['POR'],
+          'DEF': ['DFC', 'LD', 'LI'],
+          'MED': ['MC', 'MCD', 'MCO'],
+          'DEL': ['DC', 'ED', 'EI']
+        };
+        
+        const positions = positionGroups[posGroup] || [];
+        return positions.reduce((total, pos) => total + (breakdown[pos] || 0), 0);
+      }
+      
+      function updateTopPlayers() {
+        if (!window.PlayerDB.isLoaded) return;
+        
+        const topPlayers = window.PlayerDB.searchPlayers({ 
+          sortBy: 'rating', 
+          sortOrder: 'desc',
+          limit: 3
+        });
+        
+        const topPlayerCards = document.querySelectorAll('.top-player-card');
+        
+        topPlayerCards.forEach((card, index) => {
+          const player = topPlayers[index];
+          if (player) {
+            const img = card.querySelector('.mini-avatar');
+            const name = card.querySelector('.top-player-name');
+            const stats = card.querySelector('.top-player-stats');
+            
+            if (img) {
+              img.src = player.basicInfo.photoUrl;
+              img.onerror = function() { this.src = '../../img/players_icons/00000.png'; };
+            }
+            if (name) name.textContent = player.basicInfo.name;
+            if (stats) stats.textContent = `${player.basicInfo.position} • ${player.gameStats.rating} GRL`;
+          }
+        });
+      }
+      
+      function setupTabs() {
+        const tabs = document.querySelectorAll('.tab');
+        const contenidos = document.querySelectorAll('.jugadores-content');
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', function () {
+            console.log('Tab clicked:', this.getAttribute('data-tab'));
+
+            // Remover clase active de todas las pestañas
+            tabs.forEach((t) => t.classList.remove('active'));
+
+            // Agregar clase active a la pestaña clickeada
+            this.classList.add('active');
+
+            // Obtener el id del contenido a mostrar
+            const target = this.getAttribute('data-tab');
+
+            // Ocultar todos los contenidos
+            contenidos.forEach((contenido) => {
+              contenido.style.display = 'none';
+            });
+
+            // Mostrar el contenido correspondiente
+            const targetContent = document.getElementById(target);
+            if (targetContent) {
+              targetContent.style.display = 'grid';
+            }
+          });
+        });
+
+        // Mostrar por defecto la primera pestaña
+        if (tabs.length > 0) {
+          tabs[0].click();
+        }
+      }
+      
+      function setupFilters() {
+        const filtros = document.querySelectorAll('.filtro');
+
+        filtros.forEach((filtro) => {
+          filtro.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            if (e.target.closest('.filtro-option')) {
+              const selectedOption = e.target.textContent;
+              const spanElement = this.querySelector('span');
+              spanElement.textContent = selectedOption;
+              this.classList.remove('filtro-active');
+              return;
+            }
+
+            if (this.classList.contains('filtro-active')) {
+              this.classList.remove('filtro-active');
+              return;
+            }
+
+            filtros.forEach((f) => {
+              if (f !== this) {
+                f.classList.remove('filtro-active');
+              }
+            });
+
+            this.classList.toggle('filtro-active');
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.filtro')) {
+            filtros.forEach((filtro) => {
+              filtro.classList.remove('filtro-active');
+            });
+          }
+        });
+      }
+      
+      function setupAddPlayerButton() {
+        const addButton = document.querySelector('[data-action="add-player"]');
+        if (addButton) {
+          addButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('🎯 Botón añadir jugador clickeado');
+            
+            if (window.PlayerManagement) {
+              window.PlayerManagement.openAddModal();
+            } else {
+              console.error('❌ PlayerManagement no está disponible');
+            }
+          });
+        }
+      }
+      
+      function handlePlayerUpdate() {
+        console.log('🔄 Actualizando datos de jugadores...');
+        renderPlayersTable();
+        updateTeamStats();
+        updatePositionDistribution();
+        updateTopPlayers();
+      }
+      
+      function showErrorMessage(message) {
+        const tbody = document.getElementById('playersTableBody');
+        if (tbody) {
+          tbody.innerHTML = `<tr><td colspan="10" class="error-message">${message}</td></tr>`;
+        }
       }
       
       function getFlagEmoji(countryCode) {
@@ -1526,6 +1293,36 @@
         const end = new Date(contract.endDate).getFullYear();
         return `${start} ~ ${end}`;
       }
+      
+      // Event listeners para cerrar modal de información
+      document.addEventListener('DOMContentLoaded', () => {
+        const infoModal = document.getElementById('playerInfoModal');
+        const closeBtn = document.querySelector('.player-info-close');
+        const closeFooterBtn = document.getElementById('closeInfoModalBtn');
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closePlayerInfoModal);
+        }
+        
+        if (closeFooterBtn) {
+          closeFooterBtn.addEventListener('click', closePlayerInfoModal);
+        }
+        
+        if (infoModal) {
+          infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) {
+              closePlayerInfoModal();
+            }
+          });
+        }
+        
+        // Cerrar modal con ESC
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && infoModal && infoModal.classList.contains('active')) {
+            closePlayerInfoModal();
+          }
+        });
+      });
     </script>
   </body>
 </html>
