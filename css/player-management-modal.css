@@ -1,0 +1,752 @@
+/*-----------------------------------*\
+  #PLAYER MANAGEMENT MODAL
+\*-----------------------------------*/
+
+/* Variables específicas del modal */
+:root {
+  --modal-overlay-color: rgba(0, 0, 0, 0.8);
+  --modal-background: var(--background-light);
+  --modal-border-radius: 16px;
+  --modal-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --modal-max-width: 900px;
+  --modal-header-height: 70px;
+  --tab-height: 50px;
+  --form-border-color: rgba(255, 255, 255, 0.1);
+  --input-background: rgba(255, 255, 255, 0.05);
+  --input-border-focus: var(--primary-color);
+  --error-color: #ff6b6b;
+  --success-color: var(--card-border-color);
+  --warning-color: #feca57;
+}
+
+/* Overlay del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Contenido del modal */
+.modal-content {
+  background: var(--modal-background);
+  border-radius: var(--modal-border-radius);
+  box-shadow: var(--modal-shadow);
+  width: 100%;
+  max-width: var(--modal-max-width);
+  max-height: 90vh;
+  overflow: hidden;
+  transform: scale(0.9) translateY(50px);
+  transition: all 0.3s ease;
+  border: 1px solid var(--form-border-color);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+.player-management-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header del modal */
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), #0052a3);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--form-border-color);
+  min-height: var(--modal-header-height);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Formulario principal */
+.player-form {
+  display: flex;
+  flex-direction: column;
+  height: calc(90vh - var(--modal-header-height));
+}
+
+/* Tabs de navegación */
+.form-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--form-border-color);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-width: 120px;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.tab-icon {
+  font-size: 1.1rem;
+}
+
+.tab-text {
+  white-space: nowrap;
+}
+
+/* Contenido de tabs */
+.form-tab-content {
+  display: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.form-tab-content.active {
+  display: block;
+}
+
+/* Secciones del formulario */
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.form-section h4 {
+  margin: 1.5rem 0 1rem 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Filas y grupos de formulario */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row.checkboxes {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.required label::after {
+  content: " *";
+  color: var(--error-color);
+}
+
+/* Labels */
+label {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Inputs generales */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  background: var(--input-background);
+  border: 1px solid var(--form-border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+input:invalid {
+  border-color: var(--error-color);
+}
+
+/* Upload de foto */
+.photo-upload-area {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed var(--form-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+  background: var(--input-background);
+}
+
+.photo-upload-area:hover {
+  border-color: var(--primary-color);
+  background: rgba(0, 102, 204, 0.05);
+}
+
+.photo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.photo-upload-area:hover .upload-overlay {
+  opacity: 1;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-text {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Inputs de rating con visual */
+.rating-input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rating-visual {
+  background: var(--background-dark);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  border: 2px solid var(--form-border-color);
+  transition: var(--transition);
+}
+
+.rating-visual.excellent {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.rating-visual.good {
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+}
+
+.rating-visual.poor {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+/* Atributos con barras */
+.attributes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.attribute-group {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--form-border-color);
+}
+
+.attribute-group h4 {
+  margin-top: 0;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--form-border-color);
+  padding-bottom: 0.5rem;
+}
+
+.attribute-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.attribute-item label {
+  margin: 0;
+  min-width: 80px;
+  font-size: 0.85rem;
+}
+
+.attribute-input {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.attribute-input input {
+  width: 60px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.attribute-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.attribute-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--error-color), var(--warning-color), var(--success-color));
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Checkboxes personalizados */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--form-border-color);
+  border-radius: 4px;
+  margin-right: 0.75rem;
+  position: relative;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.checkbox-label:hover .checkmark {
+  border-color: var(--primary-color);
+}
+
+.checkbox-label input:checked + .checkmark {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.checkbox-label input:checked + .checkmark::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Mensajes de error */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+.form-group.error input,
+.form-group.error select {
+  border-color: var(--error-color);
+}
+
+/* Botones de acción */
+.form-actions {
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--form-border-color);
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), #0052a3);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border: 1px solid var(--form-border-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--error-color), #e74c3c);
+  color: white;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+/* Estados de carga */
+.btn-loading .btn-text {
+  display: none;
+}
+
+.btn-loading .btn-loading {
+  display: flex !important;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Modal de confirmación de eliminación */
+.delete-confirm-modal {
+  max-width: 450px;
+}
+
+.delete-confirm-modal .modal-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+.delete-confirm-modal .modal-body p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.warning-text {
+  color: var(--error-color) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+    border-radius: 12px;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .form-tab-content {
+    padding: 1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .tab-text {
+    display: none;
+  }
+  
+  .attributes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .attribute-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .attribute-input {
+    justify-content: space-between;
+  }
+  
+  .form-actions {
+    padding: 1rem;
+    flex-direction: column-reverse;
+  }
+  
+  .btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-upload-area {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .rating-input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .rating-visual {
+    text-align: center;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-tab-content.active {
+  animation: slideIn 0.3s ease;
+}
+
+/* Estados especiales */
+.form-group.success input,
+.form-group.success select {
+  border-color: var(--success-color);
+}
+
+.form-group.warning input,
+.form-group.warning select {
+  border-color: var(--warning-color);
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-dark);
+  color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 10000;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Estilos para botones de acción en tabla */
+.actions-cell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin: 0 0.125rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  opacity: 0.7;
+}
+
+.btn-icon:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.btn-icon[data-action="delete-player"]:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+/* Estilos para el header de jugadores */
+.jugadores-header .header-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.jugadores-header .btn {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-icon-text {
+  font-size: 0.9rem;
+} 

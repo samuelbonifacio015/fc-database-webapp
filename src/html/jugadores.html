@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/jugadores.css" />
+    <link rel="stylesheet" href="../../css/player-management-modal.css" />
   </head>
   <body>
     <nav>
@@ -31,8 +32,13 @@
           <li>
             <a href="rendimiento.html">Rendimiento</a>
           </li>
-          <li>
-            <a href="notas.html">Notas</a>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Temporada</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Temporada 2024/25</a></li>
+              <li><a href="#">Temporada 2023/24</a></li>
+              <li><a href="#">Temporada 2022/23</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -42,6 +48,10 @@
       <div class="jugadores-header">
         <div class="header-title">
           <h1>Jugadores</h1>
+          <button class="btn btn-primary" data-action="add-player">
+            <span class="btn-icon">➕</span>
+            Añadir Jugador
+          </button>
           <div class="filtros-dropdown">
             <div class="filtro">
               <span>v1.0 - 11 abril</span>
@@ -207,81 +217,17 @@
                 <th>Valor</th>
                 <th>Contrato</th>
                 <th>Salario</th>
+                <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>POR</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/agirrezabala.jpg"
-                    alt="J. Agirrezabala"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">J. Agirrezabala</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇪🇸</span>
-                      <span class="position por">POR</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-82">82</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€32.5M</td>
-                <td>2024 ~ 2029</td>
-                <td>€60K</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>POR</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/lejeune.png"
-                    alt="C. Lejeune"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">C. Lejeune</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇫🇷</span>
-                      <span class="position por">POR</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-71">71</span></td>
-                <td>Promesa</td>
-                <td>Normal</td>
-                <td>€3.5M</td>
-                <td>2024 ~ 2026</td>
-                <td>€12K</td>
-              </tr>
-              <tr>
-                <td>30</td>
-                <td>LI</td>
-                <td class="player-cell">
-                  <img
-                    src="../../img/players_icons/hilali.jpg"
-                    alt="O. El Hilali"
-                    class="player-avatar"
-                  />
-                  <div class="player-info">
-                    <div class="player-name">O. El Hilali</div>
-                    <div class="player-position">
-                      <span class="flag-icon">🇲🇦</span>
-                      <span class="position li">LI</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="rating rating-79">79</span></td>
-                <td>Clave</td>
-                <td>Normal</td>
-                <td>€16M</td>
-                <td>2024 ~ 2028</td>
-                <td>€35K</td>
-              </tr>
+            <tbody id="playersTableBody">
+              <!-- Los jugadores se cargarán dinámicamente desde la base de datos -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
               <tr>
                 <td>24</td>
                 <td>DFC</td>
@@ -1263,6 +1209,51 @@
       </div>
     </main>
 
+    <!-- Modal de Gestión de Jugadores (versión simplificada) -->
+    <div id="playerManagementModal" class="modal-overlay">
+      <div class="modal-content player-management-modal">
+        <header class="modal-header">
+          <h2 id="modalTitle">Añadir Jugador</h2>
+          <button class="close-modal" type="button">&times;</button>
+        </header>
+        <form id="playerForm" class="player-form">
+          <div class="form-tabs">
+            <button type="button" class="tab-btn active" data-tab="basic">👤 Básico</button>
+            <button type="button" class="tab-btn" data-tab="stats">📊 Stats</button>
+          </div>
+          <div class="form-tab-content active" data-tab="basic">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="playerName" name="name" required>
+              </div>
+              <div class="form-group">
+                <label>Posición</label>
+                <select id="playerPosition" name="position" required>
+                  <option value="POR">POR</option>
+                  <option value="DFC">DFC</option>
+                  <option value="MC">MC</option>
+                  <option value="DC">DC</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-tab-content" data-tab="stats">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Rating</label>
+                <input type="number" id="playerRating" name="rating" min="40" max="99" value="65">
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="saveBtn">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script>
       // Funcionalidad para abrir modal de jugador
       document.addEventListener("DOMContentLoaded", function () {
@@ -1446,6 +1437,95 @@
           });
         });
       });
+    </script>
+    
+    <!-- Scripts del nuevo sistema -->
+    <script src="../../js/database/PlayerDatabase.js"></script>
+    <script src="../../js/PlayerManagementModal.js"></script>
+    
+    <!-- Script de integración -->
+    <script>
+      document.addEventListener('DOMContentLoaded', async function() {
+        // Cargar base de datos
+        if (window.PlayerDB) {
+          await window.PlayerDB.loadDatabase();
+          renderPlayersTable();
+          updateTeamStats();
+        }
+        
+        // Escuchar eventos de actualización
+        document.addEventListener('playerAdded', renderPlayersTable);
+        document.addEventListener('playerUpdated', renderPlayersTable);
+        document.addEventListener('playerDeleted', renderPlayersTable);
+      });
+      
+      function renderPlayersTable() {
+        const tbody = document.getElementById('playersTableBody');
+        if (!tbody || !window.PlayerDB.isLoaded) return;
+        
+        const players = window.PlayerDB.searchPlayers({ sortBy: 'rating', sortOrder: 'desc' });
+        
+        tbody.innerHTML = players.map(player => `
+          <tr data-player-id="${player.id}">
+            <td>${player.basicInfo.dorsal || '-'}</td>
+            <td>${player.basicInfo.position}</td>
+            <td class="player-cell">
+              <img src="${player.basicInfo.photoUrl}" alt="${player.basicInfo.name}" class="player-avatar" />
+              <div class="player-info">
+                <div class="player-name">${player.basicInfo.name}</div>
+                <div class="player-position">
+                  <span class="flag-icon">${getFlagEmoji(player.basicInfo.nationalityCode)}</span>
+                  <span class="position ${player.basicInfo.position.toLowerCase()}">${player.basicInfo.position}</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating rating-${player.gameStats.rating}">${player.gameStats.rating}</span></td>
+            <td>${player.status.importance}</td>
+            <td>${player.status.form}</td>
+            <td>${player.gameStats.value}</td>
+            <td>${formatContractDates(player.gameStats.contract)}</td>
+            <td>${player.gameStats.salary}</td>
+            <td class="actions-cell">
+              <button class="btn-icon" data-action="edit-player" data-player-id="${player.id}" title="Editar">✏️</button>
+              <button class="btn-icon" data-action="delete-player" data-player-id="${player.id}" title="Eliminar">🗑️</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+      
+      function updateTeamStats() {
+        if (!window.PlayerDB.isLoaded) return;
+        
+        const stats = window.PlayerDB.getTeamStats();
+        
+        // Actualizar estadísticas en sidebar
+        const statElements = {
+          '.stat-value': [stats.totalPlayers, stats.averageRating, stats.totalValue, '€450K']
+        };
+        
+        document.querySelectorAll('.stat-item').forEach((item, index) => {
+          const valueEl = item.querySelector('.stat-value');
+          if (valueEl && statElements['.stat-value'][index]) {
+            valueEl.textContent = statElements['.stat-value'][index];
+          }
+        });
+      }
+      
+      function getFlagEmoji(countryCode) {
+        const flags = {
+          'ES': '🇪🇸', 'FR': '🇫🇷', 'PT': '🇵🇹', 'BR': '🇧🇷', 'AR': '🇦🇷',
+          'IT': '🇮🇹', 'DE': '🇩🇪', 'GB': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'NL': '🇳🇱', 'KR': '🇰🇷',
+          'GH': '🇬🇭', 'MA': '🇲🇦', 'CO': '🇨🇴', 'HU': '🇭🇺', 'CV': '🇨🇻'
+        };
+        return flags[countryCode] || '🏳️';
+      }
+      
+      function formatContractDates(contract) {
+        if (!contract.startDate || !contract.endDate) return '-';
+        const start = new Date(contract.startDate).getFullYear();
+        const end = new Date(contract.endDate).getFullYear();
+        return `${start} ~ ${end}`;
+      }
     </script>
   </body>
 </html>

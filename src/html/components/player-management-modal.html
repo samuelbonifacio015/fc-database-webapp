@@ -1,0 +1,453 @@
+<!-- Modal de Gestión de Jugadores -->
+<div id="playerManagementModal" class="modal-overlay">
+  <div class="modal-content player-management-modal">
+    <header class="modal-header">
+      <h2 id="modalTitle">Añadir Jugador</h2>
+      <button class="close-modal" type="button" aria-label="Cerrar modal">&times;</button>
+    </header>
+
+    <form id="playerForm" class="player-form" novalidate>
+      <!-- Tabs de navegación -->
+      <div class="form-tabs">
+        <button type="button" class="tab-btn active" data-tab="basic">
+          <span class="tab-icon">👤</span>
+          <span class="tab-text">Básico</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="stats">
+          <span class="tab-icon">📊</span>
+          <span class="tab-text">Estadísticas</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="contract">
+          <span class="tab-icon">📋</span>
+          <span class="tab-text">Contrato</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="attributes">
+          <span class="tab-icon">⚡</span>
+          <span class="tab-text">Atributos</span>
+        </button>
+      </div>
+
+      <!-- Tab: Información Básica -->
+      <div class="form-tab-content active" data-tab="basic">
+        <div class="form-section">
+          <h3>Información Personal</h3>
+          
+          <div class="form-row">
+            <div class="form-group photo-upload">
+              <label for="playerPhoto">Foto del Jugador</label>
+              <div class="photo-upload-area" id="photoUploadArea">
+                <img id="photoPreview" src="../../img/players_icons/00000.png" alt="Vista previa" class="photo-preview">
+                <div class="upload-overlay">
+                  <span class="upload-icon">📷</span>
+                  <span class="upload-text">Arrastra una imagen o haz clic</span>
+                </div>
+                <input type="file" id="playerPhoto" name="photoUrl" accept="image/*" hidden>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="playerName">Nombre</label>
+              <input type="text" id="playerName" name="name" required maxlength="50">
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="playerFullName">Nombre Completo</label>
+              <input type="text" id="playerFullName" name="fullName" maxlength="100">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="playerPosition">Posición</label>
+              <select id="playerPosition" name="position" required>
+                <option value="">Seleccionar posición</option>
+                <optgroup label="Portero">
+                  <option value="POR">POR - Portero</option>
+                </optgroup>
+                <optgroup label="Defensa">
+                  <option value="DFC">DFC - Defensa Central</option>
+                  <option value="LI">LI - Lateral Izquierdo</option>
+                  <option value="LD">LD - Lateral Derecho</option>
+                </optgroup>
+                <optgroup label="Centrocampo">
+                  <option value="MCD">MCD - Mediocentro Defensivo</option>
+                  <option value="MC">MC - Mediocentro</option>
+                  <option value="MCO">MCO - Mediocentro Ofensivo</option>
+                  <option value="MI">MI - Mediocentro Izquierdo</option>
+                  <option value="MD">MD - Mediocentro Derecho</option>
+                </optgroup>
+                <optgroup label="Ataque">
+                  <option value="EI">EI - Extremo Izquierdo</option>
+                  <option value="ED">ED - Extremo Derecho</option>
+                  <option value="SD">SD - Segundo Delantero</option>
+                  <option value="DC">DC - Delantero Centro</option>
+                </optgroup>
+              </select>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group required">
+              <label for="playerAge">Edad</label>
+              <input type="number" id="playerAge" name="age" required min="15" max="45">
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="playerDorsal">Dorsal</label>
+              <input type="number" id="playerDorsal" name="dorsal" min="1" max="99">
+            </div>
+            <div class="form-group">
+              <label for="playerFoot">Pierna Hábil</label>
+              <select id="playerFoot" name="preferredFoot">
+                <option value="Derecha">Derecha</option>
+                <option value="Izquierda">Izquierda</option>
+                <option value="Ambidiestro">Ambidiestro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="playerNationality">Nacionalidad</label>
+              <select id="playerNationality" name="nationality">
+                <option value="España">🇪🇸 España</option>
+                <option value="Francia">🇫🇷 Francia</option>
+                <option value="Portugal">🇵🇹 Portugal</option>
+                <option value="Brasil">🇧🇷 Brasil</option>
+                <option value="Argentina">🇦🇷 Argentina</option>
+                <option value="Italia">🇮🇹 Italia</option>
+                <option value="Alemania">🇩🇪 Alemania</option>
+                <option value="Inglaterra">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</option>
+                <option value="Países Bajos">🇳🇱 Países Bajos</option>
+                <option value="Corea del Sur">🇰🇷 Corea del Sur</option>
+                <option value="Ghana">🇬🇭 Ghana</option>
+                <option value="Marruecos">🇲🇦 Marruecos</option>
+                <option value="Colombia">🇨🇴 Colombia</option>
+                <option value="Hungría">🇭🇺 Hungría</option>
+                <option value="Cabo Verde">🇨🇻 Cabo Verde</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Estadísticas -->
+      <div class="form-tab-content" data-tab="stats">
+        <div class="form-section">
+          <h3>Estadísticas de Juego</h3>
+          
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="playerRating">Rating Actual</label>
+              <div class="rating-input-group">
+                <input type="number" id="playerRating" name="rating" required min="40" max="99" step="1">
+                <div class="rating-visual" id="ratingVisual">65</div>
+              </div>
+              <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="playerPotential">Potencial</label>
+              <div class="rating-input-group">
+                <input type="number" id="playerPotential" name="potential" min="40" max="99" step="1">
+                <div class="rating-visual" id="potentialVisual">70</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="playerValue">Valor de Mercado</label>
+              <input type="text" id="playerValue" name="value" placeholder="ej: 25M, 500K">
+            </div>
+            <div class="form-group">
+              <label for="playerSalary">Salario Semanal</label>
+              <input type="text" id="playerSalary" name="salary" placeholder="ej: 60K, 1.5M">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Estadísticas de Temporada 2024-25</h4>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="playerAppearances">Partidos Jugados</label>
+                <input type="number" id="playerAppearances" name="appearances" min="0" max="60">
+              </div>
+              <div class="form-group">
+                <label for="playerGoals">Goles</label>
+                <input type="number" id="playerGoals" name="goals" min="0" max="100">
+              </div>
+              <div class="form-group">
+                <label for="playerAssists">Asistencias</label>
+                <input type="number" id="playerAssists" name="assists" min="0" max="100">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="playerMinutes">Minutos Jugados</label>
+                <input type="number" id="playerMinutes" name="minutesPlayed" min="0" max="5000">
+              </div>
+              <div class="form-group">
+                <label for="playerSeasonRating">Media de Notas</label>
+                <input type="number" id="playerSeasonRating" name="seasonRating" min="1" max="10" step="0.1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Contrato -->
+      <div class="form-tab-content" data-tab="contract">
+        <div class="form-section">
+          <h3>Información Contractual</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contractStart">Fecha de Inicio</label>
+              <input type="date" id="contractStart" name="startDate">
+            </div>
+            <div class="form-group">
+              <label for="contractEnd">Fecha de Fin</label>
+              <input type="date" id="contractEnd" name="endDate">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contractYears">Duración (años)</label>
+              <input type="number" id="contractYears" name="years" min="1" max="10">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Estado del Jugador</h4>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="playerImportance">Importancia</label>
+                <select id="playerImportance" name="importance">
+                  <option value="Clave">Clave</option>
+                  <option value="Importante">Importante</option>
+                  <option value="Rotación">Rotación</option>
+                  <option value="Promesa">Promesa</option>
+                  <option value="Suplente">Suplente</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="playerForm">Forma Física</label>
+                <select id="playerForm" name="form">
+                  <option value="Excelente">Excelente</option>
+                  <option value="Buena">Buena</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Regular">Regular</option>
+                  <option value="Mala">Mala</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row checkboxes">
+              <div class="form-group checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="isYouthPlayer" name="isYouthPlayer">
+                  <span class="checkmark"></span>
+                  Jugador de Cantera
+                </label>
+              </div>
+              <div class="form-group checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="onLoan" name="onLoan">
+                  <span class="checkmark"></span>
+                  Cedido
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row checkboxes">
+              <div class="form-group checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="transferListed" name="transferListed">
+                  <span class="checkmark"></span>
+                  En Lista de Transferencias
+                </label>
+              </div>
+              <div class="form-group checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="injured" name="injured">
+                  <span class="checkmark"></span>
+                  Lesionado
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Atributos -->
+      <div class="form-tab-content" data-tab="attributes">
+        <div class="form-section">
+          <h3>Atributos Físicos y Técnicos</h3>
+          
+          <div class="attributes-grid">
+            <div class="attribute-group">
+              <h4>Atributos Principales</h4>
+              
+              <div class="attribute-item">
+                <label for="attrPace">Ritmo</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrPace" name="pace" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrShooting">Tiro</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrShooting" name="shooting" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrPassing">Pase</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrPassing" name="passing" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrDribbling">Regate</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrDribbling" name="dribbling" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrDefending">Defensa</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrDefending" name="defending" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrPhysical">Físico</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrPhysical" name="physical" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atributos específicos de portero (se muestran solo si position = POR) -->
+            <div class="attribute-group goalkeeper-attrs" style="display: none;">
+              <h4>Atributos de Portero</h4>
+              
+              <div class="attribute-item">
+                <label for="attrEstiradas">Estiradas</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrEstiradas" name="estiradas" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrParadas">Paradas</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrParadas" name="paradas" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrSaque">Saque</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrSaque" name="saque" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrReflejos">Reflejos</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrReflejos" name="reflejos" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="attribute-item">
+                <label for="attrColocacion">Colocación</label>
+                <div class="attribute-input">
+                  <input type="number" id="attrColocacion" name="colocacion" min="1" max="99" value="65">
+                  <div class="attribute-bar">
+                    <div class="attribute-fill" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" id="cancelBtn">
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary" id="saveBtn">
+          <span class="btn-text">Guardar Jugador</span>
+          <span class="btn-loading" style="display: none;">
+            <span class="spinner"></span>
+            Guardando...
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de confirmación para eliminar -->
+<div id="deleteConfirmModal" class="modal-overlay">
+  <div class="modal-content delete-confirm-modal">
+    <header class="modal-header">
+      <h2>Confirmar Eliminación</h2>
+    </header>
+    <div class="modal-body">
+      <p>¿Estás seguro de que quieres eliminar a <strong id="deletePlayerName"></strong>?</p>
+      <p class="warning-text">Esta acción no se puede deshacer.</p>
+    </div>
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" id="cancelDeleteBtn">
+        Cancelar
+      </button>
+      <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
+        Eliminar Jugador
+      </button>
+    </div>
+  </div>
+</div> 
