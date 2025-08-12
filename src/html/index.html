@@ -10,52 +10,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Special+Gothic&family=Special+Gothic+Condensed+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/tailwind-output.css" />
 </head>
 
-<body>
-    <nav>
-      <div class="nav-container">
-        <div class="logo">
-          <span class="logo-letter">A</span>
-          <span class="logo-text">Andorra FC Manager</span>
+<body class="font-['Urbanist',-apple-system,   BlinkMacSystemFont,'Segoe_UI',Roboto,sans-serif] bg-[#1a1a1a] text-white leading-relaxed m-0 p-0 box-border    line-height-1.6">
+    <nav class="p-4">
+      <div class="max-w-[1200px] mx-auto flex justify-between items-center">
+        <div class="flex item-center gap-[0.4rem]">
+            <img src="/img/assets/team-logo.png" alt="Andorra FC Logo" class="w-[40px] h-[40px] rounded-full">
+          <span class="text-white text-[1.2rem] font-semibold">Andorra FC Manager</span>
         </div>
 
-        <ul class="nav-links">
+        <ul class="list-none flex items-center gap-32">
           <li>
-            <a href="index.html" class="active">Inicio</a>
+            <a href="index.html" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Inicio</a>
           </li>
           <li>
-            <a href="jugadores.html">Jugadores</a>
+            <a href="jugadores.html" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Jugadores</a>
           </li>
           <li>
-            <a href="rendimiento.html">Rendimiento</a>
+            <a href="rendimiento.html" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Rendimiento</a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Temporada</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Temporada 2024/25</a></li>
-              <li><a href="#">Temporada 2023/24</a></li>
-              <li><a href="#">Temporada 2022/23</a></li>
+          <li class="relative">
+            <a href="#" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Temporada</a>
+            <ul class="absolute top-full left-0 bg-[#2d2d2d] border border-white/10 rounded-lg py-2 min-w-[200px] opacity-0 invisible -translate-y-2 transition-all duration-300 z-[1000] shadow-lg group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+              <li class="list-none"><a href="#" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Temporada 2024/25</a></li>
+              <li class="list-none"><a href="#" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Temporada 2023/24</a></li>
+              <li class="list-none"><a href="#" class="text-white no-underline text-base flex items-center gap-[0.4rem] py-[0.4rem] px-4 rounded-md transition-all duration-300 relative mx-0 my-1 hover:text-[#0066cc] after:content-[''] after:absolute after:bottom-[-0.3125rem] after:left-0 after:w-0 after:h-[0.125rem] after:bg-[#0066cc] after:transition-all after:duration-300 cursor-pointer">Temporada 2022/23</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </nav>
 
-    <main class="main-content">
-      <div class="hero-section">
-        <div class="hero-logo">
-          <img src="../../img/assets/team-logo.png" alt="Andorra FC Logo" class="team-logo-hero">
+    <main class="max-w-[1200px] mx-auto p-32">
+      <div class="text-center py-32 mb-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-[20px] p-16 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[url('data:image/svg+xml,<svg_xmlns=%22http://www.w3.org/2000/svg%22_viewBox=%220_0_100_100%22><defs><pattern_id=%22grid%22_width=%2210%22_height=%2210%22_patternUnits=%22userSpaceOnUse%22><path_d=%22M_10_0_L_0_0_0_10%22_fill=%22none%22_stroke=%22rgba(255,255,255,0.03)%22_stroke-width=%220.5%22/></pattern></defs><rect_width=%22100%22_height=%22100%22_fill=%22url(%23grid)%22/></svg>')] before:pointer-events-none">
+        <div class="mb-32">
+          <img src="/img/assets/team-logo.png" alt="Andorra FC Logo" class="w-[120px] h-[120px] rounded-full border-4 border-[#0066cc] shadow-[0_8px_32px_rgba(0,102,204,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_40px_rgba(0,102,204,0.4)]">
         </div>
-        <h1>Andorra FC Manager</h1>
-        <p class="hero-description">
+        <h1 class="text-4xl font-bold text-blue-600 mb-4 text-center font-['Libre_Caslon_Text',serif]">Andorra FC Manager</h1>
+        <p class="text-[#a0a0a0] max-w-[600px] mx-auto mb-8 text-[1.2rem] leading-[1.8] text-center">
           Base de datos completa del modo carrera con Andorra FC en FC24
         </p>
         <div class="database-access">
-          <a href="jugadores.html" class="database-btn">
-            <span class="database-icon">📊</span>
-            <span class="database-text">Acceder a la Base de Datos</span>
+          <a href="jugadores.html" class="inline-flex items-center gap-4 py-6 px-12 bg-gradient-to-r from-[#0066cc] to-[#0052a3] text-white no-underline rounded-[50px] font-semibold text-[1.1rem] transition-all duration-300 shadow-[0_8px_25px_rgba(0,102,204,0.3)] relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,102,204,0.4)] before:content-[''] before:absolute before:inset-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-left before:duration-500 hover:before:left-full">
+            <span class="text-[1.5rem]">📊</span>
+            <span class="font-semibold">Acceder a la Base de Datos</span>
           </a>
         </div>
       </div>
@@ -65,15 +65,15 @@
       <div class="stats-section">
         <h2 class="section-title">Estadísticas del Club</h2>
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">23</div>
-            <div class="stat-label">Jugadores</div>
-            <div class="stat-trend positive">↑ 3 nuevos</div>
+          <div class="stat-card bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500 hover:shadow-lg transition-shadow duration-200">
+            <div class="stat-value text-3xl font-bold text-green-600">23</div>
+            <div class="stat-label text-gray-800 font-semibold">Jugadores</div>
+            <div class="stat-trend positive text-sm text-green-600 font-medium">↑ 3 nuevos</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">4°</div>
-            <div class="stat-label">Posición</div>
-            <div class="stat-trend positive">↑ 2 posiciones</div>
+          <div class="stat-card bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500 hover:shadow-lg transition-shadow duration-200">
+            <div class="stat-value text-3xl font-bold text-blue-600">4°</div>
+            <div class="stat-label text-gray-800 font-semibold">Posición</div>
+            <div class="stat-trend positive text-sm text-blue-600 font-medium">↑ 2 posiciones</div>
           </div>
           <div class="stat-card">
             <div class="stat-value">76</div>
@@ -142,27 +142,27 @@
               </div>
             </div>
           </div>
-          <div class="update-card">
-            <div class="tools">
-              <div class="circle">
-                <span class="red box"></span>
+          <div class="bg-[#011522] p-0 rounded-xl flex flex-col relative overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:-translate-y-1">
+            <div class="flex items-center p-[9px] bg-white/5 border-b border-white/10">
+              <div class="p-0 px-1">
+                <span class="inline-block w-[10px] h-[10px] p-[1px] rounded-full bg-[#ff605c]"></span>
               </div>
-              <div class="circle">
-                <span class="yellow box"></span>
+              <div class="p-0 px-1">
+                <span class="inline-block w-[10px] h-[10px] p-[1px] rounded-full bg-[#ffbd44]"></span>
               </div>
-              <div class="circle">
-                <span class="green box"></span>
+              <div class="p-0 px-1">
+                <span class="inline-block w-[10px] h-[10px] p-[1px] rounded-full bg-[#00ca4e]"></span>
               </div>
             </div>
-            <div class="update-content">
-              <div class="update-icon training editable-icon" contenteditable="false" data-placeholder="📈">📈</div>
-              <h3 class="editable" contenteditable="false" data-placeholder="Título de actualización">Mejora de Jugador</h3>
-              <p class="editable" contenteditable="false" data-placeholder="Descripción de la actualización">Carlos Martínez ha subido a 78 de media</p>
-              <span class="update-date editable" contenteditable="false" data-placeholder="Fecha">Hace 1 semana</span>
-              <div class="update-actions">
-                <button class="edit-btn">Editar</button>
-                <button class="save-btn" style="display: none">Guardar</button>
-                <button class="cancel-btn" style="display: none">Cancelar</button>
+            <div class="p-8">
+              <div class="text-[1.5rem] bg-white/5 w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-[rgba(52,152,219,0.15)] editable-icon" contenteditable="false" data-placeholder="📈">📈</div>
+              <h3 class="text-[1.1rem] mb-[0.4rem] text-white font-semibold tracking-[0.3px] editable" contenteditable="false" data-placeholder="Título de actualización">Mejora de Jugador</h3>
+              <p class="text-[#b3b3b3] text-[0.95rem] mb-[0.4rem] leading-[1.5] editable" contenteditable="false" data-placeholder="Descripción de la actualización">Carlos Martínez ha subido a 78 de media</p>
+              <span class="text-white/50 text-[0.8rem] block italic editable" contenteditable="false" data-placeholder="Fecha">Hace 1 semana</span>
+              <div class="mt-[10px] flex gap-2">
+                <button class="bg-transparent border border-white/30 text-white py-1 px-[10px] rounded text-[0.8rem] cursor-pointer transition-all duration-300 hover:bg-[#0066cc] hover:border-[#0066cc] edit-btn">Editar</button>
+                <button class="bg-[#4caf50] border-[#4caf50] text-white py-1 px-[10px] rounded text-[0.8rem] cursor-pointer transition-all duration-300 hover:bg-[#45a049] save-btn" style="display: none">Guardar</button>
+                <button class="bg-[#f44336] border-[#f44336] text-white py-1 px-[10px] rounded text-[0.8rem] cursor-pointer transition-all duration-300 hover:bg-[#d32f2f] cancel-btn" style="display: none">Cancelar</button>
               </div>
             </div>
           </div>
@@ -180,114 +180,112 @@
       </div>
     </main>
 
-    <main class="team-profile">
-      <div class="team-header">
-        <div class="team-basic-info">
-          <div class="team-logo-container">
-            <img
-              src="../../img/assets/team-logo.png"
-              alt="Escudo del equipo"
-              class="team-logo"
-            />
-          </div>
-          <div class="team-rating">
-            <span class="rating-label">Valoración</span>
-            <span class="rating-value" data-rating="76">76</span>
-          </div>
+    <main class="max-w-[1200px] mx-auto p-8">
+      <div class="grid grid-cols-[auto_1fr_auto] gap-8 items-center bg-gradient-to-br from-[#2d2d2d] to-[#3d3d3d] p-8 rounded-xl mb-8">
+        <div class="w-[120px] h-[120px]">
+          <img
+            src="../../img/assets/team-logo.png"
+            alt="Escudo del equipo"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <div class="flex flex-col items-center p-4 bg-black/20 rounded-lg">
+          <span class="text-[0.9rem] text-[#a0a0a0] mb-[0.3rem] uppercase tracking-[0.5px]">Valoración</span>
+          <span class="text-[1.8rem] font-bold w-[50px] h-[50px] flex items-center justify-center rounded-md text-black bg-[#ffd700]" data-rating="76">76</span>
         </div>
 
-        <div class="team-details">
-          <h1 class="team-name">Andorra FC</h1>
-          <div class="team-location">
+        <div class="flex flex-col">
+          <h1 class="text-[2rem] mb-[0.4rem] font-['Libre_Caslon_Text',serif]">Andorra FC</h1>
+          <div class="flex items-center gap-[0.4rem]">
             <img
               src="../../img/assets/spain-flag.png"
-              alt="Bandera de Alemania"
-              class="country-flag"
+              alt="Bandera de España"
+              class="w-6 h-4 object-cover"
             />
             <span>España</span>
           </div>
         </div>
 
-        <div class="team-stats">
-          <div class="stat-item">
-            <span class="stat-label">Año de fundación</span>
-            <span class="stat-value">1942</span>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center">
+            <span class="text-[#a0a0a0] text-[0.9rem]">Año de fundación</span>
+            <span class="text-[1.2rem] font-bold block">1942</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-label">Valor</span>
-            <span class="stat-value">€6.0M</span>
+          <div class="text-center">
+            <span class="text-[#a0a0a0] text-[0.9rem]">Valor</span>
+            <span class="text-[1.2rem] font-bold block">€6.0M</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-label">Títulos de liga</span>
-            <span class="stat-value">1</span>
+          <div class="text-center">
+            <span class="text-[#a0a0a0] text-[0.9rem]">Títulos de liga</span>
+            <span class="text-[1.2rem] font-bold block">1</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-label">Copas nacionales</span>
-            <span class="stat-value">2</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-attributes">
-        <div class="attribute-column">
-          <div class="attribute-item">
-            <span class="attribute-name">Valoración</span>
-            <span class="attribute-value">65</span>
-            <div class="stars-container">★★★★☆</div>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Ataque</span>
-            <span class="attribute-value">65</span>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Centro del campo</span>
-            <span class="attribute-value">65</span>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Defensa</span>
-            <span class="attribute-value">64</span>
-          </div>
-        </div>
-        <div class="attribute-column">
-          <div class="attribute-item">
-            <span class="attribute-name">Prestigio nacional</span>
-            <div class="stars-container">★★★★☆</div>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Prestigio internacional</span>
-            <div class="stars-container">★☆☆☆☆</div>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Des. Juvenil</span>
-            <div class="stars-container">★★★★½</div>
-          </div>
-          <div class="attribute-item">
-            <span class="attribute-name">Rentabilidad</span>
-            <div class="stars-container">★★★☆☆</div>
+          <div class="text-center">
+            <span class="text-[#a0a0a0] text-[0.9rem]">Copas nacionales</span>
+            <span class="text-[1.2rem] font-bold block">2</span>
           </div>
         </div>
       </div>
 
-      <div class="team-staff">
-        <div class="staff-section">
-          <h2 class="section-title">Entrenador</h2>
-          <div class="coach-card">
-            <div class="coach-image-container">
+      <div class="grid grid-cols-2 gap-8 bg-black p-6 rounded-xl mb-6 relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#0066cc] after:to-transparent">
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Valoración</span>
+            <span class="font-bold text-[#ffd700]">65</span>
+            <div class="text-[#ffd700] tracking-[2px] text-[1.2rem]">★★★★☆</div>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Ataque</span>
+            <span class="font-bold text-[#ffd700]">65</span>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Centro del campo</span>
+            <span class="font-bold text-[#ffd700]">65</span>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Defensa</span>
+            <span class="font-bold text-[#ffd700]">64</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Prestigio nacional</span>
+            <div class="text-[#ffd700] tracking-[2px] text-[1.2rem]">★★★★☆</div>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Prestigio internacional</span>
+            <div class="text-[#ffd700] tracking-[2px] text-[1.2rem]">★☆☆☆☆</div>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Des. Juvenil</span>
+            <div class="text-[#ffd700] tracking-[2px] text-[1.2rem]">★★★★½</div>
+          </div>
+          <div class="flex justify-between items-center py-[0.8rem] border-b border-white/10">
+            <span class="text-[#b3b3b3] text-[0.9rem]">Rentabilidad</span>
+            <div class="text-[#ffd700] tracking-[2px] text-[1.2rem]">★★★☆☆</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 mb-8">
+        <div class="mb-6">
+          <h2 class="text-[1.3rem] mb-6 font-medium uppercase tracking-[0.5px]">Entrenador</h2>
+          <div class="bg-black rounded-xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.3)] relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#0066cc] after:to-transparent">
+            <div class="w-[130px] h-[130px] overflow-hidden flex-shrink-0 relative after:content-[''] after:absolute after:top-0 after:right-0 after:w-[2px] after:h-full after:bg-gradient-to-b after:from-transparent after:via-white/10">
               <img
                 src="../../img/players_icons/00000.png"
                 alt="Diego Simeone"
-                class="coach-photo"
+                class="w-full h-full object-cover grayscale"
               />
             </div>
-            <div class="coach-info">
-              <h3 class="coach-name">Diego Simeone</h3>
-              <div class="coach-nationality">
-                <span class="nationality-label">Nacionalidad</span>
-                <div class="nationality-value">
+            <div class="bg-black p-6 flex flex-col justify-center">
+              <h3 class="text-[1.8rem] font-bold mb-[0.8rem] text-white">Diego Simeone</h3>
+              <div class="flex flex-col gap-[0.3rem]">
+                <span class="text-[0.9rem] text-[#b3b3b3] uppercase tracking-[0.5px]">Nacionalidad</span>
+                <div class="flex items-center gap-[0.5rem]">
                   <img
                     src="../../img/assets/spain-flag.png"
                     alt="España"
-                    class="country-flag"
+                    class="w-6 h-4 object-cover"
                   />
                   <span>España</span>
                 </div>
@@ -296,30 +294,30 @@
           </div>
         </div>
 
-        <div class="stadium-section">
-          <h2 class="section-title">Estadio</h2>
-          <div class="stadium-card">
-            <div class="stadium-image-container">
+        <div class="mb-6">
+          <h2 class="text-[1.3rem] mb-6 font-medium uppercase tracking-[0.5px]">Estadio</h2>
+          <div class="bg-black rounded-xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.3)] relative min-h-[130px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#4caf50] after:to-transparent">
+            <div class="w-[180px] h-[130px] overflow-hidden flex-shrink-0 relative after:content-[''] after:absolute after:top-0 after:right-0 after:w-[2px] after:h-full after:bg-gradient-to-b after:from-transparent after:via-white/10">
               <img
                 src="../../img/assets/estadio-andorra.jpg"
-                alt="Grünwalder Stadion"
-                class="stadium-photo"
+                alt="Estadi Nacional de Andorra"
+                class="w-full h-full object-cover"
               />
             </div>
-            <div class="stadium-info">
-              <h3 class="stadium-name">Estadi Nacional de Andorra</h3>
-              <div class="stadium-details">
-                <span class="capacity">Capacidad: 3.3k</span>
-                <span class="location">Ubicación: Andorra</span>
+            <div class="bg-black p-6 flex flex-col justify-center">
+              <h3 class="text-[1.5rem] font-bold mb-[0.8rem] text-white">Estadi Nacional de Andorra</h3>
+              <div class="flex flex-col gap-[0.5rem]">
+                <span class="text-[0.9rem] text-[#b3b3b3] flex items-center">👥 Capacidad: 3.3k</span>
+                <span class="text-[0.9rem] text-[#b3b3b3] flex items-center">📍 Ubicación: Andorra</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="team-history">
-        <h2>Historia</h2>
-        <p class="history-text">
+      <div class="bg-[#2d2d2d] p-8 rounded-xl mb-8 relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#e67e22] after:to-transparent">
+        <h2 class="mb-4 text-[1.5rem] font-['Libre_Caslon_Text',serif]">Historia</h2>
+        <p class="text-[#b3b3b3] leading-[1.6]">
           Fundado en 1942, el FC Andorra ha competido principalmente en las
           ligas españolas. Alcanzó la Segunda División B en 1981, manteniéndose
           allí durante 17 temporadas. En 1994, ganó la Copa Catalunya al vencer
@@ -328,298 +326,298 @@
         </p>
       </div>
 
-      <div class="team-tactics">
-        <h2>Formación</h2>
-        <div class="formation-details">
-          <span class="formation-label">3-5-2</span>
-          <div class="formation-stats">
+      <div class="bg-black p-8 rounded-xl mb-8 relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#3498db] after:to-transparent">
+        <h2 class="mb-4 text-[1.5rem] font-['Libre_Caslon_Text',serif]">Formación</h2>
+        <div class="flex justify-between items-center my-4 py-4 border-b border-white/10">
+          <span class="text-[1.2rem] font-bold text-white">3-5-2</span>
+          <div class="flex gap-8 text-[#b3b3b3] text-[0.9rem]">
             <span>Profundidad defensiva: 30%</span>
             <span>Construcción de juego: Normal</span>
           </div>
         </div>
 
         <!-- Sección de 11 titulares -->
-        <div class="starting-eleven">
+        <div class="bg-black/30 rounded-xl p-8 my-8 relative flex flex-col gap-10">
           <!-- Delanteros -->
-          <div class="forwards-row">
-            <div class="player-card">
-              <div class="player-growth">+5</div>
+          <div class="flex justify-center gap-[60px]">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+5</div>
               <img
                 src="../../img/players_icons/adam.jpg"
                 alt="Adam"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">76</div>
-              <div class="player-name">Adám</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">76</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Adám</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+5</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+5</div>
               <img
                 src="../../img/players_icons/duk.jpg"
                 alt="Duk"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">77</div>
-              <div class="player-name">Duk</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">77</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Duk</div>
             </div>
           </div>
 
           <!-- Mediocampista Ofensivo -->
-          <div class="cam-row">
-            <div class="player-card">
-              <div class="player-growth">+2</div>
+          <div class="flex justify-center">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+2</div>
               <img
                 src="../../img/players_icons/alzate.jpg"
                 alt="Alzate"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">78</div>
-              <div class="player-name">Alzate</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">78</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Alzate</div>
             </div>
           </div>
 
           <!-- Mediocampistas Laterales -->
-          <div class="wide-mids-row">
-            <div class="player-card">
-              <div class="player-growth">+3</div>
+          <div class="flex justify-evenly">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+3</div>
               <img
                 src="../../img/players_icons/sulemana.jpg"
                 alt="Sulemana"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">82</div>
-              <div class="player-name">Sulemana</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">82</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Sulemana</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+1</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+1</div>
               <img
                 src="../../img/players_icons/seungho.jpg"
                 alt="Baik Seung Ho"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">75</div>
-              <div class="player-name">Baik Seung Ho</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">75</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Baik Seung Ho</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+1</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+1</div>
               <img
                 src="../../img/players_icons/jinseob.jpg"
                 alt="Park Jin Seob"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">75</div>
-              <div class="player-name">Park Jin Seob</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">75</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Park Jin Seob</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+4</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+4</div>
               <img
                 src="../../img/players_icons/calvo.jpg"
                 alt="Calvo"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">78</div>
-              <div class="player-name">Calvo</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">78</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Calvo</div>
             </div>
           </div>
 
           <!-- Defensas -->
-          <div class="defenders-row">
-            <div class="player-card">
-              <div class="player-growth">+5</div>
+          <div class="flex justify-center gap-10">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+5</div>
               <img
                 src="../../img/players_icons/kuipers.jpg"
                 alt="Kuipers"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">77</div>
-              <div class="player-name">Kuipers</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">77</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Kuipers</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+6</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+6</div>
               <img
                 src="../../img/players_icons/marsa.jpg"
                 alt="Marsà"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">78</div>
-              <div class="player-name">Marsà</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">78</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Marsà</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+4</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+4</div>
               <img
                 src="../../img/players_icons/mwanga.jpg"
                 alt="Mwanga"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">78</div>
-              <div class="player-name">Mwanga</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">78</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Mwanga</div>
             </div>
           </div>
 
           <!-- Portero -->
-          <div class="goalkeeper-row">
-            <div class="player-card">
-              <div class="player-growth">+6</div>
+          <div class="flex justify-center">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out w-[100px] hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+6</div>
               <img
                 src="../../img/players_icons/agirrezabala.jpg"
                 alt="Agirrezabala"
-                class="player-photo"
+                class="w-[60px] h-[60px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">82</div>
-              <div class="player-name">Agirrezabala</div>
+              <div class="absolute top-[5px] right-[5px] w-6 h-6 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.8rem]">82</div>
+              <div class="text-white text-[0.8rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Agirrezabala</div>
             </div>
           </div>
         </div>
 
         <!-- Sección de Suplentes -->
-        <div class="bench-section">
-          <h3>Suplentes</h3>
-          <div class="players-grid">
-            <div class="player-card">
-              <div class="player-growth">+3</div>
+        <div class="mt-8 pt-8 border-t-2 border-white/10">
+          <h3 class="text-white text-[1.1rem] mb-8 font-medium uppercase tracking-[1px]">Suplentes</h3>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-[10px] mb-8 px-[10px]">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+3</div>
               <img
                 src="../../img/players_icons/hilali.jpg"
                 alt="El Hilali"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">79</div>
-              <div class="player-name">El Hilali</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">79</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">El Hilali</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+0</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+0</div>
               <img
                 src="../../img/players_icons/besnard.jpg"
                 alt="Besnard"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">75</div>
-              <div class="player-name">Besnard</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">75</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Besnard</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+3</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+3</div>
               <img
                 src="../../img/players_icons/benito.jpg"
                 alt="Benito"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">74</div>
-              <div class="player-name">Benito</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">74</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Benito</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+5</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+5</div>
               <img
                 src="../../img/players_icons/glatzel.jpg"
                 alt="Glatzel"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">72</div>
-              <div class="player-name">Glatzel</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">72</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Glatzel</div>
             </div>
           </div>
-          <div class="players-grid">
-            <div class="player-card">
-              <div class="player-growth">+4</div>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-[10px] px-[10px]">
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+4</div>
               <img
                 src="../../img/players_icons/moreno.jpg"
                 alt="Moreno"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">73</div>
-              <div class="player-name">Moreno</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">73</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Moreno</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+3</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+3</div>
               <img
                 src="../../img/players_icons/mccrorie.jpg"
                 alt="McCrorie"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">75</div>
-              <div class="player-name">McCrorie</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">75</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">McCrorie</div>
             </div>
-            <div class="player-card">
-              <div class="player-growth">+4</div>
+            <div class="bg-white/5 rounded-lg p-[0.4rem] text-center relative transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:bg-white/8">
+              <div class="absolute top-[5px] left-[5px] text-[#4caf50] text-[0.8rem] font-bold">+4</div>
               <img
                 src="../../img/players_icons/cremaschi.jpg"
                 alt="Cremaschi"
-                class="player-photo"
+                class="w-[80px] h-[80px] rounded-full mb-[0.4rem] object-cover"
               />
-              <div class="player-rating">75</div>
-              <div class="player-name">Cremaschi</div>
+              <div class="absolute top-[8px] right-[8px] w-7 h-7 bg-[#ffeb3b] text-black rounded-full flex items-center justify-center font-bold text-[0.9rem]">75</div>
+              <div class="text-white text-[0.9rem] mt-[0.4rem] whitespace-nowrap overflow-hidden text-ellipsis">Cremaschi</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Sección de Galería -->
-      <div class="team-gallery">
-        <h2 class="section-title">Galería</h2>
-        <div class="gallery-container">
-          <div class="gallery-main">
+      <div class="bg-black rounded-xl overflow-hidden p-6 shadow-[0_10px_20px_rgba(0,0,0,0.3)] mb-8 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#ff9500] after:to-transparent">
+        <h2 class="text-[1.3rem] mb-6 font-medium uppercase tracking-[0.5px]">Galería</h2>
+        <div class="flex flex-col gap-4">
+          <div class="relative w-full h-[500px] rounded-lg overflow-hidden mb-4">
             <img
               id="featured-image"
               src="../../img/galery_screenshots/20241213232237_1.jpg"
               alt="Imagen destacada"
-              class="gallery-featured"
+              class="w-full h-full object-cover rounded-lg cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
             />
-            <div class="gallery-controls">
-              <button id="prev-btn" class="gallery-btn">
-                <i class="gallery-icon">◀</i>
+            <div class="absolute bottom-5 right-5 flex gap-[10px]">
+              <button id="prev-btn" class="bg-black/70 text-white border-none rounded-full w-10 h-10 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#0066cc]">
+                <i class="text-lg">◀</i>
               </button>
-              <button id="next-btn" class="gallery-btn">
-                <i class="gallery-icon">▶</i>
+              <button id="next-btn" class="bg-black/70 text-white border-none rounded-full w-10 h-10 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#0066cc]">
+                <i class="text-lg">▶</i>
               </button>
             </div>
           </div>
-          <div class="gallery-thumbnails">
+          <div class="flex gap-[10px] overflow-x-auto pb-[10px]">
             <div
-              class="thumbnail active"
+              class="w-[150px] h-[100px] rounded-md overflow-hidden cursor-pointer opacity-60 transition-all duration-300 flex-shrink-0 hover:opacity-80 hover:-translate-y-1 active:opacity-100 active:border-2 active:border-[#0066cc]"
               data-src="../../img/galery_screenshots/20241213232237_1.jpg"
             >
               <img
                 src="../../img/galery_screenshots/20241213232237_1.jpg"
                 alt="Partido vs Barcelona"
-                class="thumbnail-img"
+                class="w-full h-full object-cover"
               />
             </div>
             <div
-              class="thumbnail"
+              class="w-[150px] h-[100px] rounded-md overflow-hidden cursor-pointer opacity-60 transition-all duration-300 flex-shrink-0 hover:opacity-80 hover:-translate-y-1"
               data-src="../../img/galery_screenshots/20250310222920_1.jpg"
             >
               <img
                 src="../../img/galery_screenshots/20250310222920_1.jpg"
                 alt="Celebración de gol"
-                class="thumbnail-img"
+                class="w-full h-full object-cover"
               />
             </div>
             <div
-              class="thumbnail"
+              class="w-[150px] h-[100px] rounded-md overflow-hidden cursor-pointer opacity-60 transition-all duration-300 flex-shrink-0 hover:opacity-80 hover:-translate-y-1"
               data-src="../../img/galery_screenshots/20250316123747_1.jpg"
             >
               <img
                 src="../../img/galery_screenshots/20250316123747_1.jpg"
                 alt="Entrenamiento"
-                class="thumbnail-img"
+                class="w-full h-full object-cover"
               />
             </div>
             <div
-              class="thumbnail"
+              class="w-[150px] h-[100px] rounded-md overflow-hidden cursor-pointer opacity-60 transition-all duration-300 flex-shrink-0 hover:opacity-80 hover:-translate-y-1"
               data-src="../../img/galery_screenshots/20250105101851_1.jpg"
             >
               <img
                 src="../../img/galery_screenshots/20250105101851_1.jpg"
                 alt="Afición"
-                class="thumbnail-img"
+                class="w-full h-full object-cover"
               />
             </div>
             <div
-              class="thumbnail"
+              class="w-[150px] h-[100px] rounded-md overflow-hidden cursor-pointer opacity-60 transition-all duration-300 flex-shrink-0 hover:opacity-80 hover:-translate-y-1"
               data-src="../../img/galery_screenshots/20250316124606_1.jpg"
             >
               <img
                 src="../../img/galery_screenshots/20250316124606_1.jpg"
                 alt="Estadio"
-                class="thumbnail-img"
+                class="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -627,18 +625,29 @@
       </div>
 
       <!-- Modal para ver imágenes en grande -->
-      <div id="gallery-modal" class="gallery-modal">
-        <button id="modal-prev" class="modal-nav-btn">◀</button>
-        <button id="modal-next" class="modal-nav-btn">▶</button>
+      <div id="gallery-modal" class="hidden fixed z-[1000] pt-[30px] inset-0 w-full h-full bg-black/95 overflow-auto">
+        <button id="modal-prev" class="absolute top-1/2 left-5 -translate-y-1/2 bg-black/50 text-white border-none rounded-full w-[60px] h-[60px] text-[1.8rem] flex items-center justify-center cursor-pointer transition-all duration-300 z-[1002] opacity-70 hover:bg-[#0066cc] hover:opacity-100 hover:scale-110">◀</button>
+        <button id="modal-next" class="absolute top-1/2 right-5 -translate-y-1/2 bg-black/50 text-white border-none rounded-full w-[60px] h-[60px] text-[1.8rem] flex items-center justify-center cursor-pointer transition-all duration-300 z-[1002] opacity-70 hover:bg-[#0066cc] hover:opacity-100 hover:scale-110">▶</button>
         <img
           id="modal-image"
-          class="modal-content"
+          class="block mx-auto w-auto max-w-[90%] max-h-[85vh] rounded-lg shadow-[0_0_30px_rgba(0,0,0,0.5)] animate-[zoom_0.6s]"
           alt="Imagen ampliada"
           title="Imagen ampliada"
         />
-        <div id="modal-caption" class="modal-caption"></div>
+        <div id="modal-caption" class="block mx-auto w-[80%] max-w-[700px] text-center text-[#ccc] py-[10px] h-[50px] text-[1.2rem]"></div>
       </div>
     </main>
+
+    <style>
+      @keyframes zoom {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
 
     <!-- Script para la galería -->
     <script>
