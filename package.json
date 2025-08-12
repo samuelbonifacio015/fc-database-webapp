@@ -1,0 +1,27 @@
+{
+  "name": "fc-database-webapp",
+  "version": "1.0.0",
+  "description": "Una aplicación web interactiva con el fin de mantener un seguimiento de modo carrera con Andorra FC en FC24.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./css/tailwind-output.css --watch",
+    "build:css:prod": "tailwindcss -i ./src/css/tailwind.css -o ./css/tailwind-output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelbonifacio015/fc-database-webapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelbonifacio015/fc-database-webapp/issues"
+  },
+  "homepage": "https://github.com/samuelbonifacio015/fc-database-webapp#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  }
+}
